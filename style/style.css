@@ -1,0 +1,53 @@
+body{
+    background:#f5f6fa !important ;
+    margin: 0;
+}
+header{
+    background-color: #322c91fd;
+}
+nav{
+    font-family:  Geneva, Verdana, sans-serif;
+    color: white;
+    max-height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+#Menu>img{
+    width: 32px;
+    height: 32px;
+    margin:2px;
+}
+#login{
+    border: 0px solid black;
+    border-radius: 32px;
+    padding: 1px;
+    background-color: rgba(0, 0, 0, 0.596);
+    margin: 2px;
+}
+#login>img{
+    width: 24px;
+    display: flex;
+    align-items: center;
+    margin-right: 2px;
+}
+
+#Pesquisa{
+
+    display: flex;
+    justify-content: flex-end;
+    padding: 8px 3px 0px 5px;
+}
+#pesq_input {
+    
+    width: 90%;
+    background-color: #f5f6fa7c;
+    border: 1px solid #7c7c7c;
+    border-radius: 10px;
+    
+}
+#pesqBtn{
+    width: 24px;
+    margin-right: 3%;
+}

@@ -1,0 +1,6 @@
+Arquivo com a paleta do projeto em hexadecimal
+
+1. #322C91
+2. #2A43A8
+3. #285E9E
+4. #552AA8
