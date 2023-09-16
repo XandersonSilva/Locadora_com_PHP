@@ -1,10 +1,19 @@
 <!DOCTYPE html>
+<?php 
+    //VERIFICA SE O USUÁRIO JÁ ESTÁ LOGADO, CASO NÃO ESTEJA, REDIRECIONA PARA LOGIN
+    session_start();
+    if ((!isset($_SESSION['logado']) == true)){
+        unset($_SESSION['logado']);
+        session_destroy();
+        header('Location: ../Cadastro_Login/login.php');
+    }
+?>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alucar</title>
+    <title>Alugar</title>
     <link rel="stylesheet" href="../style/style.css">
 </head>
 <header>
@@ -12,7 +21,7 @@
         <div id="Menu">
             <img src="../Imagens/Icones/menu.png" alt="" srcset="">
         </div>
-        <h1>Alucar</h1>
+        <h1>Alugar</h1>
         <div id="login">
             <img  src="../Imagens/Icones/conecte-se.png" alt="">
         </div>
@@ -26,6 +35,8 @@
 </div>
 <hr>
 <body>
-    
+    <form action="../ScriptsPHP/sair.php" method="post">
+        <input type="submit" value="Sair" id="sair">
+    </form>
 </body>
 </html>

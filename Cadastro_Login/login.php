@@ -1,4 +1,11 @@
 <!DOCTYPE html>
+<?php 
+    // VERFICA SE O USUÁRIO JÁ ESTÁ LOGADO, CASO SIM, REDIRECIONA PARA A PÁGINA PRINCIPAL
+    session_start();
+    if ((isset($_SESSION['logado']) == true)){
+        header('Location: ../PaginasPHP/index.php');
+    }
+?>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -50,7 +57,8 @@
         <small>
             &reg; Todos os direitos reservados 
         </br>
-            Contato: <a href="https://github.com/xandersonsilva" target="_blank">GitHub </a> - <a href="https://www.instagram.com/x.s.s____/" target = "_blank">Instagram</a> 
+            Contato Xanderson: <a href="https://github.com/xandersonsilva" target="_blank">GitHub </a> - <a href="https://www.instagram.com/x.s.s____/" target = "_blank">Instagram</a> <br>
+            Contato João Vitor: <a href="https://github.com/SilvestreLago" target="_blank">GitHub </a> - <a href="https://www.instagram.com/silvestre_lago" target = "_blank">Instagram</a> 
         </small>
     </footer>
     <script>

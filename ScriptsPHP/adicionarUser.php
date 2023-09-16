@@ -7,7 +7,8 @@
     $endereco = $_GET['endereco'];
     $cpf = $_GET['CPF'];
     $nascimento = $_GET['nascimento'];
-    $senha = $_GET['senha'];
+    //CRIPTOGRAFA A SENHA DO USUÁRIO
+    $senha = password_hash($_GET['senha'], PASSWORD_DEFAULT);
 
     $definido = 0;
 

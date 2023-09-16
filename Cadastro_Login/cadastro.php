@@ -1,4 +1,11 @@
 <!DOCTYPE html>
+<?php 
+    // VERFICA SE O USUÁRIO JÁ ESTÁ LOGADO, CASO SIM, REDIRECIONA PARA A PÁGINA PRINCIPAL
+    session_start();
+    if ((isset($_SESSION['logado']) == true)){
+        header('Location: ../PaginasPHP/index.php');
+    }
+?>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
@@ -59,13 +66,13 @@
 
           <p>
             <label for="senha">Senha:</label>
-            <input type="password" name="senha" id="senha"maxlength="12" minlength="4" required onkeyup="semSenha()"  onblur="semSenha()" >
+            <input type="password" name="senha" id="senha"maxlength="12" minlength="4" required>
             <span id="erroSenha" class="erro"></span>
           </p>
 
           <p>
             <label for="senhaIgual">Confirme a senha: </label>
-            <input type="password" name="senhaIgual" id="senhaIgual" maxlength="12" minlength="4" required onkeyup="naoConf()" onblur="naoConf()" >
+            <input type="password" name="senhaIgual" id="senhaIgual" maxlength="12" minlength="4" required onblur="verifica()" >
             <span id="erroSenhaRepetida" class="erro"></span>
           </p>
           
@@ -83,8 +90,8 @@
     <small>
         &reg; Todos os direitos reservados 
     </br>
-        Contato: <a href="https://github.com/xandersonsilva" target="_blank">GitHub </a> - <a href="https://www.instagram.com/x.s.s____/" target = "_blank">Instagram</a> 
-    </small>
+            Contato Xanderson: <a href="https://github.com/xandersonsilva" target="_blank">GitHub </a> - <a href="https://www.instagram.com/x.s.s____/" target = "_blank">Instagram</a> <br>
+            Contato João Vitor: <a href="https://github.com/SilvestreLago" target="_blank">GitHub </a> - <a href="https://www.instagram.com/silvestre_lago" target = "_blank">Instagram</a>     </small>
   </footer>
 
   <script src="../JavaScript/Cadastro_P.js"></script>
