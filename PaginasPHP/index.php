@@ -15,6 +15,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alugar</title>
     <link rel="stylesheet" href="../style/style.css">
+    <script  src="../JavaScript/exibirBtnSair.js">  </script>
+    <script  src="../JavaScript/jquery.js">         </script>
+    
 </head>
 <header>
     <nav>
@@ -22,10 +25,32 @@
             <img src="../Imagens/Icones/menu.png" alt="" srcset="">
         </div>
         <h1>Alugar</h1>
-        <div id="login">
-            <img  src="../Imagens/Icones/conecte-se.png" alt="">
-        </div>
+        <div id="login" onclick="alternar()">
+        <?php
+            if(isset($_COOKIE['userA_Nome'])){
+                $nomeUser = $_COOKIE['userA_Nome'];
+                $inicial = strtoupper(substr($nomeUser,0,1));
+                echo <<< LOGADO
+                        $inicial
+                        LOGADO;
+                    }else{    
+                        echo <<< LOGIN
+                        <p>Login</p>
+                        <img id="login" src="../Imagens/Icones/conecte-se.png" alt="Log in">
+                        </nav>
+                LOGIN;
+                
+            }
+            ?>
     </nav>
+    </div>
+    <article id="SrBorda">
+        <div id=sair>
+            <form action="../ScriptsPHP/sair.php" method="post">
+                <input type="submit" value="SAIR" id="sair">
+            </form>
+        </div>
+    </article>
 </header>
 
 <div id="Pesquisa">
@@ -35,8 +60,6 @@
 </div>
 <hr>
 <body>
-    <form action="../ScriptsPHP/sair.php" method="post">
-        <input type="submit" value="Sair" id="sair">
-    </form>
+
 </body>
 </html>

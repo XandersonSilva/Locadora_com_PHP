@@ -12,35 +12,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fazer login</title>
-    <link rel="stylesheet" href="../Style/login_style.css">
+    <link rel="stylesheet" href="../style/login_style.css">
     <link rel="shortcut icon" href="../Imagens/Favicon/conecte-se.png" type="image/png">
     <script src="../JavaScript/jquery.js"></script>
 
 </head>
 <body>
     
-    <main class="conteudo">
-        <section>
+    <main >
+        <section id="conteudo">
             <article id="L-form">
                 <form action="../ScriptsPHP/validarLogin.php" method="post">
-                    <article>
+                    <article id="login">
                         <h1>Login</h1>
                     </article>
                     <article>
                         <label for="email">Email</label> 
-                        <input type="email" name="Email" id="email" placeholder="Email@exemplo.com"  required size="30" onclick="ocutar()">
+                        <input class="campo" type="email" name="Email" id="email" placeholder="Email@exemplo.com"  required size="30" onclick="ocutar()">
                     </article>
                     <br>
                     <article>
                         <label for="senha">Senha</label> 
-                        <input type="password" name="Senha" id="senha" placeholder="12345678" required onclick="ocutar()">
+                        <input class="campo" type="password" name="Senha" id="senha" placeholder="12345678" required onclick="ocutar()">
                         <?php
                         if (isset($_GET['erro'])){
                             echo '<samp class="erro"> Usuário e ou senha inválidos </samp>';
                             }
                         ?>
                     </article>
-                    <article>
+                    <article id="logar">
                       <input type="submit" value="Entrar" id="enviar">
                     </article>
                 </form>
