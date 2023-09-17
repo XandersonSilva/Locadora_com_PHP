@@ -24,7 +24,7 @@
         <div id="Menu">
             <img src="../Imagens/Icones/menu.png" alt="" srcset="">
         </div>
-        <h1>Alugar</h1>
+        <h1>Perfil</h1>
         <div id="login" onclick="alternar()">
         <?php
             if(isset($_COOKIE['userA_Nome'])){
@@ -51,20 +51,20 @@
             </form>
         </div>
         <div id="info_user">
-            <form action="../PaginasPHP/info_user.php">
-                <input type="submit" value="Perfil" id="info_user">
+            <form action="../PaginasPHP/index.php">
+                <input type="submit" value="Principal" id="info_user">
             </form>
         </div>
     </article>
 </header>
 
-<div id="Pesquisa">
-    <input type="text" name="pesq_input" id="pesq_input">
-   
-    <svg id="pesqBtn" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24 "><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg>
-</div>
 <hr>
 <body>
-
+    <?php 
+        echo"<h1> Nome: " . $name = $_COOKIE['userA_Nome'];
+        echo"<h1> Email: " . $email = $_COOKIE['userA_Email'];
+        echo"<h1> CPF: " . $cpf = $_COOKIE['userA_CPF'];
+    ?>
+    
 </body>
 </html>

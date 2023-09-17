@@ -44,6 +44,17 @@ nav{
     
 }
 
+#info_user>form>input{
+    border-radius: 5px;
+    border-left-color: #7d85f5;
+    border-top-color: #7d8ff5;
+    background-color: #2a21ad ;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #ffffff;
+    width: 75px;
+    
+}
+
 #SrBorda{
     display: none;
     padding:10px 4px 15px 4px;
