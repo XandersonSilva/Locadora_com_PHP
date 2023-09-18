@@ -1,0 +1,114 @@
+main{
+    display: flex;
+    height: 800px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+p{
+    font-size:22px ;
+}
+
+hr{
+    width: 360.139px;
+}
+form{
+    width: 360.139px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    background-color: #D9D9D9;
+}
+form>p{
+    margin-right :15px;
+}
+
+#ImgUsr{
+    width: 180px;
+    height: 180px;
+    flex-shrink: 0;
+    border-radius: 90px;
+    background: #D9D9D9;
+    border-radius: 90px;
+}
+#ImgUsr>img{
+    width: 185px;
+    height: 185px;
+}
+
+#NameUsr{
+    display: flex;
+    width: 130px;
+    height: 34px;
+    margin-bottom: 11px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #000;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+#EmailUsr{
+    margin-top: 0;
+    flex-shrink: 0;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#classifc{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+#classifc>p{
+    margin-right: 20px;
+}
+
+#Estrela{
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    margin-left: 2px;
+}
+
+
+#veiculoImg{
+    width: 314px;
+    height: 303px;
+    flex-shrink: 0;
+    border-radius: 52px;
+    background: #D9D9D9;
+}
+
+#DetlhBtn{
+    color: white;
+    width: 122px;
+    height: 32px;
+    flex-shrink: 0;
+    background: linear-gradient(180deg, #322C91 0%, #285E9E 100%);
+}
+
+#V_Imgs{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#seta{
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+}

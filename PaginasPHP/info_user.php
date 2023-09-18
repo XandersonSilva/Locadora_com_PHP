@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="../style/style.css">
     <script  src="../JavaScript/exibirBtnSair.js">  </script>
     <script  src="../JavaScript/jquery.js">         </script>
+    <link rel="stylesheet" href="../style/User_Page.css">
     
 </head>
 <header>
@@ -58,13 +59,41 @@
     </article>
 </header>
 
-<hr>
+
 <body>
-    <?php 
-        echo"<h1> Nome: " . $name = $_COOKIE['userA_Nome'];
-        echo"<h1> Email: " . $email = $_COOKIE['userA_Email'];
-        echo"<h1> CPF: " . $cpf = $_COOKIE['userA_CPF'];
-    ?>
-    
+    <main>
+        <div id="ImgUsr">
+            <img src="../Imagens/Icones/user.png" alt="">
+        </div>
+        <?php
+            echo'<p id="NameUsr"> ' . $name = $_COOKIE['userA_Nome'] . '</p>';
+            echo'<p id="EmailUsr"> ' . $email = $_COOKIE['userA_Email'] . '</p>';
+            //echo"<h1> CPF: " . $cpf = $_COOKIE['userA_CPF'];
+        ?>
+        <div id="classifc">
+            <p>Classificação </p>
+        
+            <img id="Estrela" src="../Imagens/Icones/estrela0.png" alt="Estrela de classificação">
+            <img id="Estrela" src="../Imagens/Icones/estrela0.png" alt="Estrela de classificação">
+            <img id="Estrela" src="../Imagens/Icones/estrela0.png" alt="Estrela de classificação">
+            <img id="Estrela" src="../Imagens/Icones/estrela0.png" alt="Estrela de classificação">
+            <img id="Estrela" src="../Imagens/Icones/estrela0.png" alt="Estrela de classificação">
+        </div>
+        <hr>
+        <p>Veículos</p>
+        <div id="V_Imgs">
+            <img id="seta" src="../Imagens/Icones/seta-esquerda.png" alt="">
+            <div id="veiculoImg">
+
+            </div>
+            <img id="seta" src="../Imagens/Icones/seta-direita.png" alt="">
+        </div>
+        <form action="" method="post">
+            <p for="Detalhes">
+                Nome/Modelo
+            </p>
+            <input id="DetlhBtn" type="submit" value="Detalhes">
+        </form>
+    </main>
 </body>
 </html>
