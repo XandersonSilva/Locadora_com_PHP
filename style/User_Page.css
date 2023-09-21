@@ -1,6 +1,5 @@
 main{
     display: flex;
-    height: 800px;
     flex-direction: column;
     justify-content: center;
     align-items: center;

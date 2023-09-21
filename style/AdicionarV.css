@@ -1,12 +1,12 @@
 main{
     display: flex;
-    height: 800px;
     flex-direction: column;
     align-items: center;
 }
 
 #AddVeic{
     display: flex;
+    width: 360px;
     margin-top: 20px;
     flex-direction: column;
     font-size: 20px;
@@ -34,8 +34,13 @@ main{
     flex-wrap: nowrap;
     align-items: flex-end;
 }
+.selecao>label{
+    max-width: 249px;
+    text-indent: 2px;
+}
 
 .selecao>select{
-    width: 122px;   /*Largura*/
+    text-align: center;
+    width: 118px;   /*Largura*/
     height: 32px;
 }

@@ -16,9 +16,7 @@
     <title>Alugar</title>
     <link rel="stylesheet" href="../style/style.css">
     <link rel="stylesheet" href="../style/AdicionarV.css">
-    <script  src="../JavaScript/exibirBtnSair.js">  </script>
-    <script  src="../JavaScript/jquery.js">         </script>
-
+    
     
 </head>
 <header>
@@ -67,8 +65,8 @@
 
             <div class="selecao">
                 <label for="marca">Marca</label>
-                <select id="marca" name="marca">
-                    
+                <select id="marca" name="marca" onchange="teste()">
+                    <option value="Não informado">-</option>
                     <option value="Abarth">Abarth</option>
                     <option value="Adamo">Adamo</option>
                     <option value="Agrale">Agrale</option>
@@ -193,22 +191,20 @@
             <div class="selecao">
                 <label for="modelo">Modelo</label>
                 <select name="modelo" id="modelo">
-                    <option value=""></option>
+                    <option value="Não informado">-</option>
                 </select>
 
             </div>
 
             <div class="selecao">
-                <label for="passageiros">Capacidade de passageiros</label>
+                <label for="passageiros">Capacidade do veículo</label>
                 <select name="passageiros" id="passageiros">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
+                    <option value="Não informado">-</option>
+                    <option value="1">1 Pessoa</option>
+                    <option value="2">2 Pessoas</option>
+                    <option value="4">4 Pessoas</option>
+                    <option value="6">6 Pessoas</option>
+                    <option value="8">8 Pessoas</option>
                 </select>
 
             </div>
@@ -216,7 +212,12 @@
             <div class="selecao">
                 <label for="combustivel">Tipo de Combustível</label>
                 <select name="combustivel" id="combustivel">
-                    <option value=""></option>
+                    <option value="Não informado">-</option>
+                    <option value="Gasolina">Gasolina</option>
+                    <option value="Alcool">Alcool</option>
+                    <option value="Disel">Disel</option>
+                    <option value="Eletrico">Eletrico</option>
+                    <option value="Outro">Outro</option>
                 </select>
 
             </div>
@@ -229,9 +230,7 @@
     </main>
     
 </body>
-
-
-
-
-
+<script  src="../JavaScript/exibirBtnSair.js">  </script>
+<script  src="../JavaScript/jquery.js">         </script>
+<script src="../JavaScript/AdicionarVeiculo.js"></script>
 </html>

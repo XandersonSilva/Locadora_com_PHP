@@ -1,3 +1,10 @@
+@media (max-width: 360px) {
+    /* Estilos a serem aplicados quando a largura da tela for menor ou igual a 360px */
+    main {
+      width: 360px;
+    }
+}
+
 body{
     background:#f5f6fa !important ;
     margin: 0;
