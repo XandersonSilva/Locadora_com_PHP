@@ -1,0 +1,1384 @@
+[
+    
+    {
+        "Marca":"Abarth",
+        "Modelos":["Pulse Abarth 2022"]
+},
+    {
+    "Marca":"Adamo",
+    "Modelos":[
+        "AC2000 1988-1990",
+        "CRX 1981-1990",
+        "GT 1970-1990",
+        "GT-2 1974-1990",
+        "GTL 1978-1990",
+        "GTM 1978-1990",
+        "GTM C2 1981-1990"
+        ]
+        
+},
+    {
+        "Marca":"Agrale",
+        "Modelos":["Marruá 2004"]
+        
+},
+    {
+        "Marca":"Aldee",
+        "Modelos":[
+            "GT 1.8 Street 1987-1988",
+            "Spyder 1996",
+            "GT 2.0 Street 1988-1990",
+            "Street/Racing 1990-1990",
+            "Racing Coupé 1990-1993"
+        ]
+
+},
+    {
+        "Marca":"Alfa Romeo",
+        "Modelos":[
+            "Alfa Romeo 2000 1960-1968",
+            "2300 03/1974-1976",
+            "2300 Ex. 11/1974-1976",
+            "2300 B 1976-1980",
+            "2300 Ti 1976-1980",
+            "2300 Rio 1974 ou 1978",
+            "2300 SL 1980-1984",
+            "2300 Ti 4 1980-1986",
+            "2300 Álcool Ti 1981-1986",
+            "145",
+            "155",
+            "164",
+            "156",
+            "147",
+            "166",
+            "GTV & Spider"
+        ]
+
+},
+    {
+        "Marca":"Americar",
+        "Modelos":[
+            "XKCoupe 2007",
+            "XK120 2007",
+            "Cobra 2002",
+            "GT40",
+            "Hot Rod Willys 1941 (1996)"
+        ]
+
+},
+    {
+        "Marca":"Audi",
+        "Modelos":[
+            "A3 1999-2006",
+            "A3 Sedan 2015",
+            "Q3 2016",
+            "TT",
+            "A1",
+            "R8",
+            "A4 1995 ",
+            "A5",
+            "A6",
+            "A7",
+            "Q5",
+            "Q7",
+            "Senna"
+        ]
+
+},
+    {
+        "Marca":"Aurora",
+        "Modelos":[
+            "122 C 1989-1993            "
+        ]
+
+},
+    {
+        "Marca":"Avallone",
+        "Modelos":[
+            "A 11 Avallone 1971",
+            "TF 6R 1976",
+            "Fusca Cabriolet 1982",
+            "Limosine Monza 1984",
+            "A 52 1985",
+            "Avallone Presidencial 1988"
+        ]
+
+},
+    {
+        "Marca":"Bianco",
+        "Modelos":[
+            "Bianco S 1976",
+            "Bianco Série 2",
+            "Bianco Tarpan 1978",
+            "Bianco Tarpan TS 1981"
+        ]
+
+},
+    {
+        "Marca":"BMW",
+        "Modelos":[
+            "Série 1 2015",
+            "Série 3 2014",
+            "X1 2014",
+            "X3 2015",
+            "X4 2017",
+            "Z3",
+            "Z4",
+            "Série 2",
+            "Série 4",
+            "Série 5",
+            "Série 7",
+            "Série 8",
+            "X2",
+            "X5",
+            "X6",
+            "M2 Competition",
+            "M3 Sedã",
+            "M4 Coupé",
+            "M5",
+            "X6M",
+            "i3"
+        ]
+
+},
+    {
+        "Marca":"Bola",
+        "Modelos":["Fera XK 1981-1983"]
+
+},
+    {
+        "Marca":"Brasinca",
+        "Modelos":[
+            "4200 GT 1965-1966",
+            "4200 GTS  1966-1967"
+        ]
+
+},
+    {
+        "Marca":"CBP",
+        "Modelos":[
+            "Super 90 1984",
+            "Spyder 550 - 1985",
+            "911 Carrera 1986",
+            "911 Carrera 2/4",
+            "911 Carrera conversível",
+            "MG MGA 1987",
+            "EJ 1 1987",
+            "Formigão"
+        ]
+
+},
+    {
+        "Marca":"CBT",
+        "Modelos":[
+            "CBT Javali 4x2 1989-1994",
+            "CBT Javali 4x4 1989-1994",
+            "CBT Javali 4x4 (turbo) 1991-1994"
+        ]
+
+},
+    {
+        "Marca":"Chamonix",
+        "Modelos":[
+            "Roadster 356 2011",
+            "Speedster 356 1994",
+            "Spyder 550 R 2001-2004",
+            "Spyder 550 S 1995",
+            "Spyder 550 S L.M. 2010",
+            "Super 90 1990-2006"
+        ]
+
+},
+    {
+        "Marca":"Chery",
+        "Modelos":[
+            "Arrizzo5 2018",
+            "Celer 2015-2017",
+            "QQ 2016-2020",
+            "Tiggo2 2018",
+            "Tiggo7 2018",
+            "Face 2010-2018",
+            "Cielo 2013-2018",
+            "Arrizo 5E",
+            "Tiggo3x 2021-2022",
+            "Tiggo8 2020",
+            "Arrizo6 2021",
+            "Tiggo5x 2019",
+            "iCar 2022"
+        ]
+
+},
+    {
+        "Marca":"Chevrolet",
+        "Modelos":[
+            "3100/Brasil 1958-1963",
+            "A-10",
+            "A-20 1985-1995",
+            "Alvorada 1961-1963",
+            "Amazona 1959-1963",
+            "Astra 1998-2011",
+            "Beretta",
+            "Blazer 1995-2011",
+            "Bonanza 1989-1994",
+            "Bolt 2019",
+            "C-10 1974-1988",
+            "C-14 1964-1973",
+            "C-1416 1964-1994",
+            "C-15 1964-1973",
+            "C-20 1985-1995",
+            "Camaro 2010",
+            "Caravan 1975-1992",
+            "Celta 2000-2015",
+            "Chevette Hatch 1980-1988",
+            "Chevette 1973-1993",
+            "Chevette Junior 1992-1993",
+            "Chevy 500 1983-1995",
+            "Cobalt 2011-2020",
+            "Corisco 1963",
+            "Corsa 1994-2012",
+            "Corsa Sedan / Classic 1995-2011",
+            "Corsa Pick-up 1995-2002",
+            "Corsa Wagon 1997-2001",
+            "Cruze 2011",
+            "Cruze Sport6 2012",
+            "D-10 1980-1985",
+            "D-20 1985-1995",
+            "Ipanema 1990-1998",
+            "Kadett 1989-1998",
+            "Kadett Conversível 1991-1995",
+            "Marajó 1981-1989",
+            "Meriva 2002-2012",
+            "Montana 2003",
+            "Monza Sedan 1983-1996",
+            "Monza Hatch 1982-1988",
+            "Omega 1992-1998/1998-2012 (importado da Austrália)",
+            "Onix 2012",
+            "Opala Coupé 1971-1988",
+            "Opala 1968-1992",
+            "Prisma 2006",
+            "Silverado 1997-2001",
+            "S10 1995",
+            "Spin 2012",
+            "Suprema 1993-1996",
+            "TrailBlazer 2012",
+            "Vectra 1993-2011",
+            "Vectra GT 2007-2011",
+            "Veraneio 1964-1994",
+            "Volt",
+            "Zafira 2001-2012",
+            "Equinox 2017",
+            "SS10",
+            "Caprice",
+            "Malibu 2010-2012"
+        ]
+
+},
+    {
+        "Marca":"Chrysler/Dodge",
+        "Modelos":[
+            "1800 1973-1975",
+            "1800 Polara 1976-1981",
+            "Charger 1971-1981",
+            "Dakota 1998-2002",
+            "Dart Sedã 1969-1981",
+            "Dart Coupé 1970-1981",
+            "LeBaron 1979-1980",
+            "Magnum 1979-1981",
+            "Polara 1976-1981",
+            "Journey 2009",
+            "Durango",
+            "Town & Country",
+            "300",
+            "PT Cruiser",
+            "Caravan/Grand Caravan 1996-2005",
+            "Stratus",
+            "D100"
+        ]
+
+},
+    {
+        "Marca":"Citroën",
+        "Modelos":[
+            "Aircross 2010-2020",
+            "C3 2003",
+            "C4 Cactus 2018",
+            "Xsara Picasso 2001-2012",
+            "DS3",
+            "Xantia (importado da França)",
+            "C5 2001 (importado da França)",
+            "C4 Pallas 2007-2013",
+            "C4 Lounge 2013-2019",
+            "DS5",
+            "C3 Picasso 2012-2017",
+            "XM 1995",
+            "ZX 1992-1997"
+        ]
+
+},
+    {
+        "Marca":"Concorde",
+        "Modelos":["Concorde 1976-2003"]
+
+},
+    {
+        "Marca":"Corona",
+        "Modelos":[
+            "Dardo F 1.3 1979-1983",
+            "Dardo F 1.5"
+        ]
+
+},
+    {
+        "Marca":"Cross Lander",
+        "Modelos":[
+            "CL-244 2002-2005",
+            "CL-330 2002-2005"
+        ]
+
+},
+    {
+        "Marca":"Daewoo",
+        "Modelos":[
+            "Espero 1994-2000",
+            "Nubira",
+            "Lanos",
+            "Leganza",
+            "Super Salon",
+            "Tico",
+            "Prince"
+        ]
+
+},
+    {
+        "Marca":"Daihatsu",
+        "Modelos":[
+            "Cuore",
+            "Applause",
+            "Terios",
+            "Feroza",
+            "Move"
+        ]
+
+},
+    {
+        "Marca":"Dankar",
+        "Modelos":[
+            "Squalo 1979",
+            "Julia 1981-1984"
+        ]
+
+},
+    {
+        "Marca":"DKW-Vemag",
+        "Modelos":[
+            "Belcar 1958-1967",
+            "Caiçara 1963-1965",
+            "Camioneta 1958-",
+            "Candango 1958-1963",
+            "F-91 Universal 1956-1958",
+            "Fissore 1964-1967",
+            "Grande 1958-1967",
+            "Pracinha 1966-1967",
+            "Vemaguet 1958-1967"
+        ]
+
+},
+    {
+        "Marca":"Edra",
+        "Modelos":[
+            "Rancho PK",
+            "Rancho TT 1990",
+            "GT e GT-R 2003",
+            "Mog 2005",
+            "Aris 2009"
+        ]
+
+},
+    {
+        "Marca":"Emis",
+        "Modelos":["Art 1986-1987"]
+
+},
+    {
+        "Marca":"Engerauto",
+        "Modelos":["Topazzio 1988-1989"]
+
+},
+    {
+        "Marca":"Engesa",
+        "Modelos":[
+            "EE-12 1984-1984",
+            "EE-34",
+            "4 1985-1987"
+        ]
+
+},
+    {
+        "Marca":"Envemo",
+        "Modelos":[
+            "Camper 1989-1995",
+            "Super 90 1980",
+            "Super 90 Cabriolet 1981"
+        ]
+
+},
+    {
+        "Marca":"Envesa",
+        "Modelos":["Envesa 4"]
+
+},
+    {
+        "Marca":"Effa",
+        "Modelos":["Effa M100"]
+
+},
+    {
+        "Marca":"Farus",
+        "Modelos":[
+            "ML-929 1978",
+            "TS 1982",
+            "Beta 1984",
+            "Beta Cabriolet 1985",
+            "Quadro 1989-1990"
+        ]
+
+},
+    {
+        "Marca":"Fiat",
+        "Modelos":[
+            "147 1976-1986",
+            "Argo 2017",
+            "Brava 1999-2003",
+            "Bravo 2010-2016",
+            "City",
+            "Cronos 2018",
+            "Doblò 2001- 2019",
+            "Ducato 1998",
+            "Elba 1986-1996",
+            "Fastback 2022",
+            "Fiorino 1979",
+            "Idea 2005-2016",
+            "Linea 2008-2016",
+            "Marea 1998-2007",
+            "Marea Weekend 1998-2007",
+            "Mobi 2016",
+            "Oggi 1983-1985",
+            "Palio 1996-2018",
+            "Weekend/Palio Weekend 1997-2020",
+            "Panorama 1980-1986",
+            "Prêmio 1985-1995",
+            "Pulse 2021",
+            "Punto 2007-2017",
+            "Scudo 2023",
+            "Siena/Grand Siena 1998-2022",
+            "Spazio 1983-1984",
+            "Stilo 2002-2010",
+            "Strada 1998",
+            "Tempra 1991-1999",
+            "Tipo 1993-1997",
+            "Toro 2018",
+            "Uno/Mille 1984-2022",
+            "Coupé 1995-1996",
+            "500 2007-2018 e 2021"
+        ]
+
+},
+    {
+        "Marca":"FNM",
+        "Modelos":[
+            "2000 JK 1960-1968",
+            "2150 JK 1968-1973",
+            "Onça 1966-1967",
+            "Fúria GT 1971"
+        ]
+
+},
+    {
+        "Marca":"Ford",
+        "Modelos":[
+            "Belina 1970-1977",
+            "Belina II 1977-1991",
+            "Bronco 2021",
+            "Corcel 1968-1977",
+            "Corcel II 1977-1986",
+            "Courier 1997-2013",
+            "Courier Van",
+            "Del Rey 1981-1991",
+            "Del Rey Scala 1984-1986",
+            "EcoSport 2003-2021",
+            "Escort 1983-2003",
+            "Escort SW 1997-2003",
+            "Escort conversível 1985-1995",
+            "F-100 1957-1984",
+            "F-150 2023",
+            "F-1000 1979-1999",
+            "F-250 1999-2011",
+            "F-75 1972-1983 ",
+            "Fiesta 1996-2019",
+            "Focus 2000-2019",
+            "Jeep 1972-1983 ",
+            "Galaxie 500 1967-1979",
+            "Galaxie 1970-1972",
+            "Ka 1997-2021",
+            "Ka+ 2014-2021",
+            "LTD 1969-1970 / 1976-1982",
+            "LTD Landau/Landau 1971-1983",
+            "Maverick 1973-1979",
+            "Belina 1970-1977",
+            "Belina II 1977-1991",
+            "Bronco 2021 (importado dos Estados Unidos)",
+            "Corcel 1968-1977",
+            "Corcel II 1977-1986",
+            "Courier 1997-2013",
+            "Courier Van",
+            "Del Rey 1981-1991",
+            "Del Rey Scala 1984-1986",
+            "EcoSport 2003-2021",
+            "Escort 1983-2003",
+            "Escort SW 1997-2003",
+            "Escort conversível 1985-1995",
+            "F-100 1957-1984",
+            "F-150 2023 (importado dos Estados Unidos)",
+            "F-1000 1979-1999",
+            "F-250 1999-2011",
+            "F-75 1972-1983 ",
+            "Fiesta 1996-2019",
+            "Focus 2000-2019",
+            "Jeep 1972-1983 ",
+            "Galaxie 500 1967-1979",
+            "Galaxie 1970-1972",
+            "Ka 1997-2021",
+            "Ka+ 2014-2021",
+            "LTD 1969-1970 / 1976-1982",
+            "LTD Landau/Landau 1971-1983",
+            "Maverick 1973-1979",
+            "Mustang 2018 (importado dos Estados Unidos)",
+            "Mondeo 1995-2006",
+            "Pampa 1982-1997",
+            "Ranger 1994 (importado da Argentina)",
+            "Royale 1992-1996",
+            "Territory 2020 (importado da China)",
+            "Rural 1972-1977",
+            "Verona 1989-1996",
+            "Versailles 1991-1996",
+            "Fusion 2006-2020",
+            "Edge 2009 (importado dos Estados Unidos)",
+            "Taurus 1994-2000",
+            "Crown Victoria"
+
+            
+        ]
+
+},
+    {
+        "Marca":"Furglass",
+        "Modelos":["Furglaine 1980 - 1994"]
+
+},
+    {
+        "Marca":"Geely",
+        "Modelos":[
+            "EC7",
+            "GC2"    
+        ]
+
+},
+    {
+        "Marca":"Glaspac",
+        "Modelos":["Cobra 1982-1987"]
+
+},
+    {
+        "Marca":"GMC",
+        "Modelos":["3500 HD 1997-2001"]
+
+},
+    {
+        "Marca":"Grancar",
+        "Modelos":["Futura 1990-1991"]
+
+},
+    {
+        "Marca":"Gurgel",
+        "Modelos":[
+            "Ipanema 1969-1971",
+            "Bugato 1970-1971",
+            "Xavante XT 1971-1975",
+            "Xavante XTR 1971-1975",
+            "Xavante XTC 1974-1975",
+            "X-10 1975-1977",
+            "X-20 1976-1979",
+            "X-12 1975-1988",
+            "Tocantins 1988-1991",
+            "X-15 1979-1982",
+            "G-15 1979-1982",
+            "Itaipu E-150",
+            "Itaipu E-400 1981-1982",
+            "Itaipu E-500 1981-1982",
+            "G-800 1982-1988",
+            "XEF 1983-1986",
+            "Carajás 1984-1989",
+            "BR-800 1988-1991",
+            "BR-800 Van",
+            "Motomachine 1990-1992",
+            "Supermini 1992-1995"
+        ]
+
+},
+    {
+        "Marca":"GWM",
+        "Modelos":["Haval H6 2023"]
+
+},
+    {
+        "Marca":"Hofstetter",
+        "Modelos":["Hofstetter 1986-1993"]
+
+},
+    {
+        "Marca":"Honda",
+        "Modelos":[
+            "Accord 1994 (importado do Japão)",
+            "City 2009",
+            "Civic 1992-2021 e 2022 (importado do Japão)",
+            "Fit 2003-2022",
+            "CR-V 1996",
+            "HR-V 2015",
+            "WR-V 2017-2021",
+            "NSX"
+        ]
+
+},
+    {
+        "Marca":"Hummer",
+        "Modelos":[
+            "H1",
+            "H2",
+            "H3"
+        ]
+
+},
+    {
+        "Marca":"Hyundai",
+        "Modelos":[
+            "Creta 2016",
+            "HB20 2012",
+            "HB20S 2012",
+            "HB20X 2012",
+            "ix20 2010",
+            "ix35 2011",
+            "Tucson 2005",
+            "Azera 2007",
+            "Veloster 2011-2014",
+            "Santa Fe 2007",
+            "Veracruz",
+            "Genesis",
+            "Elantra 2011- 2020",
+            "Equus",
+            "Sonata 2011-2014"
+        ]
+
+},
+    {
+        "Marca":"IBAP",
+        "Modelos":["Democrata"]
+
+},
+    {
+        "Marca":"Inbrave",
+        "Modelos":["Swing 1981"]
+
+},
+    {
+        "Marca":"Infiniti",
+        "Modelos":[
+            "FX35",
+            "QX56",
+            "FX50",
+            "J30"
+        ]
+
+},
+    {
+        "Marca":"Ita",
+        "Modelos":["Lassale"]
+
+},
+    {
+        "Marca":"JAC",
+        "Modelos":[
+            "T5 2018",
+            "T40 2018",
+            "JAC J3 2011- 2018",
+            "JAC J3 Turin 2011- 2018",
+            "JAC J6 2011- 2018",
+            "JAC J5 2012- 2018",
+            "JAC J2 2010- 2018",
+            "iEV 20",
+            "iEV 60",
+            "iEV 40",
+            "T80",
+            "T50",
+            "T60",
+            "T6"
+        ]
+
+},
+    {
+        "Marca":"Jaguar",
+        "Modelos":[
+            "S-Type",
+            "F-Pace"
+        ]
+
+},
+    {
+        "Marca":"Jeep",
+        "Modelos":[
+            "Commander 2021",
+            "Compass 2016",
+            "Renegade 2015",
+            "Cherokee",
+            "Grand Cherokee",
+            "Wrangler"
+        ]
+
+},
+    {
+        "Marca":"JPX",
+        "Modelos":[
+            "Montez 1992-2001",
+            "Montez pick-up 1995-2001"
+        ]
+
+},
+    {
+        "Marca":"Kadron",
+        "Modelos":["Tropi Buggy 1969-1974"]
+
+},
+    {
+        "Marca":"Kia",
+        "Modelos":[
+            "Kia Picanto ou Kia Morning 2008",
+            "Kia Cadenza ou Kia K7",
+            "Kia Cerato ou Kia Forte ",
+            "Kia Cerato Koup ou Kia Koup ou Kia Forte Koup",
+            "Kia Sportage",
+            "Kia Carens ou Kia Rondo-",
+            "Kia Sorento",
+            "Kia Carnival ou Kia Sedona 2015",
+            "Kia Bongo",
+            "Kia Mohave ou Kia Borrego",
+            "Kia Soul 2013",
+            "Kia Optima",
+            "Kia Quoris",
+            "Kia Stinger 2018",
+            "Kia Rio"
+        ]
+
+},
+    {
+        "Marca":"Lada",
+        "Modelos":[
+            "VAZ- 2105 (Laika) 1990-1997",
+            "VAZ- 2104 (Laika Station Wagon) 1990-1997",
+            "VAZ- 2108 (Samara) 1990-1997",
+            "VAZ- 2121 (Niva) 1990-1997"
+        ]
+
+},
+    {
+        "Marca":"L'Automobile/L'Auto Craft",
+        "Modelos":[
+            "Ventura 1978-?",
+            "Ventura conversível ?-?",
+            "Ventura II 1988-?",
+            "Sabre 1990-1997"
+        ]
+
+},
+    {
+        "Marca":"Lafer",
+        "Modelos":[
+            "MP TD 1974-1990",
+            "MP LL 1976-1979",
+            "MP TI 1978-1990",
+            "MP TX 1986-1990"
+        ]
+
+},
+    {
+        "Marca":"Land Rover",
+        "Modelos":[
+            "Range Rover Evoque 2016",
+            "Range Rover",
+            "Range Rover Sport",
+            "Defender",
+            "Vogue",
+            "Autobiography",
+            "Range Rover Velar",
+            "Discovery"
+        ]
+
+},
+    {
+        "Marca":"Lexus",
+        "Modelos":[
+            "ES",
+            "LS",
+            "UX",
+            "NX",
+            "RX",
+            "CT",
+            "LC",
+            "NX 300h"
+        ]
+
+},
+    {
+        "Marca":"LHM",
+        "Modelos":[
+            "Phoenix 1985",
+            "Ítala 1987"
+        ]
+
+},
+    {
+        "Marca":"Lifan",
+        "Modelos":[
+            "X60",
+            "320",
+            "530",
+            "X80"
+        ]
+
+},
+    {
+        "Marca":"Lincoln",
+        "Modelos":[
+            "Continental",
+            "Town Car"
+        ]
+
+},
+    {
+        "Marca":"Lobini",
+        "Modelos":[
+            "H1 1999",
+            "R 2007-2010"
+        ]
+
+},
+    {
+        "Marca":"Lorena",
+        "Modelos":[
+            "Lorena GT 1968",
+            "Lorena RM 1972",
+            "Lorena GT-L 2010"
+        ]
+
+},
+    {
+        "Marca":"Macan",
+        "Modelos":["Gurgel 1200"]
+
+},
+    {
+        "Marca":"Mahindra",
+        "Modelos":[
+            "M.O.V. 2012-2015",
+            "Pick-up 2007-2015",
+            "Scorpio 2007-2009",
+            "SUV 2009-2011"
+        ]
+
+},
+    {
+        "Marca":"Malzoni",
+        "Modelos":[
+            "Malzoni I",
+            "Malzoni II",
+            "Malzoni III",
+            "GT Malzoni 1964-1966",
+            "GT Malzoni II (Malzoni GTM) 1976-1978",
+            "GT Malzoni II (Malzoni GTM) conversível 1976-1978"
+        ]
+
+},
+    {
+        "Marca":"Matra Veículos",
+        "Modelos":["Matra Pick-up 2002-2004"]
+
+},
+    {
+        "Marca":"Mazda",
+        "Modelos":[
+            "626",
+            "Protegè",
+            "MX-3",
+            "MX-5"
+        ]
+
+},
+    {
+        "Marca":"Megastar Veículos",
+        "Modelos":["Emme 1997-1999"]
+
+},
+    {
+        "Marca":"Mercedes-Benz",
+        "Modelos":[
+            "Classe A 1999-2005",
+            "Classe C 2016",
+            "CLC 200 2008-2010",
+            "GLA 2016",
+            "CLA",
+            "Classe E",
+            "Classe S",
+            "GLC",
+            "GLE",
+            "GLS",
+            "SLC",
+            "Classe G",
+            "SLK",
+            "Classe GLK",
+            "Classe CLK",
+            "Classe M"
+        ]
+
+},
+    {
+        "Marca":"MG",
+        "Modelos":[
+            "MG550",
+            "MG6"
+        ]
+
+},
+    {
+        "Marca":"Mini",
+        "Modelos":[
+            "Countryman 2015",
+            "Cooper"
+        ]
+
+},
+    {
+        "Marca":"Mirage",
+        "Modelos":["Mirage GT"]
+
+},
+    {
+        "Marca":"Mitsubishi",
+        "Modelos":[
+            "ASX 2013",
+            "L200 1991",
+            "Lancer 2014-2019",
+            "Pajero TR4 2007-2015",
+            "Pajero 1997",
+            "Eclipse",
+            "Outlander 2001",
+            "Eclipse Cross 2018"
+        ]
+
+},
+    {
+        "Marca":"Miura",
+        "Modelos":[
+            "Sport 1977-1979",
+            "Sport II 1980-1983",
+            "MTS 1981",
+            "Targa 1982-1988",
+            "Spider 1983-1988",
+            "Kabrio 1984-1985",
+            "Saga 1984-1988",
+            "787 1986-1990",
+            "X8 1987-1990",
+            "Saga II 1988-1992",
+            "Top Sport 1989-1992",
+            "X11 1990-1992",
+            "BG-Truck CD 1993-1997"
+            
+        ]
+
+},
+    {
+        "Marca":"Monarca",
+        "Modelos":["Monarca 1954/1955"]
+
+},
+    {
+        "Marca":"NBM",
+        "Modelos":[
+            "Jornada 1984-1988",
+            "Spirit 1986-1988"
+        ]
+
+},
+    {
+        "Marca":"Nissan",
+        "Modelos":[
+            "Frontier 1990",
+            "Grand Livina 2010-2014",
+            "Kicks 2016",
+            "Livina 2007-2014",
+            "March 2011",
+            "Sentra 2007",
+            "Versa 2013",
+            "Leaf 2010",
+            "Tiida 2004-2014"            
+        ]
+
+},
+    {
+        "Marca":"Nobre",
+        "Modelos":["Alpini G 59 Grand Prix"]
+
+},
+    {
+        "Marca":"PAG/Dacon",
+        "Modelos":[
+            "828",
+            "Nick 1988-1991"
+        ]
+
+},
+    {
+        "Marca":"Peugeot",
+        "Modelos":[
+            "206 2001-2008",
+            "504 Pickup Diesel 1992-1999",
+            "206 SW 2005-2008",
+            "207 2008-2014",
+            "207 Passion 2008-2014",
+            "207 SW 2008-2012",
+            "208 2013",
+            "2008 2015",
+            "Hoggar 2010-2014",
+            "408 2011-2018",
+            "3008 2009",
+            "5008 2009",
+            "307 2003-2012",
+            "405 1992-1998",
+            "205 1992-1998",
+            "106 1993-2002",
+            "306 1994-2002",
+            "406 1998-2005",
+            "407 2006-2010",
+            "RCZ 2011-2016"
+        ]
+
+},
+    {
+        "Marca":"Polystilo",
+        "Modelos":[
+            "WM II 1982",
+            "Savana 1983-1986"
+        ]
+
+},
+    {
+        "Marca":"Puma",
+        "Modelos":[
+            "GT (DKW) 1967 (VW) 1968-1970",
+            "GT4R 1969-1970",
+            "Puma P8 1971",
+            "Puma Spyder 1971-1972",
+            "GTE 1970-1980",
+            "GTS 1973-1980",
+            "GTB 1974-1979",
+            "GTB S2 1979-1987",
+            "GTB S3 1984-1984",
+            "GTB S4 1984-1984",
+            "P-018 1981-1987",
+            "GTC 1981-1986",
+            "GTI 1981-1987",
+            "AM1 1988-1990",
+            "AM2 1988-1990",
+            "AM3 1989-1991",
+            "AM4 1989-1995",
+            "AMV 1988-1991"
+        ]
+
+},
+    {
+        "Marca":"Py Motors",
+        "Modelos":["Equus"]
+
+},
+    {
+        "Marca":"Ragge",
+        "Modelos":["Califórnia 1989"]
+
+},
+    {
+        "Marca":"Renault",
+        "Modelos":[
+            "Captur 2017",
+            "Clio 1996-2016",
+            "Clio Sedan 2000-2005",
+            "Duster 2011",
+            "Oroch 2015",
+            "Kwid 2017",
+            "Logan 2007-2023",
+            "Mégane Grand Tour 2006-2012",
+            "Mégane Sedan 1998-2010",
+            "Sandero 2007-2023",
+            "Scénic 1998-2010",
+            "Fluence 2010-2018",
+            "Symbol 2009-2013",
+            "19 1993-1998",
+            "Twingo",
+            "Zoe 2018",
+            "Twizy"
+        ]
+
+},
+    {
+        "Marca":"Romi",
+        "Modelos":["Isetta 1956-1961"]
+
+},
+    {
+        "Marca":"Saab",
+        "Modelos":["Isetta 1956-1961"]
+
+},
+    {
+        "Marca":"Simca",
+        "Modelos":[
+            "Alvorada 1963",
+            "Chambord 1959",
+            "Emi-Sul 1966",
+            "Esplanada 1967-1969",
+            "GTX 1969",
+            "Jangada 1962",
+            "Presidence 1963",
+            "Rally 1962",
+            "Regente 1968",
+            "Tufão 1964"
+        ]
+
+},
+    {
+        "Marca":"Santa Matilde",
+        "Modelos":[
+            "SM Hatch 1977-1983",
+            "SM Conversível 1983-1990",
+            "SM Coupé 1983-1997"
+        ]
+
+},
+    {
+        "Marca":"San Vito",
+        "Modelos":[]
+
+},
+    {
+        "Marca":"SEAT",
+        "Modelos":[
+            "Córdoba 1995-2002",
+            "Ibiza 1995-2002",
+            "Inca 1995-2002",
+            "Vario 1995-2002"
+        ]
+
+},
+    {
+        "Marca":"Smart",
+        "Modelos":["Fortwo 2011"]
+
+},
+    {
+        "Marca":"STV",
+        "Modelos":[
+            "Uirapuru berlineta 1965-1967",
+            "Uirapuru cabriolet 1966-1967"
+        ]
+
+},
+    {
+        "Marca":"Spiller Mattei",
+        "Modelos":["Gringo"]
+
+},
+    {
+        "Marca":"SR Veículos Especiais",
+        "Modelos":[
+            "Ibiza",
+            "Max Sport",
+            "Max Sport 2",
+            "Deserter 2",
+            "Deserter Rally",
+            "Deserter XK",
+            "Country XK"
+        ]
+
+},
+    {
+        "Marca":"Subaru",
+        "Modelos":[
+            "Impreza",
+            "Forester",
+            "WRX",
+            "Outback",
+            "XV",
+            "Legacy"
+        ]
+
+},
+    {
+        "Marca":"Suzuki",
+        "Modelos":[
+            "Jimny 2012",   
+            "Grand Vitara 1997- 2015",  
+            "Vitara 1997",  
+            "Suzuki SX4 S-Cross 2013"
+        ]
+
+},
+    {
+        "Marca":"SsangYong",
+        "Modelos":[
+            "XLV",
+            "Tivoli",
+            "Actyon",
+            "Actyon Sports",
+            "Korando",
+            "Kyron",
+            "Rexton"
+        ]
+
+},
+    {
+        "Marca":"TAC Motors",
+        "Modelos":["Stark 2009"]
+
+},
+    {
+        "Marca":"Tanger",
+        "Modelos":["Lucena"]
+
+},
+    {
+        "Marca":"Toyota",
+        "Modelos":[
+            "Bandeirante 1962-2001",
+            "Camry 1980",
+            "Corolla 1998",
+            "Etios 2012",
+            "Fielder 2004-2008",
+            "Hilux 1968",
+            "Prius 1997",
+            "RAV4 1994",
+            "SW4 1997",
+            "Yaris 2018",
+            "Previa 1992"
+        ]
+
+},
+    {
+        "Marca":"Trimax",
+        "Modelos":["Audax 2010"]
+
+},
+    {
+        "Marca":"Troller",
+        "Modelos":[
+            "Pantanal 2006-2008",
+            "T4 1999"
+        ]
+
+},
+    {
+        "Marca":"Villa",
+        "Modelos":["Villa GT"]
+
+},
+    {
+        "Marca":"Volvo",
+        "Modelos":[
+            "XC40",
+            "XC60",
+            "XC90",
+            "V40",
+            "V60",
+            "S60",
+            "S90",
+            "850",
+            "C30",
+            "V50",
+            "XC70",
+            "V50",
+            "C70"
+        ]
+
+},
+    {
+        "Marca":"Volkswagen",
+        "Modelos":[
+            "1600 1968-1971",
+            "Apollo 1990-1992",
+            "Amarok 2010",
+            "Brasília 1973-1982",
+            "Fox 2003-2021",
+            "Fusca 1959-1986 / 1993-1996 e 2014-2017",
+            "Gol 1980-2022",
+            "Golf 1995",
+            "Jetta 2006",
+            "Karmann Ghia 1962-1971",
+            "Karmann Ghia Cabriolet 1967-1971",
+            "Karmann Ghia TC 1970-1975",
+            "Kombi 1957-2013",
+            "Logus 1993-1997",
+            "Nivus 2020",
+            "Parati 1982-2012",
+            "Passat 1974-1989",
+            "Pointer 1994-1996",
+            "Polo 2002-2014 / 2017",
+            "Polo Classic 1997-2002",
+            "Polo Sedan 2002- 2014",
+            "Quantum 1985-2001",
+            "Santana 1984-2006",
+            "Saveiro 1982",
+            "SP1 1972-1973",
+            "SP2 1972-1976",
+            "TL 1970-1976",
+            "Up! 2014-2021",
+            "Variant 1969-1977",
+            "Variant II 1978-1981",
+            "Virtus 2018",
+            "Voyage 1981-1996/2008-2023",
+            "Bora 1999-2011",
+            "Taos 2020",
+            "T-Cross 2019",
+            "Tiguan 2009",
+            "Touareg 2002-2019"
+        ]
+
+},
+    {
+        "Marca":"WMV",
+        "Modelos":["WMV 1978"]
+
+},
+    {
+        "Marca":"Willys Overland",
+        "Modelos":[
+            "1093 1964-1965",
+            "Aero 1960-1971",
+            "Dauphine 1959-1966",
+            "Gordini 1962-1968",
+            "Interlagos 1961-1966",
+            "Itamaraty 1966-1971",
+            "Itamaraty Executivo 1967-1969",
+            "Jeep CJ-5 1957-1971 ",
+            "Jeep CJ-6 1957-1966",
+            "Jeep pick-up 1958-1971 ",
+            "Rural 1958-1971 ",
+            "Teimoso 1964-1966",
+            "Capeta"
+        ]
+    }
+]

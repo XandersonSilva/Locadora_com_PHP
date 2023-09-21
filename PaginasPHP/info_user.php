@@ -84,11 +84,13 @@
         <div id="V_Imgs">
             <img id="seta" src="../Imagens/Icones/seta-esquerda.png" alt="">
             <div id="veiculoImg">
-
+                <form action="AdicionarVeiculo.php" method="post">
+                    <input type="submit" value="Adicionar Veículo">
+                </form>
             </div>
             <img id="seta" src="../Imagens/Icones/seta-direita.png" alt="">
         </div>
-        <form action="" method="post">
+        <form id="Dtlh" action="" method="post">
             <p for="Detalhes">
                 Nome/Modelo
             </p>

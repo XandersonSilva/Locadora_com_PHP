@@ -33,6 +33,10 @@ nav{
     height: 32px;
 }
 
+#login:hover {
+    cursor: pointer;
+  }
+
 #sair>form>input{
     border-radius: 5px;
     border-left-color: #f57d7d;
