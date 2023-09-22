@@ -12,15 +12,28 @@ main{
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
 }
-#AddVeic>input[type=submit]{
+
+
+#marca, #modelo, #passageiros, #combustivel, #AddVeic > input[type=submit]{
     color: white;
     width: 122px;
     height: 32px;
     border-radius: 16px;
     border:none;
     background: linear-gradient(180deg, #322C91 0%, #285E9E 100%);
-    margin: 40px auto 0px auto;
 }
+#AddVeic > input[type=submit]{
+    font-size: 20px;
+    width: 183px;
+    margin: 40px auto 0px auto ;
+}
+
+#placa{
+    width: 116px;
+    height: 32px;
+    padding: 0;
+}
+
 #detalhes{
     width: 360px;
     resize: none;
@@ -43,4 +56,43 @@ main{
     text-align: center;
     width: 118px;   /*Largura*/
     height: 32px;
+}
+
+#conteinerFts{
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+    height: 164px;
+    background: #1f1b58;
+    color: #fff;
+    margin-bottom: 20px;
+    
+}
+
+#fotos{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.fotoX{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 96px;
+    height: 96px;
+    border-radius: 24px;
+    background-color: #fff;
+}
+
+.fotoX:hover{
+    cursor: pointer;
+}
+
+p{
+    padding: 7px 0px 0px 15px ;
+    margin: 0;  
 }

@@ -61,8 +61,46 @@
 
 <body>
     <main>
-        <form id="AddVeic" action="" method="post">
 
+
+        <form id="AddVeic" action="" method="post">
+            <input type="file" name="fotoA" accept="image/*" id="fotoA" style="display: none;">
+            <input type="file" name="fotoC" accept="image/*" id="fotoC" style="display: none;">
+            <input type="file" name="fotoB" accept="image/*" id="fotoB" style="display: none;">
+            <div id="conteinerFts">
+                <p>Imagens</p>
+                <div id="fotos">
+
+                    <div class="fotoX" onclick="uploadImgA()">  
+                        <!-- SVG ICONE + -->
+                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="10" width="5" height="25" fill="#322C91"/>
+                            <rect y="15" width="5" height="25" transform="rotate(-90 0 15)" fill="#322C91"/>
+                        </svg>
+                    
+                    </div>
+
+                    <div class="fotoX" onclick="uploadImgB()">
+                        <!-- SVG ICONE + -->
+                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="10" width="5" height="25" fill="#322C91"/>
+                            <rect y="15" width="5" height="25" transform="rotate(-90 0 15)" fill="#322C91"/>
+                        </svg>
+
+                    </div>
+
+                    <div class="fotoX" onclick="uploadImgC()">
+                        <!-- SVG ICONE + -->
+                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="10" width="5" height="25" fill="#322C91"/>
+                            <rect y="15" width="5" height="25" transform="rotate(-90 0 15)" fill="#322C91"/>
+                        </svg>
+                        
+                    </div>
+                </div>
+            
+            </div>
+            
             <div class="selecao">
                 <label for="marca">Marca</label>
                 <select id="marca" name="marca" onchange="teste()">
@@ -220,6 +258,11 @@
                     <option value="Outro">Outro</option>
                 </select>
 
+            </div>
+
+            <div class="selecao">
+                <label for="placa">Placa</label>
+                <input type="text" name="placa" id="placa">
             </div>
             
             <label for="detalhes">Detalhes Adicionais</label>

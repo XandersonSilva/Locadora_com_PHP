@@ -4,3 +4,4 @@ Arquivo com a paleta do projeto em hexadecimal
 2. #2A43A8
 3. #285E9E
 4. #552AA8
+5. #1f1b58
