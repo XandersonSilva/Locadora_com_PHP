@@ -15,27 +15,36 @@ main{
 
 
 #marca, #modelo, #passageiros, #combustivel, #AddVeic > input[type=submit]{
-    color: white;
+    color: #aaa;
     width: 122px;
     height: 32px;
     border-radius: 16px;
     border:none;
     background: linear-gradient(180deg, #322C91 0%, #285E9E 100%);
 }
+
+*:focus{
+    outline: 3px solid #116bd8;
+}
+
 #AddVeic > input[type=submit]{
     font-size: 20px;
     width: 183px;
     margin: 40px auto 0px auto ;
+    color: #fff;
 }
 
 #placa{
     width: 116px;
     height: 32px;
     padding: 0;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 #detalhes{
-    width: 360px;
+    margin: auto;
+    width: 350px;
     resize: none;
 }
 
@@ -78,7 +87,7 @@ main{
     align-items: center;
 }
 
-.fotoX{
+#fotoA, #fotoB,#fotoC{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -95,4 +104,11 @@ main{
 p{
     padding: 7px 0px 0px 15px ;
     margin: 0;  
+}
+
+.CarroIMG{
+    max-width: 90px;
+    max-height: 90px;
+    width: auto;
+    height: auto;
 }

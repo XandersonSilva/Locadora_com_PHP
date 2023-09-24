@@ -69,9 +69,9 @@
             <input type="file" name="fotoB" accept="image/*" id="fotoB" style="display: none;">
             <div id="conteinerFts">
                 <p>Imagens</p>
-                <div id="fotos">
+                <div id="fotos" >
 
-                    <div class="fotoX" onclick="uploadImgA()">  
+                    <div id="fotoA" onclick="uploadImgA()" tabindex="0">  
                         <!-- SVG ICONE + -->
                         <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect x="10" width="5" height="25" fill="#322C91"/>
@@ -80,7 +80,7 @@
                     
                     </div>
 
-                    <div class="fotoX" onclick="uploadImgB()">
+                    <div id="fotoB" onclick="uploadImgB()" tabindex="0">
                         <!-- SVG ICONE + -->
                         <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect x="10" width="5" height="25" fill="#322C91"/>
@@ -89,7 +89,7 @@
 
                     </div>
 
-                    <div class="fotoX" onclick="uploadImgC()">
+                    <div id="fotoC" onclick="uploadImgC()" tabindex="0">
                         <!-- SVG ICONE + -->
                         <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect x="10" width="5" height="25" fill="#322C91"/>
@@ -262,11 +262,11 @@
 
             <div class="selecao">
                 <label for="placa">Placa</label>
-                <input type="text" name="placa" id="placa">
+                <input type="text" name="placa" id="placa" placeholder="ABC1A23" maxlength="7">
             </div>
             
             <label for="detalhes">Detalhes Adicionais</label>
-            <textarea id="detalhes" name="detalhes" rows="4" cols="5"></textarea>
+            <textarea id="detalhes" name="detalhes" rows="4" cols="5" ></textarea>
 
             <input type="submit" value="Adicionar">
         </form>

@@ -33,16 +33,112 @@ function teste(){
 
 
 
+var inputImagemA = $("input#fotoA");
+var inputImagemB = $("input#fotoB");
+var inputImagemC = $("input#fotoC");
+
 function uploadImgA(){
-    var inputImagemA = $("input#fotoA");
     inputImagemA.trigger('click'); // Simula o clique no botão de input
 }
 
 function uploadImgB(){
-    var inputImagemB = $("input#fotoB");
     inputImagemB.trigger('click'); 
 }
 function uploadImgC(){
-    var inputImagemC = $("input#fotoC");
     inputImagemC.trigger('click');
 }
+
+inputImagemA.on('change',function(e){
+    var Ft1 = $("div#fotoA");
+    var AddIMG = '<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="10" width="5" height="25" fill="#322C91"/><rect y="15" width="5" height="25" transform="rotate(-90 0 15)" fill="#322C91"/></svg>';
+    var inputTarget = e.target;
+    var file = inputTarget.files[0];
+    
+    if (file){
+        const reader = new FileReader();
+        reader.addEventListener("load", function(e){
+            const readerTarget = e.target;
+
+            const img = document.createElement("img");
+            img.src=readerTarget.result;// Atribui a imagem que está na memória do computador para uma variável da página web
+            img.classList.add("CarroIMG");
+
+            
+            Ft1.html("");
+            Ft1.append(img);    
+        });
+        reader.readAsDataURL(file);
+    }else{
+        Ft1.html(AddIMG);
+    }
+});
+
+inputImagemB.on('change',function(e){
+    var Ft2 = $("div#fotoB");
+    var AddIMG = '<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="10" width="5" height="25" fill="#322C91"/><rect y="15" width="5" height="25" transform="rotate(-90 0 15)" fill="#322C91"/></svg>';
+    var inputTarget = e.target;
+    var file = inputTarget.files[0];
+    
+    if (file){
+        const reader = new FileReader();
+        reader.addEventListener("load", function(e){
+            const readerTarget = e.target;
+
+            const img = document.createElement("img");
+            img.src=readerTarget.result;// Atribui a imagem que está na memória do computador para uma variável da página web
+            img.classList.add("CarroIMG");
+
+            
+            Ft2.html("");
+            Ft2.append(img);    
+        });
+        reader.readAsDataURL(file);
+    }else{
+        Ft2.html(AddIMG);
+    }
+});
+
+inputImagemC.on('change',function(e){
+    var Ft3 = $("div#fotoC");
+    var AddIMG = '<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="10" width="5" height="25" fill="#322C91"/><rect y="15" width="5" height="25" transform="rotate(-90 0 15)" fill="#322C91"/></svg>';
+    var inputTarget = e.target;
+    var file = inputTarget.files[0];
+    
+    if (file){
+        const reader = new FileReader();
+        reader.addEventListener("load", function(e){
+            const readerTarget = e.target;
+
+            const img = document.createElement("img");
+            img.src=readerTarget.result;// Atribui a imagem que está na memória do computador para uma variável da página web
+            img.classList.add("CarroIMG");
+
+            
+            Ft3.html("");
+            Ft3.append(img);    
+        });
+        reader.readAsDataURL(file);
+    }else{
+        Ft3.html(AddIMG);
+    }
+});
+
+// VALIDAR PLACA
+
+//A placa deve começar com 3 numeros
+//Em seguida a placa deve ter uma letras minúsculas
+//Em seguida a placa pode ter ou não um número
+//Em seguida a placa deve ter 2 letras maiúsculas
+
+const placa = $("#placa"); 
+placa.on('blur', function vrifcPlaca() {
+  const Pmercosul = /[A-Z]{3}[0-9][A-Z][0-9]{2}/;
+  const Pvelha = /[A-Z]{3}[0-9]{3}/;
+  const placaVal = placa.val().toUpperCase();
+  
+  if(placaVal.match(Pmercosul) || placaVal.match(Pvelha) ) {
+    console.log('Placa correta')
+  } else {
+    alert("placa incorreta")
+  }
+});

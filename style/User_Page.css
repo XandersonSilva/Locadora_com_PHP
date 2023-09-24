@@ -10,10 +10,10 @@ p{
 }
 
 hr{
-    width: 360.139px;
+    width: 320px;
 }
 #Dtlh{
-    width: 360.139px;
+    width: 350px;
     height: 32px;
     display: flex;
     align-items: center;
@@ -86,8 +86,8 @@ form>p{
 
 #veiculoImg{
     display: flex;
-    width: 314px;
-    height: 303px;
+    width: 300px;
+    height: 300px;
     flex-shrink: 0;
     border-radius: 52px;
     background: #D9D9D9;
@@ -117,14 +117,17 @@ form>p{
 }
 
 #V_Imgs{
+    width: 350px;
     display: flex;
     flex-direction: row;
     align-items: center;
     margin-bottom: 10px;
+    flex-wrap: nowrap;
+    justify-content: center;
 }
 
 #seta{
-    width: 32px;
-    height: 32px;
+    width: 30px;
+    height: 30px;
     flex-shrink: 0;
 }
