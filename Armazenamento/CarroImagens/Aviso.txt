@@ -1,0 +1,1 @@
+Por conta do gitignore as imagens não serão subidas para o repositório online.

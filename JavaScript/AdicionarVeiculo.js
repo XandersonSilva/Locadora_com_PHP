@@ -133,7 +133,7 @@ inputImagemC.on('change',function(e){
 const placa = $("#placa"); 
 placa.on('blur', function vrifcPlaca() {
   const Pmercosul = /[A-Z]{3}[0-9][A-Z][0-9]{2}/;
-  const Pvelha = /[A-Z]{3}[0-9]{3}/;
+  const Pvelha = /[A-Z]{3}[0-9]{4}/;
   const placaVal = placa.val().toUpperCase();
   
   if(placaVal.match(Pmercosul) || placaVal.match(Pvelha) ) {
@@ -142,3 +142,9 @@ placa.on('blur', function vrifcPlaca() {
     alert("placa incorreta")
   }
 });
+
+
+
+function esconderAviso(){
+    $("#erroReg").toggle();
+}

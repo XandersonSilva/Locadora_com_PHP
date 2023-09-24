@@ -63,7 +63,27 @@
     <main>
 
 
-        <form id="AddVeic" action="" method="post">
+    <?php 
+    
+    
+    $erroDiv = '<div id="erroReg"><div><div id="extiAvisoErro">
+        <p  onclick="esconderAviso()" tabindex="0">x</p>
+    </div>
+        <p>A placa informada pertence a outro veículo!</p>
+    </div></div>';
+    $sucesso = '<script> alert("Veiculo registrado com sucesso!")</script>';
+
+    if (isset($_GET['erro']) and $_GET['erro'] == 'vieculoJaRegistrado'){
+        echo $erroDiv;
+    }
+    if (isset($_GET['aviso']) and $_GET['aviso'] == 'sucesso'){
+        echo $sucesso;
+    }
+    
+    ?>
+
+
+        <form id="AddVeic" action="../ScriptsPHP/adicionarVeiculo.php" method="post" enctype="multipart/form-data">
             <input type="file" name="fotoA" accept="image/*" id="fotoA" style="display: none;">
             <input type="file" name="fotoC" accept="image/*" id="fotoC" style="display: none;">
             <input type="file" name="fotoB" accept="image/*" id="fotoB" style="display: none;">
@@ -103,8 +123,8 @@
             
             <div class="selecao">
                 <label for="marca">Marca</label>
-                <select id="marca" name="marca" onchange="teste()">
-                    <option value="Não informado">-</option>
+                <select id="marca" name="marca" onchange="teste()" required>
+                    <option value="Nao informado">-</option>
                     <option value="Abarth">Abarth</option>
                     <option value="Adamo">Adamo</option>
                     <option value="Agrale">Agrale</option>
@@ -228,16 +248,16 @@
 
             <div class="selecao">
                 <label for="modelo">Modelo</label>
-                <select name="modelo" id="modelo">
-                    <option value="Não informado">-</option>
+                <select name="modelo" id="modelo" required>
+                    <option value="Nao informado">-</option>
                 </select>
 
             </div>
 
             <div class="selecao">
                 <label for="passageiros">Capacidade do veículo</label>
-                <select name="passageiros" id="passageiros">
-                    <option value="Não informado">-</option>
+                <select name="passageiros" id="passageiros" required>
+                    <option value="Nao informado">-</option>
                     <option value="1">1 Pessoa</option>
                     <option value="2">2 Pessoas</option>
                     <option value="4">4 Pessoas</option>
@@ -249,8 +269,8 @@
             
             <div class="selecao">
                 <label for="combustivel">Tipo de Combustível</label>
-                <select name="combustivel" id="combustivel">
-                    <option value="Não informado">-</option>
+                <select name="combustivel" id="combustivel" required>
+                    <option value="Nao informado">-</option>
                     <option value="Gasolina">Gasolina</option>
                     <option value="Alcool">Alcool</option>
                     <option value="Disel">Disel</option>
@@ -262,9 +282,13 @@
 
             <div class="selecao">
                 <label for="placa">Placa</label>
-                <input type="text" name="placa" id="placa" placeholder="ABC1A23" maxlength="7">
+                <input required type="text" name="placa" id="placa" placeholder="ABC1A23" maxlength="7">
             </div>
-            
+            <div class="selecao">
+                <label for="KmL">Quilômetros por litro</label>
+                <input required type="number" name="KmL" id="KmL" min="1" max="30" step="0.1" >
+            </div>
+
             <label for="detalhes">Detalhes Adicionais</label>
             <textarea id="detalhes" name="detalhes" rows="4" cols="5" ></textarea>
 
