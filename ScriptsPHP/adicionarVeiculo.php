@@ -16,9 +16,9 @@
     }
     $definido = 0;
     
-    $CaminhofotoA;
-    $CaminhofotoB;
-    $CaminhofotoC;
+    $CaminhofotoA = "";
+    $CaminhofotoB = "";
+    $CaminhofotoC = "";
 
 
     if(isset($_FILES['fotoB']) && !empty($_FILES['fotoB']) && !$_FILES['fotoB']['error']){

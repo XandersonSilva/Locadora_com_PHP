@@ -1,0 +1,140 @@
+@charset "UTF-8";
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+main{
+    display: flex;
+    align-items: center;
+}
+
+section{
+    width: 320px;
+    background-color: #ffffff;
+    border: solid #322C91 5px;
+    border-radius: 10px;
+}
+
+.conteudo{
+    flex: 1;
+    padding: 20px;
+}
+
+form{
+    width: 278px;
+    margin: auto;
+    padding-bottom: 15px;    
+}
+
+h1{
+  background-color: #322C91;
+  color: #fff;
+  text-align: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 32px;
+  margin-bottom: 2px;
+  margin-top: 0;
+  padding-top: 25px;
+}
+
+aside > a{
+    background-color: #322C91;
+    padding: 0px 20px 3px 0px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+p{
+    color: white;
+}
+
+a{
+    color: #7289a5;
+}
+
+label{
+    color: #552AA8;
+    
+}
+
+label, input{
+    margin: auto;
+}
+
+
+span{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-top: 2px;
+    display: flex;
+    color: #ff0606;
+    justify-content: center;
+    background-color: #8f7df542;
+}
+
+#nascimento, input{
+    height: 25px;
+    width: 270px;
+}
+
+
+
+#botaoCadastrar{
+    border-radius: 5px;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 18px;
+    width: 278px;
+    height: 33px;
+}
+
+
+#Mt_log{
+    display: flex;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+footer{
+    flex-shrink: 0;
+    width: 100%;
+    padding-top: 10px;
+    background-color: #1f1b58;
+    text-align: center;
+    color: #ffffff;
+}
+
+
+.ativado{
+    background-color: #3824A8;
+    border-left-color: #8F7DF5;
+    border-top-color: #8F7DF5;
+}
+.ativado:hover{
+    background-color: #271975;
+    color: #fff;
+}   
+
+.desativado{
+    background-color: #5a5866;
+}
+
+
+
+
+.entrada{
+    width: 267px;
+    height: 24px;
+    
+    border-radius: 30px;
+    background: #D9D9D9;
+}

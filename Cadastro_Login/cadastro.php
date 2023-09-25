@@ -13,6 +13,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cadastro</title>
   <link rel="stylesheet" href="../Style/cadastro_style.css">
+  <link rel="stylesheet" href="../style/Cadastro.css">
   <link rel="shortcut icon" href="../Imagens/Favicon/formulario-de-registro.png" type="image/png">
   <script src="../JavaScript/jquery.js"></script>
 </head>
@@ -35,44 +36,44 @@
         <form action="../ScriptsPHP/adicionarUser.php"  method="get">
           <p>
             <label for="nome" action="cadastro.html" >Nome: </label>
-            <input type="text" name="nome" id="nome" required
+            <input class="entrada" type="text" name="nome" id="nome" required
             onblur="semNome()" minlength="3" maxlength="30" >
             <span id="erroNome" class="erro"></span>
           </p>
 
           <p>
             <label for="E-mail">E-mail</label>
-            <input type="email" name="email" required id="E-mail" onblur="semEmail()" placeholder="Email@exemplo.com" >
+            <input class="entrada" type="email" name="email" required id="E-mail" onblur="semEmail()" placeholder="Email@exemplo.com" >
             <span id="erroEmail" class="erro"></span>
           </p>
 
           <p>
             <label for="endereco">Endereço</label>
-            <input type="text" name="endereco" onblur="semEndereco()" id="endereco" required>
+            <input class="entrada" type="text" name="endereco" onblur="semEndereco()" id="endereco" required>
             <span id="erroEndereco" class="erro"></span>        
           </p>
 
           <p>
             <label for="CPF">CPF</label>
-            <input type="number" name="CPF" id="cpf" placeholder="00000000000" onkeyup="validaC()" onblur="validaC()" required>
+            <input class="entrada" type="number" name="CPF" id="cpf" placeholder="00000000000" onkeyup="validaC()" onblur="validaC()" required>
             <span id="erroCPF" class="erro"></span>
           </p>
 
           <p>
             <label for="nascimento">Nascimento: </label>
-            <input type="date" name="nascimento" id="nascimento"  onblur="validaIdade()"required>
+            <input class="entrada" type="date" name="nascimento" id="nascimento"  onblur="validaIdade()"required>
             <span id="erroIdade" class="erro"></span>
           </p>
 
           <p>
             <label for="senha">Senha:</label>
-            <input type="password" name="senha" id="senha"maxlength="12" minlength="4" required>
+            <input class="entrada" type="password" name="senha" id="senha"maxlength="12" minlength="4" required>
             <span id="erroSenha" class="erro"></span>
           </p>
 
           <p>
             <label for="senhaIgual">Confirme a senha: </label>
-            <input type="password" name="senhaIgual" id="senhaIgual" maxlength="12" minlength="4" required onblur="verifica()" >
+            <input class="entrada" type="password" name="senhaIgual" id="senhaIgual" maxlength="12" minlength="4" required onblur="verifica()" >
             <span id="erroSenhaRepetida" class="erro"></span>
           </p>
           

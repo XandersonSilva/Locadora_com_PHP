@@ -29,11 +29,41 @@ if ($pessoas == $vazio0 or $pessoas == $vazio1 or $definido == 0){
 foreach ($pessoas as $pessoa) {
     if(password_verify($senha, $pessoa['Senha']) and $pessoa['Email'] == $email) {
         $usuarioValid ++;
-        $usserAtu = $pessoa['nome'];
-        $usserName     = $pessoa['nome']    ;
-        $usserEmail    = $pessoa['Email']   ;
-        $usserEndereco = $pessoa['Endereco'];
-        $usserCPF      = $pessoa['CPF']     ;
+        if(isset($pessoa['nome'])){
+            
+            $usserAtu      = $pessoa['nome'];
+        
+        }else{
+            $usserAtu = "";
+        };
+        if(isset($pessoa['nome'])){
+            
+            $usserName     = $pessoa['nome'];
+        
+        }else{
+            $usserName = "";
+        };
+        if(isset($pessoa['Email'])){
+            
+            $usserEmail    = $pessoa['Email'];
+        
+        }else{
+            $usserEmail = "";
+        };
+        if(isset($pessoa['Endereco'])){
+            
+            $usserEndereco = $pessoa['Endereco'];
+        
+        }else{
+            $usserEndereco = "";
+        };
+        if(isset($pessoa['CPF'])){
+            
+            $usserCPF      = $pessoa['CPF'];
+        
+        }else{
+            $usserCPF = "";
+        };
     }
 }
 
