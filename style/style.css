@@ -5,6 +5,9 @@
     }
 }
 
+*:focus{
+    outline: 2px solid #322C91;
+}
 body{
     background:#f5f6fa !important ;
     margin: 0;

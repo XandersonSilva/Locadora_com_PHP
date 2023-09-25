@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
+*:focus{
+    outline: 2px solid #322C91;
+}
 
 html, body {
     height: 100%;
@@ -19,10 +22,10 @@ main{
 }
 
 section{
-    width: 320px;
-    background-color: #ffffff;
+    width: 334px;
+    background-color: #322C91;
     border: solid #322C91 5px;
-    border-radius: 10px;
+    border-radius: 16px;
 }
 
 .conteudo{
@@ -31,7 +34,12 @@ section{
 }
 
 form{
-    width: 278px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    border: #1f1b58 solid 1px;
+    border-radius: 16px;
+    width: 320px;
     margin: auto;
     padding-bottom: 15px;    
 }
@@ -44,7 +52,7 @@ h1{
   font-size: 32px;
   margin-bottom: 2px;
   margin-top: 0;
-  padding-top: 25px;
+  padding-top: 7px;
 }
 
 aside > a{
@@ -54,7 +62,10 @@ aside > a{
     justify-content: flex-end;
 }
 
-p{
+.campoE{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
     color: white;
 }
 
@@ -63,11 +74,14 @@ a{
 }
 
 label{
+    padding: 8px 0px 3px 12.5px;
+    display: flex;
+    justify-content: flex-start;
     color: #552AA8;
     
 }
 
-label, input{
+ input{
     margin: auto;
 }
 
@@ -89,6 +103,7 @@ span{
 
 
 #botaoCadastrar{
+    margin-top: 15px;
     border-radius: 5px;
     color: white;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -132,9 +147,18 @@ footer{
 
 
 .entrada{
-    width: 267px;
+    width: 287px;
     height: 24px;
     
     border-radius: 30px;
     background: #D9D9D9;
+}
+
+#nascimento{
+    width: 290px;
+    height: 24px;
+    
+    border-radius: 30px;
+    background: #D9D9D9;
+
 }

@@ -24,7 +24,7 @@ main{
 }
 
 *:focus{
-    outline: 3px solid #116bd8;
+    outline: 2px solid #322C91;
 }
 
 #AddVeic > input[type=submit]{

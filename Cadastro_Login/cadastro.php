@@ -34,48 +34,49 @@
         <h1>Cadastrar-se</h1>
         
         <form action="../ScriptsPHP/adicionarUser.php"  method="get">
-          <p>
+          <div class="campoE">
             <label for="nome" action="cadastro.html" >Nome: </label>
             <input class="entrada" type="text" name="nome" id="nome" required
             onblur="semNome()" minlength="3" maxlength="30" >
             <span id="erroNome" class="erro"></span>
-          </p>
+          </div>
 
-          <p>
+          <div class="campoE">
             <label for="E-mail">E-mail</label>
             <input class="entrada" type="email" name="email" required id="E-mail" onblur="semEmail()" placeholder="Email@exemplo.com" >
             <span id="erroEmail" class="erro"></span>
-          </p>
+          </div>
 
-          <p>
+          <div class="campoE">
             <label for="endereco">Endereço</label>
             <input class="entrada" type="text" name="endereco" onblur="semEndereco()" id="endereco" required>
             <span id="erroEndereco" class="erro"></span>        
-          </p>
+          </div>
 
-          <p>
+          <div class="campoE">
             <label for="CPF">CPF</label>
             <input class="entrada" type="number" name="CPF" id="cpf" placeholder="00000000000" onkeyup="validaC()" onblur="validaC()" required>
             <span id="erroCPF" class="erro"></span>
-          </p>
+          </div>
 
-          <p>
+          <div class="campoE">
             <label for="nascimento">Nascimento: </label>
             <input class="entrada" type="date" name="nascimento" id="nascimento"  onblur="validaIdade()"required>
             <span id="erroIdade" class="erro"></span>
-          </p>
+          </div>
 
-          <p>
+          <div class="campoE">
             <label for="senha">Senha:</label>
             <input class="entrada" type="password" name="senha" id="senha"maxlength="12" minlength="4" required>
             <span id="erroSenha" class="erro"></span>
-          </p>
+          </div>
 
-          <p>
+          <div class="campoE">
+
             <label for="senhaIgual">Confirme a senha: </label>
             <input class="entrada" type="password" name="senhaIgual" id="senhaIgual" maxlength="12" minlength="4" required onblur="verifica()" >
             <span id="erroSenhaRepetida" class="erro"></span>
-          </p>
+          </div>
           
       
           <input type="submit" value="Cadastrar-se"  class="ativado" id="botaoCadastrar" onclick="avancar()">
