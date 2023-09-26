@@ -15,6 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alugar</title>
     <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/Index.css">
     <script  src="../JavaScript/exibirBtnSair.js">  </script>
     <script  src="../JavaScript/jquery.js">         </script>
     
@@ -65,6 +66,53 @@
 </div>
 <hr>
 <body>
+    <main>
+            <section id="conteudo">
+                
+                
+                <?php 
+                    $RegVeic = fopen("../Arquivos_json/Veiculos_Registrados.json" , "r");
+
+                    if (filesize("../Arquivos_json/Veiculos_Registrados.json") > 0){
+                        $jsonVeiculosReg = fread($RegVeic, filesize("../Arquivos_json/Veiculos_Registrados.json"));
+                        $Veiculos = json_decode($jsonVeiculosReg, true);
+                        $definido = 1;
+                    }
+
+
+                    $IniVeicF = "<form class='veiculo'>";
+                    $FimVeicF = " </form>";
+                    $Botão    = '<input class="alugarBTN" type="submit" value="Alugar">';
+                    foreach ($Veiculos as $veiculo) {
+                        if($veiculo["Marca"]){
+                            $veic = '<label>' .  $veiculo["Marca"] . ' - ' . $veiculo["Modelo"] . '</label>' ;    
+                        }
+
+                        if($veiculo["imagens"][0]){
+                            $imagem = " <div class='DivVeicIMG'><img class='VeicIMG' src='".$veiculo["imagens"][0]."' alt=''> </div>";
+                            
+                        }elseif($veiculo["imagens"][1]){
+                            $imagem = " <div class='DivVeicIMG'><img class='VeicIMG' src='".$veiculo["imagens"][1]."' alt=''> </div>";
+                        }elseif($veiculo["imagens"][2]){
+                            $imagem = " <div class='DivVeicIMG'><img class='VeicIMG' src='".$veiculo["imagens"][2]."' alt=''> </div>";
+                        }else{
+                            $imagem = "<p class='erroIMG'> SEM IMGEM</p>";
+
+                        }
+
+                        if (isset($veic)){
+                            $veicF = $IniVeicF . $imagem . $veic . $Botão . $FimVeicF;
+                        }
+                            if (isset($veicF)){
+                            echo $veicF;
+                        };
+
+                    };
+                    fclose($RegVeic);
+                ?>
+            </section>
+
+    </main>
 
 </body>
 </html>

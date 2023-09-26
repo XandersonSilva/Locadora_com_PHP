@@ -1,0 +1,53 @@
+.VeicIMG{
+    margin: 10px 0px;
+    width: auto;
+    height: auto;
+    max-height: 75px;
+    max-width: 105px;
+}
+.DivVeicIMG{
+    min-height: 75px;
+}
+.veiculo{
+    display: flex;
+    margin: auto;
+    border: 1px solid;
+    border-radius: 16px;
+    width: 130px;
+    height: 180px;
+    padding: 3px;
+    margin-top: 5px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.alugarBTN{
+    background:#2A43A8 ;
+    border:  solid ;
+    border-left-color  : #285E9E ;
+    border-top-color   : #285E9E ;
+    border-right-color : #1f1b58 ;
+    border-bottom-color: #1f1b58 ;
+    border-radius: 5px;
+    color: white;
+    width: 110px;
+    height: 25px;
+    margin-bottom: 10px;
+}
+.erroIMG{
+    display: flex;
+    width: 105px;
+    height: 67px;
+    align-items: center;
+    justify-content: center;
+}
+#conteudo{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+label{
+    display: flex;
+    height: 50px;
+}
