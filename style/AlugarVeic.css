@@ -1,0 +1,52 @@
+#Veic_fotos{
+    width: 310px;
+    height: 190px;
+    border-radius: 24px;
+    background: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#Veic_fotos>img{
+    border-radius: 16px;
+    min-width: 290px;
+    max-width: 190px;
+    width: auto;
+    max-height: 310px;
+    height: auto;
+}
+#ContFts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 360px;
+    height: 236px;
+    background: #1f1b58;
+    color: #fff;
+    margin-bottom: 20px;
+}
+#dadosV{
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    background-color: #b5b5b5;
+}
+
+.dado{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 36px;
+    border-bottom: 3px solid #fff;
+}
+.dado>p{
+    margin: 0 10px;
+}
+
+#erroIMG{
+    color: #1f1b58;
+}

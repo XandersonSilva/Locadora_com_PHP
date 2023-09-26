@@ -53,9 +53,9 @@
     }
     
     if ($definido === 0){
-        $Novo_veic = array(array('Marca'=>$marca,'Modelo'=>$modelo,'Capacidade'=>$Qpassageiros,'placa'=>$placa,'combustivel'=>$combustivel,'KM_por_Litro'=>$KmL,'valor_diaria'=>"",'data_saida'=>"",'data_retorno'=>"",'localizacao_Atu'=>"",'destino_Atu'=>"",'status'=>"Disponivel",'CPF_cliente'=>"",'CPF_proprietario'=>$cpf,'detalhes'=>$detalhes, 'imagens' => [$CaminhofotoA, $CaminhofotoB, $CaminhofotoC]));
+        $Novo_veic = array(array('marca'=>$marca,'modelo'=>$modelo,'capacidade'=>$Qpassageiros,'placa'=>$placa,'combustivel'=>$combustivel,'KM_por_Litro'=>$KmL,'valor_diaria'=>"",'data_saida'=>"",'data_retorno'=>"",'localizacao_Atu'=>"",'destino_Atu'=>"",'status'=>"disponivel",'CPF_cliente'=>"",'CPF_proprietario'=>$cpf,'detalhes'=>$detalhes, 'imagens' => [$CaminhofotoA, $CaminhofotoB, $CaminhofotoC]));
     }else{
-        $Novo_veic = array('Marca'=>$marca,'Modelo'=>$modelo,'Capacidade'=>$Qpassageiros,'placa'=>$placa,'combustivel'=>$combustivel,'KM_por_Litro'=>$KmL,'valor_diaria'=>"",'data_saida'=>"",'data_retorno'=>"",'localizacao_Atu'=>"",'destino_Atu'=>"",'status'=>"Disponivel",'CPF_cliente'=>"",'CPF_proprietario'=>$cpf,'detalhes'=>$detalhes, 'imagens' => [$CaminhofotoA, $CaminhofotoB, $CaminhofotoC]);
+        $Novo_veic = array('marca'=>$marca,'modelo'=>$modelo,'capacidade'=>$Qpassageiros,'placa'=>$placa,'combustivel'=>$combustivel,'KM_por_Litro'=>$KmL,'valor_diaria'=>"",'data_saida'=>"",'data_retorno'=>"",'localizacao_Atu'=>"",'destino_Atu'=>"",'status'=>"disponivel",'CPF_cliente'=>"",'CPF_proprietario'=>$cpf,'detalhes'=>$detalhes, 'imagens' => [$CaminhofotoA, $CaminhofotoB, $CaminhofotoC]);
     };
 
     $vazio0 = "";

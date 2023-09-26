@@ -72,7 +72,7 @@
                 
                 <?php 
                     $RegVeic = fopen("../Arquivos_json/Veiculos_Registrados.json" , "r");
-
+                    $definido = 0;
                     if (filesize("../Arquivos_json/Veiculos_Registrados.json") > 0){
                         $jsonVeiculosReg = fread($RegVeic, filesize("../Arquivos_json/Veiculos_Registrados.json"));
                         $Veiculos = json_decode($jsonVeiculosReg, true);
@@ -80,39 +80,40 @@
                     }
 
 
-                    $IniVeicF = "<form class='veiculo'>";
+                    
                     $FimVeicF = " </form>";
                     $Botão    = '<input class="alugarBTN" type="submit" value="Alugar">';
-                    foreach ($Veiculos as $veiculo) {
-                        if($veiculo["Marca"]){
-                            $veic = '<label>' .  $veiculo["Marca"] . ' - ' . $veiculo["Modelo"] . '</label>' ;    
+                    if ($definido == 1){
+                        foreach ($Veiculos as $veiculo) {
+                            $IniVeicF = "<form action='AlugarVeiculo.php'method='get' class='veiculo'>";
+                            $VecId = '<input style="display: none;" type="text" name="id" id="placaID" value="' . $veiculo['placa'] .'">';
+                            if($veiculo["marca"]){
+                                $veic = '<label>' .  $veiculo["marca"] . ' - ' . $veiculo["modelo"] . '</label>' ;    
+                            }
+
+                            if($veiculo["imagens"][0]){
+                                $imagem = " <div class='DivVeicIMG'><img class='VeicIMG' src='".$veiculo["imagens"][0]."' alt=''> </div>";
+                                
+                            }elseif($veiculo["imagens"][1]){
+                                $imagem = " <div class='DivVeicIMG'><img class='VeicIMG' src='".$veiculo["imagens"][1]."' alt=''> </div>";
+                            }elseif($veiculo["imagens"][2]){
+                                $imagem = " <div class='DivVeicIMG'><img class='VeicIMG' src='".$veiculo["imagens"][2]."' alt=''> </div>";
+                            }else{
+                                $imagem = "<p class='erroIMG'> SEM IMGEM</p>";
+
+                            }
+
+                            if (isset($veic)){
+                                $veicF = $IniVeicF . $VecId . $imagem . $veic . $Botão . $FimVeicF;
+                            }
+                                if (isset($veicF)){
+                                echo $veicF;
                         }
-
-                        if($veiculo["imagens"][0]){
-                            $imagem = " <div class='DivVeicIMG'><img class='VeicIMG' src='".$veiculo["imagens"][0]."' alt=''> </div>";
-                            
-                        }elseif($veiculo["imagens"][1]){
-                            $imagem = " <div class='DivVeicIMG'><img class='VeicIMG' src='".$veiculo["imagens"][1]."' alt=''> </div>";
-                        }elseif($veiculo["imagens"][2]){
-                            $imagem = " <div class='DivVeicIMG'><img class='VeicIMG' src='".$veiculo["imagens"][2]."' alt=''> </div>";
-                        }else{
-                            $imagem = "<p class='erroIMG'> SEM IMGEM</p>";
-
-                        }
-
-                        if (isset($veic)){
-                            $veicF = $IniVeicF . $imagem . $veic . $Botão . $FimVeicF;
-                        }
-                            if (isset($veicF)){
-                            echo $veicF;
-                        };
-
-                    };
+                    }
+                }
                     fclose($RegVeic);
                 ?>
             </section>
-
     </main>
-
 </body>
 </html>
