@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <?php 
     //VERIFICA SE O USUÁRIO JÁ ESTÁ LOGADO, CASO NÃO ESTEJA, REDIRECIONA PARA LOGIN
     session_start();
@@ -7,7 +6,46 @@
         session_destroy();
         header('Location: ../Cadastro_Login/login.php');
     }
-?>
+   
+    $RegVeic = fopen("../Arquivos_json/Veiculos_Registrados.json" , "r");
+    $definido = 0;
+    $veiculoAtual = "Veiculo invalido";
+    if (filesize("../Arquivos_json/Veiculos_Registrados.json") > 0){
+        $jsonVeiculosReg = fread($RegVeic, filesize("../Arquivos_json/Veiculos_Registrados.json"));
+        $Veiculos = json_decode($jsonVeiculosReg, true);
+        $definido = 1;
+    }
+
+    if (isset($_GET['id'])){
+        $placa = $_GET['id'];
+        if ($definido == 1){
+            foreach ($Veiculos as $veiculo) {
+                if($veiculo['placa'] == $placa){
+                    $veiculoAtual = $veiculo; 
+                    }
+                }
+            }
+        }
+
+                fclose($RegVeic);
+        
+    $quant = 0;
+    $indicesVal = [];
+    for ($i = 0; $i < 3; $i++){
+        if($veiculoAtual["imagens"][$i] != ''){
+            array_push($indicesVal, $i+1);
+            $quant++;        
+        }
+        else{
+            array_push($indicesVal, 0);
+        }
+    }
+
+    $indicesVal = implode(', ', $indicesVal);
+    ?>
+
+
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -16,7 +54,7 @@
     <title>Alugar</title>
     <link rel="stylesheet" href="../style/AlugarVeic.css">
     <link rel="stylesheet" href="../style/style.css">
-    <link rel="stylesheet" href="../style/AdicionarV.css">
+    <link rel="stylesheet" href="../style/AdicionarV.css" >
     
     
 </head>
@@ -53,7 +91,7 @@
         </div>
         <div id="info_user">
             <form action="../PaginasPHP/index.php">
-                <input type="submit" value="Principal" id="info_user">
+                <input type="submit" value="Principal" id="info_user" >
             </form>
         </div>
     </article>
@@ -63,48 +101,33 @@
 <body>
     <main>
         <section>
-            <?php 
-                $RegVeic = fopen("../Arquivos_json/Veiculos_Registrados.json" , "r");
-                $definido = 0;
-                $veiculoAtual = "Veiculo invalido";
-                if (filesize("../Arquivos_json/Veiculos_Registrados.json") > 0){
-                    $jsonVeiculosReg = fread($RegVeic, filesize("../Arquivos_json/Veiculos_Registrados.json"));
-                    $Veiculos = json_decode($jsonVeiculosReg, true);
-                    $definido = 1;
-                }
-
-                if (isset($_GET['id'])){
-                    $placa = $_GET['id'];
-                    if ($definido == 1){
-                        foreach ($Veiculos as $veiculo) {
-                            if($veiculo['placa'] == $placa){
-                                $veiculoAtual = $veiculo; 
-                                }
-                            }
-                        }
-                    }
-                fclose($RegVeic);
-            ?>
-
-        <div id="ContFts" >
-            <div id="Veic_fotos" >
-                <?php 
-                     
-                    if($veiculoAtual["imagens"][0]){
-                        echo '<img src="'. $veiculoAtual['imagens'][0] .'" alt="">';    
-                        
-                    }elseif($veiculoAtual["imagens"][1]){
-                        echo '<img src="'. $veiculoAtual['imagens'][1] .'" alt="">';
-                        
-                    }elseif($veiculoAtual["imagens"][2]){
-                        echo '<img src="'. $veiculoAtual['imagens'][2] .'" alt="">';
-                        
-                    }else{
-                        echo  "<p id='erroIMG'> SEM IMGEM</p>";
-                    }
-                ?>
+            
+<div id="ContFts" >
+    <div id="Veic_fotos" >
+        
+        <?php 
+        
+            if ($quant > 1){
+                echo '<img id="seta" src="..\Imagens\Icones\seta-esquerda.png" onclick="Anterior('.$indicesVal.')"> ';
+            }
+            if($veiculoAtual["imagens"][0]){
+                echo '<img id="veic1" class="imgVisvel" src="'. $veiculoAtual['imagens'][0] .'" alt="">';    
+                
+            }elseif($veiculoAtual["imagens"][1]){
+                echo '<img id="veic2" class="imgVisvel" src="'. $veiculoAtual['imagens'][1] .'" alt="">';
+                
+            }elseif($veiculoAtual["imagens"][2]){
+                echo '<img id="veic3" class="imgVisvel" src="'. $veiculoAtual['imagens'][2] .'" alt="">';
+                
+            }else{
+                echo  "<p id='erroIMG'> SEM IMGEM</p>";
+            }
+            if ($quant > 1){        
+                echo ' <img id="seta" src="..\Imagens\Icones\seta-direita.png" onclick="Proximo('.$indicesVal.')">';
+            }
+                    ?>
             </div>
-        <div>
+        <div> 
         </section>
         <section id="dadosV">
             <div class='dado'>
@@ -132,4 +155,5 @@
 </body>
 <script  src="../JavaScript/exibirBtnSair.js">  </script>
 <script  src="../JavaScript/jquery.js">         </script>
+<script  src="../JavaScript/AlugarVeiculo.js">  </script>
 </html>

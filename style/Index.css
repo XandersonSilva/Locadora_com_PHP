@@ -9,9 +9,10 @@
     min-height: 75px;
 }
 .veiculo{
+    /* background-color: #d7d2dd; */
     display: flex;
     margin: auto;
-    border: 1px solid;
+    /* border: 1px solid; */
     border-radius: 16px;
     width: 130px;
     height: 180px;

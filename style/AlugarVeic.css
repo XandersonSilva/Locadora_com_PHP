@@ -4,16 +4,16 @@
     border-radius: 24px;
     background: #FFF;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
 }
-#Veic_fotos>img{
+#Veic_fotos>#veic1, #Veic_fotos>#veic2, #Veic_fotos>#veic3{
     border-radius: 16px;
-    min-width: 290px;
-    max-width: 190px;
+    min-width: 250px;
+    max-width: 300px;
     width: auto;
-    max-height: 310px;
+    max-height: 190px;
     height: auto;
 }
 #ContFts{
@@ -49,4 +49,13 @@
 
 #erroIMG{
     color: #1f1b58;
+}
+#seta{
+    display: flex;
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+}
+#seta:hover{
+    cursor: pointer;
 }
