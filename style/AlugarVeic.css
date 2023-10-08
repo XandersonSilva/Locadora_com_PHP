@@ -31,17 +31,16 @@
     display: flex;
     flex-direction: column;
     width: 350px;
-    background-color: #b5b5b5;
 }
 
 .dado{
+    border-top: 2px solid #b5b5b5;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
     height: 36px;
-    border-bottom: 3px solid #fff;
 }
 .dado>p{
     margin: 0 10px;
@@ -58,4 +57,31 @@
 }
 #seta:hover{
     cursor: pointer;
+}
+#alugar{
+    padding: 0px 5px;
+    width: 360px;
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+#dias{
+    border-color: #fff;
+    border-radius: 16px;
+    margin-right: 135px;
+    height: 30px;
+    width: 40px;
+}
+
+#alugarBTN {
+    font-size: 20px;
+    width: 183px;
+    color: #fff;
+    width: 122px;
+    height: 32px;
+    border-radius: 16px;
+    border:none;
+    background: linear-gradient(180deg, #322C91 0%, #285E9E 100%);
+
 }

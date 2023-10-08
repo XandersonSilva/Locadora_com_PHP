@@ -101,9 +101,10 @@
 <body>
     <main>
         <section>
-            
-<div id="ContFts" >
+            <div id="ContFts" >
+    <br>
     <div id="Veic_fotos" >
+        
         
         <?php 
         
@@ -127,8 +128,14 @@
             }
                     ?>
             </div>
-        <div> 
+ 
+            <div> <p>Diaria: R$</p> <?=$veiculoAtual["valor_diaria"]?></div>
         </section>
+            <form action="FormasPagamento.php" method="get" id="alugar">
+                <label for="dias">Dias</label>
+                <input type="number" name="dias" id="dias" required max="180" min="1">
+                <input type="submit" value="Alugar" id="alugarBTN">
+            </form>
         <section id="dadosV">
             <div class='dado'>
                 <p>Marca</p>
@@ -147,6 +154,19 @@
                 <?php 
                 echo "<p>".$veiculoAtual["capacidade"]."</p>";
                 ?>
+            </div>
+            <div class='dado'>
+                <p>Combustivel</p>
+                <?="<p>".$veiculoAtual["combustivel"]."</p>"?>
+            </div> 
+            <div class='dado'>
+                <p>Quilometros por litro </p>
+                <?="<p>".$veiculoAtual["KM_por_Litro"]."</p>"?>
+            </div>
+            <div class='dado'>
+                <p>Detalhes </p>
+                <br>
+                <?="<p>".$veiculoAtual["detalhes"]."</p>"?>
             </div>
         </section>
 
