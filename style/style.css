@@ -25,9 +25,10 @@ nav{
     justify-content: space-between;
 }
 #Menu>img{
+    padding-left: 8px;
     width: 32px;
     height: 32px;
-    margin:2px;
+    margin: 2px;
 }
 #login{
     font-size: 1.5em;

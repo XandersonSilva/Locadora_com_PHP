@@ -23,7 +23,7 @@
 <header>
     <nav>
         <div id="Menu">
-            <img src="../Imagens/Icones/menu.png" alt="" srcset="">
+            <img src="../Imagens/Icones/menu.png" alt="" srcset="" onclick="retMenu()">
         </div>
         <h1>Alugar</h1>
         <div id="login" onclick="alternar()">
@@ -58,6 +58,16 @@
         </div>
     </article>
 </header>
+
+<div id="menuLateral">
+    <img src="../Imagens/Icones/menu.png" id="retMenu" onclick="retMenu()">
+        <p class="item">Perfil</p>
+        <p class="item">Historico</p>
+        <p class="item">Adicionar Veiculo</p>
+        <p class="item">Sobre</p>
+        <p id="sair">Sair</p>
+</div>
+
 
 <body>
     <h1>Em progresso...</h1>
