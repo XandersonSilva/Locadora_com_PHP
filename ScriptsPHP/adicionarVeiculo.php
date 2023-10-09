@@ -82,16 +82,17 @@
         $jsonVeiculosReg = json_encode($Veiculos);
         fwrite($ArqSobresvr, $jsonVeiculosReg);
 
-        header("Location: ../PaginasPHP/AdicionarVeiculo.php?aviso=sucesso");
+        header("Location: ../PaginasPHP/index.php");
 
     }
     if ( $Veiculos == ""){
         $jsonVeiculosReg = json_encode($Novo_veic);
         fwrite($ArqSobresvr, $jsonVeiculosReg);
 
-        header("Location: ../PaginasPHP/AdicionarVeiculo.php?aviso=sucesso");
+        header("Location: ../PaginasPHP/index.php");
     }
 
     fclose($ArqSobresvr);
+    //header('../PaginasPHP/index.php')
 
 ?>

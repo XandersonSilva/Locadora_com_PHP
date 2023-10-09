@@ -5,7 +5,7 @@
     $nome = ucwords($nome);
     $email = $_GET['email'];
     $endereco = $_GET['endereco'];
-    $cpf = $_GET['CPF'];
+    $cpf = password_hash($_GET['CPF'], PASSWORD_DEFAULT);
     $nascimento = $_GET['nascimento'];
     //CRIPTOGRAFA A SENHA DO USUÁRIO
     $senha = password_hash($_GET['senha'], PASSWORD_DEFAULT);

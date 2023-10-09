@@ -18,12 +18,13 @@
     <link rel="stylesheet" href="../style/Index.css">
     <script  src="../JavaScript/exibirBtnSair.js">  </script>
     <script  src="../JavaScript/jquery.js">         </script>
+    <link rel="stylesheet" href="../style/menu.css">
     
 </head>
 <header>
     <nav>
         <div id="Menu">
-            <img src="../Imagens/Icones/menu.png" alt="" srcset="">
+            <img src="../Imagens/Icones/menu.png" alt="" srcset="" onclick="retMenu()">
         </div>
         <h1>Alugar</h1>
         <div id="login" onclick="alternar()">
@@ -45,19 +46,36 @@
             ?>
     </nav>
     </div>
-    <article id="SrBorda">
-        <div id=sair>
-            <form action="../ScriptsPHP/sair.php" method="post">
-                <input type="submit" value="SAIR" id="sair">
-            </form>
-        </div>
-        <div id="info_user">
-            <form action="../PaginasPHP/info_user.php">
-                <input type="submit" value="Perfil" id="info_user">
-            </form>
-        </div>
-    </article>
 </header>
+
+<div id="menuLateral">
+    <img src="../Imagens/Icones/menu.png" id="retMenu" onclick="retMenu()">
+        <div id="menu_list">
+            <form action="../PaginasPHP/index.php">
+                <input type="submit" value="Página principal" class="css-input">
+            </form>
+        </div>
+        <div id="menu_list">
+            <form action="#">
+                <input type="submit" value="Histórico" class="css-input">
+            </form>
+        </div>
+        <div id="menu_list">
+            <form action="../PaginasPHP/AdicionarVeiculo.php">
+                <input type="submit" value="Adicionar veículo" class="css-input">
+            </form>
+        </div>
+        <div id="menu_list">
+            <form action="../PaginasPHP/info_user.php">
+                <input type="submit" value="Perfil" class="css-input">
+            </form>
+        </div>
+        <div id="menu_list">
+            <form action="../ScriptsPHP/sair.php" method="post">
+                <input type="submit" value="SAIR" class="css-input">
+            </form>
+        </div>
+</div>
 
 <div id="Pesquisa">
     <input type="text" name="pesq_input" id="pesq_input">

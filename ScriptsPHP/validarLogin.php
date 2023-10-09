@@ -82,6 +82,7 @@ if ($usuarioValid == 0){
     setcookie("userA_Endereco", $usserEndereco ,0, '/');
     setcookie("userA_CPF"     , $usserCPF      ,0, '/');
     setcookie("SSID"          , session_id()   ,0, '/');
+    setcookie('color'         , 'white'        , 0, '/');
 }
 
 

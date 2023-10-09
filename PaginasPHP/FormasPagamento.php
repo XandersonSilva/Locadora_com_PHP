@@ -16,6 +16,7 @@
     <title>Alugar</title>
     <link rel="stylesheet" href="../style/style.css">
     <link rel="stylesheet" href="../style/Index.css">
+    <link rel="stylesheet" href="../style/menu.css">
     <script  src="../JavaScript/exibirBtnSair.js">  </script>
     <script  src="../JavaScript/jquery.js">         </script>
     
@@ -45,27 +46,35 @@
             ?>
     </nav>
     </div>
-    <article id="SrBorda">
-        <div id=sair>
-            <form action="../ScriptsPHP/sair.php" method="post">
-                <input type="submit" value="SAIR" id="sair">
-            </form>
-        </div>
-        <div id="info_user">
-            <form action="../PaginasPHP/info_user.php">
-                <input type="submit" value="Perfil" id="info_user">
-            </form>
-        </div>
-    </article>
 </header>
 
 <div id="menuLateral">
     <img src="../Imagens/Icones/menu.png" id="retMenu" onclick="retMenu()">
-        <p class="item">Perfil</p>
-        <p class="item">Historico</p>
-        <p class="item">Adicionar Veiculo</p>
-        <p class="item">Sobre</p>
-        <p id="sair">Sair</p>
+        <div id="menu_list">
+            <form action="../PaginasPHP/index.php">
+                <input type="submit" value="Página principal" class="css-input">
+            </form>
+        </div>
+        <div id="menu_list">
+            <form action="#">
+                <input type="submit" value="Histórico" class="css-input">
+            </form>
+        </div>
+        <div id="menu_list">
+            <form action="../PaginasPHP/AdicionarVeiculo.php">
+                <input type="submit" value="Adicionar veículo" class="css-input">
+            </form>
+        </div>
+        <div id="menu_list">
+            <form action="../PaginasPHP/info_user.php">
+                <input type="submit" value="Perfil" class="css-input">
+            </form>
+        </div>
+        <div id="menu_list">
+            <form action="../ScriptsPHP/sair.php" method="post">
+                <input type="submit" value="SAIR" class="css-input">
+            </form>
+        </div>
 </div>
 
 
