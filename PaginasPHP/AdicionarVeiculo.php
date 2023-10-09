@@ -16,13 +16,15 @@
     <title>Alugar</title>
     <link rel="stylesheet" href="../style/style.css">
     <link rel="stylesheet" href="../style/AdicionarV.css">
+    <link rel="stylesheet" href="../style/menu.css">
+    <link rel="stylesheet" href="../style/Index.css">
     
     
 </head>
 <header>
     <nav>
         <div id="Menu">
-            <img src="../Imagens/Icones/menu.png" alt="" srcset="">
+            <img src="../Imagens/Icones/menu.png" alt="" srcset="" onclick="retMenu()">
         </div>
         <h1>Adicionar Veículo</h1>
         <div id="login" onclick="alternar()">
@@ -44,20 +46,36 @@
             ?>
     </nav>
     </div>
-    <article id="SrBorda">
-        <div id=sair>
-            <form action="../ScriptsPHP/sair.php" method="post">
-                <input type="submit" value="SAIR" id="sair">
-            </form>
-        </div>
-        <div id="info_user">
-            <form action="../PaginasPHP/index.php">
-                <input type="submit" value="Principal" id="info_user">
-            </form>
-        </div>
-    </article>
 </header>
 
+<div id="menuLateral">
+    <img src="../Imagens/Icones/menu.png" id="retMenu" onclick="retMenu()">
+        <div id="menu_list">
+            <form action="../PaginasPHP/index.php">
+                <input type="submit" value="Página principal" class="css-input">
+            </form>
+        </div>
+        <div id="menu_list">
+            <form action="#">
+                <input type="submit" value="Histórico" class="css-input">
+            </form>
+        </div>
+        <div id="menu_list">
+            <form action="../PaginasPHP/AdicionarVeiculo.php">
+                <input type="submit" value="Adicionar veículo" class="css-input">
+            </form>
+        </div>
+        <div id="menu_list">
+            <form action="../PaginasPHP/info_user.php">
+                <input type="submit" value="Perfil" class="css-input">
+            </form>
+        </div>
+        <div id="menu_list">
+            <form action="../ScriptsPHP/sair.php" method="post">
+                <input type="submit" value="SAIR" class="css-input">
+            </form>
+        </div>
+</div>
 
 <body>
     <main>

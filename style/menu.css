@@ -1,0 +1,47 @@
+#menuLateral{
+    font-family: 'Martian Mono', monospace;
+    top: 0px;
+    padding: 10px;
+    background-color: #15133b;
+    width: 300px;
+    color: #fff;
+    position: fixed;
+    display: flex;
+    display: none;
+    flex-direction: column;
+    height: 100%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+#menu_list{
+    padding: 10px;
+}
+
+.css-input { 
+    border-width:2px; 
+    text-align:center; 
+    background-color:#15133b; 
+    border-color:#15133b; 
+    color:#ffffff; 
+    padding:5px; 
+    font-size:20px; 
+    border-style:hidden;  
+}
+
+.css-input:hover{
+    border-width:2px; 
+    text-align:center; 
+    background-color:#15133b; 
+    border-color:#15133b; 
+    color:#ffffff; 
+    padding:5px; 
+    transition: 0.5s;
+    font-style: italic;
+    font-size:25px; 
+    border-style:hidden;  
+    cursor: pointer;
+}
+
+.css-input:focus { 
+    outline:none; 
+} 
