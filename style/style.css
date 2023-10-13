@@ -5,6 +5,8 @@
     }
 }
 
+
+
 *:focus{
     outline: 2px solid #322C91;
 }
@@ -24,6 +26,11 @@ nav{
     align-items: center;
     justify-content: space-between;
 }
+
+hr{
+    margin-top: 1px;
+}
+
 #Menu>img{
     padding-left: 8px;
     width: 32px;
@@ -80,20 +87,132 @@ nav{
 }
 
 #Pesquisa{
-
+    align-items: center;
     display: flex;
-    justify-content: flex-end;
-    padding: 8px 3px 0px 5px;
+    justify-content: space-around;
+    padding: 1px 3px 0px 5px;
 }
+
 #pesq_input {
-    
-    width: 90%;
     background-color: #f5f6fa7c;
     border: 1px solid #7c7c7c;
     border-radius: 10px;
-    
 }
+
 #pesqBtn{
     width: 24px;
-    margin-right: 3%;
+    fill: #fff;
+}
+
+#Pesquisa > p{
+    margin: 0;
+}
+
+#Pesquisa> form{
+    display:flex;    
+    flex-direction: row;
+
+}
+
+.cidadeINPT{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5px 0px;
+}
+.cidadeINPT > p {
+    margin: 0;
+}
+
+.cidadeINPT > input{
+
+    margin: 00px 07px;
+}
+
+#busca{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    width: 150px;
+    color:#fff;
+    background-color: #2243c9e0;
+    border: #00000000 solid;
+    margin-left: 30px;
+}
+#busca>p{
+    margin: 0;
+}
+
+.cidade{
+    font-size: 12px;
+    width: 110px;
+}
+
+@media (max-width: 690px) {
+    /* Estilos a serem aplicados quando a largura da tela for menor ou igual a 360px */
+    #Pesquisa{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #ddd;
+        padding: 1px 3px 0px 5px;
+    }
+    
+    #pesq_input {
+        background-color: #f5f6fa7c;
+        border: 1px solid #7c7c7c;
+        border-radius: 10px;
+    }
+    
+    #pesqBtn{
+        width: 24px;
+        fill: #fff;
+    }
+    
+    #Pesquisa > p{
+        margin: 0;
+    }
+    
+    #Pesquisa> form{
+        display:flex;    
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cidadeINPT{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 310px;
+        margin: 5px 0px;
+    }
+    .cidadeINPT > p {
+        margin: 0;
+    }
+    
+    .cidadeINPT > input{
+    
+        margin: 00px 07px;
+    }
+    
+    #busca{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        width: 250px;
+        color:#fff;
+        background-color: #2243c9e0;
+        margin-left: 0;
+
+    }
+    #busca>p{
+        margin: 0;
+    }
+    
+    .cidade{
+        font-size: 12px;
+        width: 150px;
+    }
 }

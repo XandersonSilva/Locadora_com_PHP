@@ -152,7 +152,7 @@
         </section>
             <form action="FormasPagamento.php" method="get" id="alugar">
                 <label for="dias">Dias</label>
-                <input type="number" name="dias" id="dias" required max="180" min="1">
+                <input type="number" name="dias" id="dias" required max="180" min="1" maxlength="3">
                 <input type="submit" value="Alugar" id="alugarBTN">
             </form>
         <section id="dadosV">
@@ -182,9 +182,8 @@
                 <p>Quilometros por litro </p>
                 <?="<p>".$veiculoAtual["KM_por_Litro"]."</p>"?>
             </div>
-            <div class='dado'>
+            <div id='detalhes'>
                 <p>Detalhes </p>
-                <br>
                 <?="<p>".$veiculoAtual["detalhes"]."</p>"?>
             </div>
         </section>

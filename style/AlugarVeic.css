@@ -85,3 +85,9 @@
     background: linear-gradient(180deg, #322C91 0%, #285E9E 100%);
 
 }
+
+#detalhes{
+    display: flex;
+    flex-direction: column;
+}
+
