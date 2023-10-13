@@ -1,13 +1,24 @@
-<!DOCTYPE html>
 <?php 
     //VERIFICA SE O USUÁRIO JÁ ESTÁ LOGADO, CASO NÃO ESTEJA, REDIRECIONA PARA LOGIN
+    $partida = $_POST['partida'] ?? '';
+    $destino = $_POST['destino'] ?? '';
     session_start();
     if ((!isset($_SESSION['logado']) == true)){
         unset($_SESSION['logado']);
         session_destroy();
         header('Location: ../Cadastro_Login/login.php');
     }
-?>
+
+    $RegVeic = fopen("../Arquivos_json/Veiculos_Registrados.json" , "r");
+    $definido = 0;
+    if (filesize("../Arquivos_json/Veiculos_Registrados.json") > 0){
+        $jsonVeiculosReg = fread($RegVeic, filesize("../Arquivos_json/Veiculos_Registrados.json"));
+        $Veiculos = json_decode($jsonVeiculosReg, true);
+        $definido = 1;
+    }
+    fclose($RegVeic);
+    ?>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -78,10 +89,10 @@
 </div>
 
     <div id="Pesquisa">
-        <form>
+        <form action="<?=$_SERVER['PHP_SELF']?>" method="post">
             
             <div class="cidadeINPT">
-                <p>Cidade de Partida </p> <input  type=“text” list=“cidades” class="cidade" >
+                <p>Cidade de Partida </p> <input name="partida" type=“text” list=“cidades” class="cidade" value="<?=$partida?>" required>
             </div>
             <datalist id=“cidades”>
                 <option>Cachoeira do Sul</option>
@@ -89,7 +100,7 @@
                 <option>PortoAlegre</option>
             </datalist>
             <div class="cidadeINPT">
-                <p>Cidade de Destino </p> <input type=“text” list=“cidades” class="cidade">
+                <p>Cidade de Destino </p> <input  name="destino" type=“text” list=“cidades” class="cidade" value="<?=$destino?>" required>
             </div>
             <datalist id=“cidades”>
                 <option>Cachoeira do Sul</option>
@@ -109,19 +120,11 @@
                 
                 
                 <?php 
-                    $RegVeic = fopen("../Arquivos_json/Veiculos_Registrados.json" , "r");
-                    $definido = 0;
-                    if (filesize("../Arquivos_json/Veiculos_Registrados.json") > 0){
-                        $jsonVeiculosReg = fread($RegVeic, filesize("../Arquivos_json/Veiculos_Registrados.json"));
-                        $Veiculos = json_decode($jsonVeiculosReg, true);
-                        $definido = 1;
-                    }
-
-
+                    
                     
                     $FimVeicF = " </form>";
                     $Botão    = '<input class="alugarBTN" type="submit" value="Alugar">';
-                    if ($definido == 1){
+                    if ($definido == 1 && $partida && $destino){
                         foreach ($Veiculos as $veiculo) {
                             $IniVeicF = "<form action='AlugarVeiculo.php'method='get' class='veiculo'>";
                             $VecId = '<input style="display: none;" type="text" name="id" id="placaID" value="' . $veiculo['placa'] .'">';
@@ -148,8 +151,14 @@
                                 echo $veicF;
                         }
                     }
+                    
                 }
-                    fclose($RegVeic);
+                else{
+                ?>
+                    <h2 id="avisoINF" >Para Alugar um veiculo informe sua cidade de partida e sua cidade destino!</h2>
+
+                <?php }
+            
                 ?>
             </section>
     </main>
