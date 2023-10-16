@@ -155,7 +155,7 @@ hr{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        background-color: #ddd;
+        background-color: #e1e1e1;
         padding: 1px 3px 0px 5px;
     }
     

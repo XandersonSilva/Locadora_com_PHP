@@ -14,7 +14,7 @@ main{
 }
 
 
-#marca, #modelo, #passageiros, #combustivel, #AddVeic > input[type=submit]{
+#marca, #modelo, #passageiros, #combustivel , #cidade, #uf,#AddVeic > input[type=submit]{
     color: #aaa;
     width: 122px;
     height: 32px;
@@ -52,8 +52,7 @@ main{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    flex-wrap: nowrap;
-    align-items: flex-end;
+    align-items: center;
 }
 .selecao>label{
     max-width: 249px;
@@ -162,6 +161,18 @@ main{
 #extiAvisoErro>p:hover{
     cursor: pointer;
 }
-label{
-    padding-left: 5px;
+
+#inserc{
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding-top: 20px;
+    border-top: 2px #16147d solid;
+    display: flex;
+    text-align: left;
+    justify-content: center;
 }
+
+#cid{
+    border-bottom: 2px #16147d solid;
+}
+

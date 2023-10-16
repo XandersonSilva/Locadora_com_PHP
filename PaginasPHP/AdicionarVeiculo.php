@@ -18,9 +18,13 @@
     <link rel="stylesheet" href="../style/AdicionarV.css">
     <link rel="stylesheet" href="../style/menu.css">
     <link rel="stylesheet" href="../style/Index.css">
-    
-    
 </head>
+<style>
+    label{
+    padding-left: 5px;
+    height: auto;
+}
+</style>
 <header>
     <nav>
         <div id="Menu">
@@ -310,6 +314,46 @@
             <label for="detalhes">Detalhes Adicionais</label>
             <textarea id="detalhes" name="detalhes" rows="4" cols="5" ></textarea>
 
+            <p id="inserc">Local de inserção</p>
+            <div class="selecao">
+            <label for="uf">Estado</label>
+            <select class="entrada" id="uf" name="uf" onchange="exibirCity()" required>
+                <option value="Nao informado">-</option>
+                <option value="AC">AC - Acre</option>
+                <option value="AL">AL - Alagoas</option>
+                <option value="AP">AP - Amapá</option>
+                <option value="AM">AM - Amazonas</option>
+                <option value="BA">BA - Bahia</option>
+                <option value="CE">CE - Ceará</option>
+                <option value="DF">DF - Distrito Federal</option>
+                <option value="ES">ES - Espírito Santo</option>
+                <option value="GO">GO - Goiás</option>
+                <option value="MA">MA - Maranhão</option>
+                <option value="MT">MT - Mato Grosso</option>
+                <option value="MS">MS - Mato Grosso do Sul</option>
+                <option value="MG">MG - Minas Gerais</option>
+                <option value="PA">PA - Pará</option>
+                <option value="PB">PB - Paraíba</option>
+                <option value="PR">PR - Paraná</option>
+                <option value="PE">PE - Pernambuco</option>
+                <option value="PI">PI - Piauí</option>
+                <option value="RJ">RJ - Rio de Janeiro</option>
+                <option value="RN">RN - Rio Grande do Norte</option>
+                <option value="RS">RS - Rio Grande do Sul</option>
+                <option value="RO">RO - Rondônia</option>
+                <option value="RR">RR - Roraima</option>
+                <option value="SC">SC - Santa Catarina</option>
+                <option value="SP">SP - São Paulo</option>
+                <option value="SE">SE - Sergipe</option>
+                <option value="TO">TO - Tocantins</option>
+            </select>
+        </div>
+        <div class="selecao" id="cid">
+            <label for="cidade">Cidade</label>
+            <select class="entrada" id="cidade" name="cidade" required >
+                <option value="Nao informado">-</option>
+            </select>
+        </div>
             <input type="submit" value="Adicionar">
         </form>
     </main>

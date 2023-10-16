@@ -92,20 +92,68 @@
         <form action="<?=$_SERVER['PHP_SELF']?>" method="post">
             
             <div class="cidadeINPT">
-                <p>Cidade de Partida </p> <input name="partida" type=“text” list=“cidades” class="cidade" value="<?=$partida?>" required>
+                <p>Cidade de Partida </p> <input name="partida" type=“text” list=“cidadesP” class="cidade" value="<?=$partida?>" required>
             </div>
-            <datalist id=“cidades”>
-                <option>Cachoeira do Sul</option>
-                <option>Santa Maria</option>
-                <option>PortoAlegre</option>
+            <datalist id=“cidadesP”>
+                <option> Aracaju - Sergipe </option>
+                <option> Belém  - Pará   </option>
+                <option> Belo Horizonte - Minas Gerais  </option>
+                <option> Boa Vista - Roraima </option>
+                <option> Brasília - Distrito Federal  </option>
+                <option> Campo Grande - Mato Grosso do Sul  </option>
+                <option> Cuiabá - Mato Grosso </option>
+                <option> Curitiba - Paraná   </option>
+                <option> Florianópolis - Santa Catarina </option>
+                <option> Fortaleza - Ceará   </option>
+                <option> Goiânia - Goiás </option>
+                <option> João Pessoa - Paraíba  </option>
+                <option> Macapá - Amapá </option>
+                <option> Maceió - Alagoas </option>
+                <option> Manaus - Amazonas   </option>
+                <option> Natal  - Rio Grande do Norte </option>
+                <option> Palmas - Tocantins  </option>
+                <option> Porto Alegre - Rio Grande do Sul  </option>
+                <option> Porto Velho - Rondônia </option>
+                <option> Recife - Pernambuco </option>
+                <option> Rio Branco  - Acre   </option>
+                <option> Rio de Janeiro - Rio de Janeiro  </option>
+                <option> Salvador - Bahia </option>
+                <option> São Luís - Maranhão </option>
+                <option> São Paulo - São Paulo  </option>
+                <option> Teresina - Piauí </option>
+                <option> Vitória - Espírito Santo </option>
             </datalist>
             <div class="cidadeINPT">
-                <p>Cidade de Destino </p> <input  name="destino" type=“text” list=“cidades” class="cidade" value="<?=$destino?>" required>
+                <p>Cidade de Destino </p> <input  name="destino" type=“text” list=“cidadesD” class="cidade" value="<?=$destino?>" required>
             </div>
-            <datalist id=“cidades”>
-                <option>Cachoeira do Sul</option>
-                <option>Santa Maria</option>
-                <option>PortoAlegre</option>
+            <datalist id=“cidadesD”>
+                <option> Aracaju - Sergipe </option>
+                <option> Belém  - Pará   </option>
+                <option> Belo Horizonte - Minas Gerais  </option>
+                <option> Boa Vista - Roraima </option>
+                <option> Brasília - Distrito Federal  </option>
+                <option> Campo Grande - Mato Grosso do Sul  </option>
+                <option> Cuiabá - Mato Grosso </option>
+                <option> Curitiba - Paraná   </option>
+                <option> Florianópolis - Santa Catarina </option>
+                <option> Fortaleza - Ceará   </option>
+                <option> Goiânia - Goiás </option>
+                <option> João Pessoa - Paraíba  </option>
+                <option> Macapá - Amapá </option>
+                <option> Maceió - Alagoas </option>
+                <option> Manaus - Amazonas   </option>
+                <option> Natal  - Rio Grande do Norte </option>
+                <option> Palmas - Tocantins  </option>
+                <option> Porto Alegre - Rio Grande do Sul  </option>
+                <option> Porto Velho - Rondônia </option>
+                <option> Recife - Pernambuco </option>
+                <option> Rio Branco - Acre   </option>
+                <option> Rio de Janeiro - Rio de Janeiro  </option>
+                <option> Salvador - Bahia </option>
+                <option> São Luís - Maranhão </option>
+                <option> São Paulo - São Paulo  </option>
+                <option> Teresina - Piauí </option>
+                <option> Vitória - Espírito Santo </option>
             </datalist>
             <button type="submit" id="busca" >
                 <p>Buscar veiculos</p> 
@@ -120,7 +168,7 @@
                 
                 
                 <?php 
-                    
+                    $semcarros = 1;
                     
                     $FimVeicF = " </form>";
                     $Botão    = '<input class="alugarBTN" type="submit" value="Alugar">';
@@ -128,6 +176,7 @@
                         foreach ($Veiculos as $veiculo) {
                             $IniVeicF = "<form action='AlugarVeiculo.php'method='get' class='veiculo'>";
                             $VecId = '<input style="display: none;" type="text" name="id" id="placaID" value="' . $veiculo['placa'] .'">';
+                           if ($veiculo['localizacao_Atu'] == $partida && $veiculo['status'] == 'disponivel'){ 
                             if($veiculo["marca"]){
                                 $veic = '<label>' .  $veiculo["marca"] . ' - ' . $veiculo["modelo"] . '</label>' ;    
                             }
@@ -150,14 +199,21 @@
                                 if (isset($veicF)){
                                 echo $veicF;
                         }
+                        $semcarros = 0;
+                        }
                     }
                     
-                }
-                else{
-                ?>
-                    <h2 id="avisoINF" >Para Alugar um veiculo informe sua cidade de partida e sua cidade destino!</h2>
-
-                <?php }
+                }else{
+                    ?>
+                        <h2 id="avisoINF" >Para Alugar um veiculo informe sua cidade de partida e sua cidade destino!</h2>
+    
+                    <?php }
+                if ($semcarros == 1 && $partida){
+                    $semcarros = 2;
+                    ?>
+                        <h2 id="avisoINF">Não há veiculos disponiveis na cidade de partida selecinada</h2>
+    
+                    <?php }
             
                 ?>
             </section>

@@ -1,4 +1,8 @@
 <?php 
+
+    $estados = ["AC"=>"Acre", "AL"=>"Alagoas", "AP"=>"Amapá", "AM"=>"Amazonas", "BA"=>"Bahia", "CE"=>"Ceará", "DF"=>"Distrito Federal", "ES"=>"Espírito Santo", "GO"=>"Goiás", "MA"=>"Maranhão", "MT"=>"Mato Grosso", "MS"=>"Mato Grosso do Sul", "MG"=>"Minas Gerais", "PA"=>"Pará", "PB"=>"Paraíba", "PR"=>"Paraná", "PE"=>"Pernambuco", "PI"=>"Piauí", "RJ"=>"Rio de Janeiro", "RN"=>"Rio Grande do Norte", "RS"=>"Rio Grande do Sul", "RO"=>"Rondônia", "RR"=>"Roraima", "SC"=>"Santa Catarina", "SP"=>"São Paulo", "SE"=>"Sergipe", "TO"=>"Tocantins", ''=>''];
+
+
     $prosseguir = false;
     $marca = $_POST['marca'];
     $modelo = $_POST['modelo'];
@@ -7,7 +11,9 @@
     $placa =  strtoupper($_POST['placa']);
     $KmL = $_POST['KmL'];
     $detalhes = $_POST['detalhes'];
-    
+    $cidade = $_POST['cidade'] ?? '';
+    $estado = $_POST['uf']     ?? '';
+    $localizacao_Atu = $cidade . ' - ' . $estados[$estado];
     
     if (isset($_COOKIE['userA_CPF'])){
         $cpf = $_COOKIE['userA_CPF'];
@@ -53,9 +59,9 @@
     }
     
     if ($definido === 0){
-        $Novo_veic = array(array('marca'=>$marca,'modelo'=>$modelo,'capacidade'=>$Qpassageiros,'placa'=>$placa,'combustivel'=>$combustivel,'KM_por_Litro'=>$KmL,'valor_diaria'=>"",'data_saida'=>"",'data_retorno'=>"",'localizacao_Atu'=>"",'destino_Atu'=>"",'status'=>"disponivel",'CPF_cliente'=>"",'CPF_proprietario'=>$cpf,'detalhes'=>$detalhes, 'imagens' => [$CaminhofotoA, $CaminhofotoB, $CaminhofotoC]));
+        $Novo_veic = array(array('marca'=>$marca,'modelo'=>$modelo,'capacidade'=>$Qpassageiros,'placa'=>$placa,'combustivel'=>$combustivel,'KM_por_Litro'=>$KmL,'valor_diaria'=>"",'data_saida'=>"",'data_retorno'=>"",'localizacao_Atu'=>$localizacao_Atu,'destino_Atu'=>"",'status'=>"disponivel",'CPF_cliente'=>"",'CPF_proprietario'=>$cpf,'detalhes'=>$detalhes, 'imagens' => [$CaminhofotoA, $CaminhofotoB, $CaminhofotoC]));
     }else{
-        $Novo_veic = array('marca'=>$marca,'modelo'=>$modelo,'capacidade'=>$Qpassageiros,'placa'=>$placa,'combustivel'=>$combustivel,'KM_por_Litro'=>$KmL,'valor_diaria'=>"",'data_saida'=>"",'data_retorno'=>"",'localizacao_Atu'=>"",'destino_Atu'=>"",'status'=>"disponivel",'CPF_cliente'=>"",'CPF_proprietario'=>$cpf,'detalhes'=>$detalhes, 'imagens' => [$CaminhofotoA, $CaminhofotoB, $CaminhofotoC]);
+        $Novo_veic = array('marca'=>$marca,'modelo'=>$modelo,'capacidade'=>$Qpassageiros,'placa'=>$placa,'combustivel'=>$combustivel,'KM_por_Litro'=>$KmL,'valor_diaria'=>"",'data_saida'=>"",'data_retorno'=>"",'localizacao_Atu'=>$localizacao_Atu,'destino_Atu'=>"",'status'=>"disponivel",'CPF_cliente'=>"",'CPF_proprietario'=>$cpf,'detalhes'=>$detalhes, 'imagens' => [$CaminhofotoA, $CaminhofotoB, $CaminhofotoC]);
     };
 
     $vazio0 = "";

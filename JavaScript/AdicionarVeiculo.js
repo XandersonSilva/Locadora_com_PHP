@@ -1,3 +1,96 @@
+const cidadesPorEstado = {
+    
+    
+    AC: [
+        "Rio Branco", "Cruzeiro do Sul", "Sena Madureira"
+    ],
+    AL: [
+        "Maceió", "Arapiraca", "Palmeira dos Índios"
+    ],
+    AP: [
+        "Macapá", "Santana", "Laranjal do Jari"
+    ],
+    AM: [
+
+    ],
+    BA: [
+
+    ],
+    CE: [
+
+    ],
+    DF: [
+
+    ],
+    ES: [
+
+    ],
+    GO: [
+
+    ],
+    MA: [
+
+    ],
+    MT: [
+
+    ],
+    MS: [
+
+    ],
+    MG: [
+
+    ],
+    PA: [
+
+    ],
+    PB: [
+
+    ],
+    PR: [
+
+    ],
+    PE: [
+
+    ],
+    PI: [
+
+    ],
+    RJ: [
+
+    ],
+    RN: [
+
+    ],
+    RS: [
+
+    ],
+    RO: [
+
+    ],
+    RR: [
+
+    ],
+    SC: [
+
+    ],
+    SP: [
+
+    ],
+    SE: [
+
+    ],
+    TO: [
+
+    ],
+    
+
+    
+};
+
+
+
+
+
 function teste(){
     var marca = $("select#marca").val();
     $("select#modelo").html(
@@ -143,7 +236,23 @@ placa.on('blur', function vrifcPlaca() {
   }
 });
 
-
+function exibirCity(){
+    let estado = document.getElementById("uf").value;
+    let cidadesExist = document.getElementById("cidade");
+    let cidades = cidadesPorEstado[estado];
+    preencherCidades(cidadesExist, cidades)
+    function preencherCidades(cidadesExist, cidades){
+        cidadesExist.innerHTML = "<option value='Nao informado'> - </option>";
+        cidades.forEach(opcao => {
+            const optionElement = document.createElement("option");
+            optionElement.value = opcao;
+            optionElement.textContent = opcao;
+            cidadesExist.appendChild(optionElement);
+            
+        });
+    }
+    
+}
 
 function esconderAviso(){
     $("#erroReg").toggle();
