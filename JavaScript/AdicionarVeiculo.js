@@ -1,90 +1,31 @@
 const cidadesPorEstado = {
-    
-    
-    AC: [
-        "Rio Branco", "Cruzeiro do Sul", "Sena Madureira"
-    ],
-    AL: [
-        "Maceió", "Arapiraca", "Palmeira dos Índios"
-    ],
-    AP: [
-        "Macapá", "Santana", "Laranjal do Jari"
-    ],
-    AM: [
-
-    ],
-    BA: [
-
-    ],
-    CE: [
-
-    ],
-    DF: [
-
-    ],
-    ES: [
-
-    ],
-    GO: [
-
-    ],
-    MA: [
-
-    ],
-    MT: [
-
-    ],
-    MS: [
-
-    ],
-    MG: [
-
-    ],
-    PA: [
-
-    ],
-    PB: [
-
-    ],
-    PR: [
-
-    ],
-    PE: [
-
-    ],
-    PI: [
-
-    ],
-    RJ: [
-
-    ],
-    RN: [
-
-    ],
-    RS: [
-
-    ],
-    RO: [
-
-    ],
-    RR: [
-
-    ],
-    SC: [
-
-    ],
-    SP: [
-
-    ],
-    SE: [
-
-    ],
-    TO: [
-
-    ],
-    
-
-    
+    AC: ["Rio Branco"],
+    AL: ["Maceió"],
+    AP: ["Macapá"],
+    AM: ["Manaus"],
+    BA: ["Salvador"],
+    CE: ["Fortaleza"],
+    DF: ["Brasília"],
+    ES: ["Vitória"],
+    GO: ["Goiânia"],
+    MA: ["São Luís"],
+    MT: ["Cuiabá"],
+    MS: ["Campo Grande"],
+    MG: ["Belo Horizonte"],
+    PA: ["Belém"],
+    PB: ["João Pessoa"],
+    PR: ["Curitiba"],
+    PE: ["Recife"],
+    PI: ["Teresina"],
+    RJ: ["Rio de Janeiro"],
+    RN: ["Natal"],
+    RS: ["Porto Alegre"],
+    RO: ["Porto Velho"],
+    RR: ["Boa Vista"],
+    SC: ["Florianópolis"],
+    SP: ["São Paulo"],
+    SE: ["Aracaju"],
+    TO: ["Palmas"]
 };
 
 
