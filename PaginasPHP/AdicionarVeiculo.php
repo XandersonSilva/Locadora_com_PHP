@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../style/AdicionarV.css">
     <link rel="stylesheet" href="../style/menu.css">
     <link rel="stylesheet" href="../style/Index.css">
+    <script src="../JavaScript/tema.js"></script>
 </head>
 <style>
     label{
@@ -25,7 +26,7 @@
     height: auto;
 }
 </style>
-<header>
+<header onload="user()">
     <nav>
         <div id="Menu">
             <img src="../Imagens/Icones/menu.png" alt="" srcset="" onclick="retMenu()">
@@ -82,7 +83,7 @@
 </div>
 
 <body>
-    <main>
+    <main id="main">
 
 
     <?php 

@@ -19,7 +19,7 @@
     fclose($RegVeic);
     ?>
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" id="html">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -33,7 +33,7 @@
     <link rel="stylesheet" href="../style/menu.css">
     
 </head>
-<header>
+<header onload="index()">
     <nav>
         <div id="Menu">
             <img src="../Imagens/Icones/menu.png" alt="" srcset="" onclick="retMenu()">
@@ -162,7 +162,7 @@
             </button>
         </form>
         </div>
-<hr>
+
 <body>
     <main>
             <section id="conteudo">
@@ -206,7 +206,7 @@
                     
                 }else{
                     ?>
-                        <h2 id="avisoINF" >Para Alugar um veiculo informe sua cidade de partida e sua cidade destino!</h2>
+                        <h2 id="avisoINF" id="texto">Para Alugar um veiculo informe sua cidade de partida e sua cidade destino!</h2>
     
                     <?php }
                 if ($semcarros == 1 && $partida){

@@ -57,10 +57,14 @@
     <link rel="stylesheet" href="../style/AdicionarV.css" >
     <link rel="stylesheet" href="../style/menu.css">
     <link rel="stylesheet" href="../style/Index.css">
+    <script src="../JavaScript/tema.js"></script>
+    <script  src="../JavaScript/exibirBtnSair.js">  </script>
+    <script  src="../JavaScript/jquery.js">         </script>
+    <script  src="../JavaScript/AlugarVeiculo.js">  </script>
     
     
 </head>
-<header>
+<header onload="user()">
     <nav>
         <div id="Menu">
             <img src="../Imagens/Icones/menu.png" alt="" srcset="" onclick="retMenu()">
@@ -118,7 +122,7 @@
 </div>
 
 <body>
-    <main>
+    <main id="main">
         <section>
             <div id="ContFts" >
     <br>
@@ -187,11 +191,6 @@
                 <?="<p>".$veiculoAtual["detalhes"]."</p>"?>
             </div>
         </section>
-
-
-    <main>    
+    </main>    
 </body>
-<script  src="../JavaScript/exibirBtnSair.js">  </script>
-<script  src="../JavaScript/jquery.js">         </script>
-<script  src="../JavaScript/AlugarVeiculo.js">  </script>
 </html>

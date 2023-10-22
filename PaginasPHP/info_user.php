@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="../style/Index.css">
     
 </head>
-<header>
+<header onload="user()">
     <nav>
         <div id="Menu">
             <img src="../Imagens/Icones/menu.png" alt="" srcset="" onclick="retMenu()">
@@ -81,6 +81,9 @@
 
 <body>
     <main id='main'>
+        <form action="../ScriptsPHP/tema.php" method="get">
+            <input type="submit" value="Tema" id="btntema">
+        </form>
         <div id="ImgUsr">
             <img src="../Imagens/Icones/user.png" alt="">
         </div>
@@ -116,8 +119,6 @@
             <input id="DetlhBtn" type="submit" value="Detalhes">
         </form>
     </main>
-    <form action="../ScriptsPHP/tema.php" method="get">
-        <input type="submit" value="Tema">
-    </form>
+    
 </body>
 </html>
