@@ -1,16 +1,58 @@
 <?php 
+    session_start();
     $usuarioValid = false;
+    $codCorreto = 0;
 
-    $nome = $_GET['nome'];
-    $nome = ucwords($nome);
-    $email = $_GET['email'];
-    $endereco = $_GET['endereco'];
-    $cpf = password_hash($_GET['CPF'], PASSWORD_DEFAULT);
-    $nascimento = $_GET['nascimento'];
-    //CRIPTOGRAFA A SENHA DO USUÁRIO
-    $senha = password_hash($_GET['senha'], PASSWORD_DEFAULT);
+    $nome       = $_SESSION['nome']      ;
+    $email      = $_SESSION['email']     ;
+    $endereco   = $_SESSION['endereco']  ;
+    $cpf        = $_SESSION['CPF']       ;
+    $nascimento = $_SESSION['nascimento'];
+    $senha      = $_SESSION['senha']     ;
+
+
+    //Verifica se o código inserido pelo usr é o mesmo enviado por email
+
+    //Abre o arquivo com os cadastros pendentes
+    $ArquivoUsersTemp = fopen("../Arquivos_json/CadastrosNaoFinalizados.json" , "r");
+
+    //Caso o arquivo esteja em branco redireciona o usr pra tela de cadastro
+    if (filesize("../Arquivos_json/CadastrosNaoFinalizados.json") > 0){
+        $jsonPessoas = fread($ArquivoUsersTemp, filesize("../Arquivos_json/CadastrosNaoFinalizados.json"));
+        $pessoas = json_decode($jsonPessoas, true);
+    }else{
+        header("Location: ../Cadastro_Login/cadastro.php?erroW=write");
+        exit;
+    }
+
+    fclose($ArquivoUsersTemp);
+
+    foreach ($pessoas as $pessoa) {
+        //Verifica se os códigos são iguais
+        print_r($pessoa);
+        if ($pessoa['cod'] ==  $_POST['cod']) {
+            $codCorreto += 1;
+        }  
+    }
+    if ($codCorreto == 0){
+        //Se não forem iguais envia o usr para a tela de inserir o código 
+        header("Location: ../Cadastro_Login/ValidarEmail.php?erro=incorreto");
+        exit;
+    }else{
+        //Se forem iguais vai retira-lo da lista usuários pendentes e cadastra-lo
+        $listaAtu = array();
+        foreach ($pessoas as $pessoa) {
+            if (!($pessoa['email'] ==  $email)) {
+                array_push($listaAtu, $pessoa);
+            }  
+        }
+        $ArquivoUsersTemp = fopen("../Arquivos_json/CadastrosNaoFinalizados.json" , "w");
+        fwrite($ArquivoUsersTemp, json_encode($listaAtu));
+        fclose($ArquivoUsersTemp);
+    }
 
     $definido = 0;
+    $pessoas = '';
 
     $ArquivoUsers = fopen("../Arquivos_json/usuarios.json" , "r");
 

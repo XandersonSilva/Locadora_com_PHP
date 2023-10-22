@@ -150,7 +150,7 @@ hr{
 }
 
 @media (max-width: 690px) {
-    /* Estilos a serem aplicados quando a largura da tela for menor ou igual a 360px */
+    /* Estilos a serem aplicados quando a largura da tela for menor ou igual a 690px */
     #Pesquisa{
         display: flex;
         flex-direction: column;

@@ -5,6 +5,13 @@
     if ((isset($_SESSION['logado']) == true)){
         header('Location: ../PaginasPHP/index.php');
     }
+    if (isset($_GET['erroS']) && $_GET['erroS'] == 'internalerror'){
+      ?>
+      <script>
+        alert("Erro interno no servidor");
+      </script>
+      <?php 
+    }
 ?>
 <html lang="pt-br">
 <head>
@@ -32,7 +39,7 @@
       <section>
         <h1>Cadastrar-se</h1>
         
-        <form action="../ScriptsPHP/adicionarUser.php"  method="get">
+        <form action="../ScriptsPHP/validarEmail.php"  method="post">
           <div class="campoE">
             <label for="nome" action="cadastro.html" >Nome: </label>
             <input class="entrada" type="text" name="nome" id="nome" required
