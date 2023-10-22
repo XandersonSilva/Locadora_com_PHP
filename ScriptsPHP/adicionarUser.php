@@ -20,9 +20,9 @@
         $definido = 1;
     }
     if ($definido === 0){
-        $$nome = array( array( 'nome' => $nome, 'Email' => $email, 'Endereco' => $endereco, 'CPF' => $cpf, 'Nascimento' => $nascimento, 'Senha' => $senha));
+        $$nome = array( array( 'nome' => $nome, 'Email' => $email, 'Endereco' => $endereco, 'CPF' => $cpf, 'Nascimento' => $nascimento, 'Senha' => $senha, 'tema' => 'W'));
     }else{
-        $$nome = array( 'nome' => $nome, 'Email' => $email, 'Endereco' => $endereco, 'CPF' => $cpf, 'Nascimento' => $nascimento, 'Senha' => $senha);
+        $$nome = array( 'nome' => $nome, 'Email' => $email, 'Endereco' => $endereco, 'CPF' => $cpf, 'Nascimento' => $nascimento, 'Senha' => $senha, 'tema' => 'W');
     }
     $vazio0 = "";
     $vazio1 = array();

@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="../style/style.css">
     <script  src="../JavaScript/exibirBtnSair.js">  </script>
     <script  src="../JavaScript/jquery.js">         </script>
+    <script src="../JavaScript/tema.js">            </script>
     <link rel="stylesheet" href="../style/User_Page.css">
     <link rel="stylesheet" href="../style/menu.css">
     <link rel="stylesheet" href="../style/Index.css">
@@ -79,7 +80,7 @@
 </div>
 
 <body>
-    <main>
+    <main id='main'>
         <div id="ImgUsr">
             <img src="../Imagens/Icones/user.png" alt="">
         </div>
@@ -115,5 +116,8 @@
             <input id="DetlhBtn" type="submit" value="Detalhes">
         </form>
     </main>
+    <form action="../ScriptsPHP/tema.php" method="get">
+        <input type="submit" value="Tema">
+    </form>
 </body>
 </html>

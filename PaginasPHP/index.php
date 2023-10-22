@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="../style/Index.css">
     <script  src="../JavaScript/exibirBtnSair.js">  </script>
     <script  src="../JavaScript/jquery.js">         </script>
+    <script src="../JavaScript/tema.js">            </script>
     <link rel="stylesheet" href="../style/menu.css">
     
 </head>

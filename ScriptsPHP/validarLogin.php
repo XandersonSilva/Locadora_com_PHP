@@ -76,13 +76,13 @@ if ($usuarioValid == 0){
     //Define os cookies de sessão necessários, e confirma que o usuário está logado através de sessão
     session_start();
     $_SESSION['logado'] = true;
+    $_SESSION['User'] = $usserAtu;
     header("Location: ../PaginasPHP/index.php");
     setcookie("userA_Nome"    , $usserName     ,0, '/');
     setcookie("userA_Email"   , $usserEmail    ,0, '/');    
     setcookie("userA_Endereco", $usserEndereco ,0, '/');
     setcookie("userA_CPF"     , $usserCPF      ,0, '/');
-    setcookie("SSID"          , session_id()   ,0, '/');
-    setcookie('color'         , 'white'        , 0, '/');
+    setcookie("tema"          , 'W'            ,0, '/');
 }
 
 
