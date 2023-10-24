@@ -152,7 +152,7 @@
                     ?>
             </div>
  
-            <div> <p>Diaria: R$</p> <?=$veiculoAtual["valor_diaria"]?></div>
+            <div> <p>Diaria: R$<?=$veiculoAtual["preco_Dia"]?></p> </div>
         </section>
             <form action="FormasPagamento.php" method="get" id="alugar">
                 <label for="dias">Dias</label>

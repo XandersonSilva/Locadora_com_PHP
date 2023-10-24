@@ -15,6 +15,19 @@
     $estado = $_POST['uf']     ?? '';
     $localizacao_Atu = $cidade . ' - ' . $estados[$estado];
     
+    $arquivoAbrir = fopen('../Arquivos_json/Carros_Brasileiros.json', 'r');
+    $arquivo = fread($arquivoAbrir, filesize("../Arquivos_json/Carros_Brasileiros.json"));
+    $CarrosBrasileiros = json_decode($arquivo, true);
+
+    foreach($CarrosBrasileiros as $carro){
+        if ($marca == $carro['Marca']){
+
+            $preco_Dia = $carro['preco_Dia']; 
+        }
+    }
+    fclose($arquivoAbrir);
+
+
     if (isset($_COOKIE['userA_CPF'])){
         $cpf = $_COOKIE['userA_CPF'];
     }else{
@@ -59,9 +72,9 @@
     }
     
     if ($definido === 0){
-        $Novo_veic = array(array('marca'=>$marca,'modelo'=>$modelo,'capacidade'=>$Qpassageiros,'placa'=>$placa,'combustivel'=>$combustivel,'KM_por_Litro'=>$KmL,'valor_diaria'=>"",'data_saida'=>"",'data_retorno'=>"",'localizacao_Atu'=>$localizacao_Atu,'destino_Atu'=>"",'status'=>"disponivel",'CPF_cliente'=>"",'CPF_proprietario'=>$cpf,'detalhes'=>$detalhes, 'imagens' => [$CaminhofotoA, $CaminhofotoB, $CaminhofotoC]));
+        $Novo_veic = array(array('marca'=>$marca,'modelo'=>$modelo,'capacidade'=>$Qpassageiros,'placa'=>$placa,'combustivel'=>$combustivel,'KM_por_Litro'=>$KmL,'valor_diaria'=>"",'data_saida'=>"",'data_retorno'=>"",'localizacao_Atu'=>$localizacao_Atu,'destino_Atu'=>"",'status'=>"disponivel",'CPF_cliente'=>"",'CPF_proprietario'=>$cpf,'detalhes'=>$detalhes, 'preco_Dia'=>$preco_Dia, 'imagens' => [$CaminhofotoA, $CaminhofotoB, $CaminhofotoC]));
     }else{
-        $Novo_veic = array('marca'=>$marca,'modelo'=>$modelo,'capacidade'=>$Qpassageiros,'placa'=>$placa,'combustivel'=>$combustivel,'KM_por_Litro'=>$KmL,'valor_diaria'=>"",'data_saida'=>"",'data_retorno'=>"",'localizacao_Atu'=>$localizacao_Atu,'destino_Atu'=>"",'status'=>"disponivel",'CPF_cliente'=>"",'CPF_proprietario'=>$cpf,'detalhes'=>$detalhes, 'imagens' => [$CaminhofotoA, $CaminhofotoB, $CaminhofotoC]);
+        $Novo_veic = array('marca'=>$marca,'modelo'=>$modelo,'capacidade'=>$Qpassageiros,'placa'=>$placa,'combustivel'=>$combustivel,'KM_por_Litro'=>$KmL,'valor_diaria'=>"",'data_saida'=>"",'data_retorno'=>"",'localizacao_Atu'=>$localizacao_Atu,'destino_Atu'=>"",'status'=>"disponivel",'CPF_cliente'=>"",'CPF_proprietario'=>$cpf,'detalhes'=>$detalhes, 'preco_Dia'=>$preco_Dia, 'imagens' => [$CaminhofotoA, $CaminhofotoB, $CaminhofotoC]);
     };
 
     $vazio0 = "";
