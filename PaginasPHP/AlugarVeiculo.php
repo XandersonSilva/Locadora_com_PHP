@@ -64,6 +64,11 @@
     
     
 </head>
+<style>
+    .NVeiw{
+        display: none   ;
+    }
+</style>
 <header onload="user()">
     <nav>
         <div id="Menu">
@@ -152,12 +157,16 @@
                     ?>
             </div>
  
-            <div> <p>Diaria: R$<?=$veiculoAtual["preco_Dia"]?></p> </div>
+            <?php $plc = $_GET['id']?>
+            <div> <p>Diaria: R$<?php $tt = $veiculoAtual["preco_Dia"]; echo $tt?></p> </div>
         </section>
-            <form action="FormasPagamento.php" method="get" id="alugar">
+            <form action="Pagamento.php" method="post" id="alugar">
                 <label for="dias">Dias</label>
                 <input type="number" name="dias" id="dias" required max="180" min="1" maxlength="3">
                 <input type="submit" value="Alugar" id="alugarBTN">
+                <input type="text" name="nome"  id="" value="<?=$nomeUser?>" class="NVeiw">
+                <input type="number" name="preco" id="" value="<?php echo $tt?>"  class="NVeiw" >
+                <input type="text" name="placa" id="" value="<?=$plc?>" class="NVeiw">
             </form>
         <section id="dadosV">
             <div class='dado'>
