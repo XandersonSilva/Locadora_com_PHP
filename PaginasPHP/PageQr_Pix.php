@@ -1,6 +1,7 @@
 <?php 
 
     require '../lib/vendor/autoload.php';
+    require '../ScriptsPHP/alugelConfirmado.php';
 
     use Mpdf\QrCode\QrCode;
     use Mpdf\QrCode\Output;
@@ -47,6 +48,8 @@
     
     $qrImage = (new Output\Png)->output($obQrcode, 300);
 
+    // TORNAR O VEICULO INDISPONIVEL NO "BANCO DE DADOS"
+    VeiculoIndisponivel();
 ?>
 
 
@@ -59,10 +62,12 @@
     <title>Alugar</title>
     <link rel="stylesheet" href="../style/style.css">
     <link rel="stylesheet" href="../style/Index.css">
+    <link rel="stylesheet" href="../style/menu.css">
+    <link rel="stylesheet" href="../style/PagQr_Pix.css">
     <script  src="../JavaScript/exibirBtnSair.js">  </script>
     <script  src="../JavaScript/jquery.js">         </script>
     <script src="../JavaScript/tema.js">            </script>
-    <link rel="stylesheet" href="../style/menu.css">
+    
     <title>Pagamento PIX</title>
     
 </head>
@@ -121,52 +126,6 @@
             </form>
         </div>
 </div>
-
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f7f7f7;
-        }
-        .container {
-            width: 340px;
-            margin: 0 auto;
-            padding: 5px;
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-
-        .qr-code {
-            margin: auto;
-        }
-        .copiar-texto {
-            display: block;
-            background-color: #0074cc;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            margin-top: 10px;
-            border-radius: 3px;
-            cursor: pointer;
-            text-decoration: none;
-        }
-        .copiar-texto:hover {
-            background-color: #005ea7;
-        }
-        #chave{
-            border-radius: 5px;
-    padding: 2px;
-    border: 10px solid #70bb8999;
-    background: #70bb8999;
-    user-select: none;
-    font-family: monospace;
-        }
-        #chave_pix{
-            display: none;
-        }
-    </style>
 </head>
 <body>
     <div class="container">

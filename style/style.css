@@ -124,7 +124,7 @@ hr{
     margin: 0;
 }
 
-.cidadeINPT > input{
+.cidadeINPT > select{
 
     margin: 00px 07px;
 }
@@ -146,7 +146,7 @@ hr{
 
 .cidade{
     font-size: 12px;
-    width: 110px;
+    width: 120px;
 }
 
 @media (max-width: 690px) {

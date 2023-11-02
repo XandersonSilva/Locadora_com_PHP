@@ -1,0 +1,44 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+}
+.container {
+    width: 340px;
+    margin: 0 auto;
+    padding: 5px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.qr-code {
+    margin: auto;
+}
+.copiar-texto {
+    display: block;
+    background-color: #0074cc;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.copiar-texto:hover {
+    background-color: #005ea7;
+}
+#chave{
+    border-radius: 5px;
+    padding: 2px;
+    border: 10px solid #70bb8999;
+    background: #70bb8999;
+    user-select: none;
+    font-family: monospace;
+}
+#chave_pix{
+    display: none;
+}

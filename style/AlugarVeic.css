@@ -19,7 +19,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 360px;
+    width: 350px;
     height: 236px;
     background: #1f1b58;
     color: #fff;
@@ -58,7 +58,7 @@
 }
 #alugar{
     padding: 0px 5px;
-    width: 360px;
+    width: 350px;
     display: flex;
     margin-bottom: 20px;
     justify-content: space-between;
@@ -88,4 +88,6 @@
     display: flex;
     flex-direction: column;
 }
-
+main{
+    margin: auto;
+}
