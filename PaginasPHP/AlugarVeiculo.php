@@ -161,7 +161,7 @@
             <div> <p>Diaria: R$<?php $tt = $veiculoAtual["preco_Dia"]; echo $tt?></p> </div>
         </section>
             <form action="Pagamento.php" method="post" id="alugar">
-                <label for="dias">Dias</label>
+                <label style="height: auto" for="dias">Dias</label>
                 <input type="number" name="dias" id="dias" required max="180" min="1" maxlength="3">
                 <input type="submit" value="Alugar" id="alugarBTN">
                 <input type="text" name="nome"  id="" value="<?=$nomeUser?>" class="NVeiw">

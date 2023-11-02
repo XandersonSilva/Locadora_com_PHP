@@ -9,8 +9,6 @@
     justify-content: center;
 }
 #Veic_fotos>#veic1, #Veic_fotos>#veic2, #Veic_fotos>#veic3{
-    border-radius: 16px;
-    min-width: 250px;
     max-width: 300px;
     width: auto;
     max-height: 190px;

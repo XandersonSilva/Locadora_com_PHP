@@ -150,11 +150,14 @@
                 echo  "<p id='erroIMG'> SEM IMGEM</p>";
             }
                     ?>
-
-        <form action="../ScriptsPHP/alugelConfirmado.php" method="post">
-            <input class="modern-button" type="submit" value="Alugar">
-            <input type="text" style="display: none;" name="placa" value="<?=$placa?>">
-        </form>
+        <div id="Fpag">
+    
+            <form action="../ScriptsPHP/realizarPagamento.php" method="post">
+                <input class="modern-button" type="submit" value="Pagar com pix">
+                <input type="text" style="display: none;" name="placa" value="<?=$placa?>">
+                <input type="text" style="display: none;" name="preco" value="<?=$total?>">
+            </form>
+</div>
 
     </div>
  
