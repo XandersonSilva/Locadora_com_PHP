@@ -1,4 +1,5 @@
 main{
+    margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,7 +15,7 @@ main{
 }
 
 
-#marca, #modelo, #passageiros, #combustivel , #cidade, #uf,#AddVeic > input[type=submit]{
+#marca, #modelo, #passageiros, #combustivel , #cidade, #uf,#AddVeic > #formulario > input[type=submit]{
     color: #aaa;
     width: 122px;
     height: 32px;
@@ -27,10 +28,10 @@ main{
     outline: 2px solid #322C91;
 }
 
-#AddVeic > input[type=submit]{
+#AddVeic >  #formulario  >input[type=submit]{
     font-size: 20px;
-    width: 183px;
-    margin: 40px auto 0px auto ;
+    width: 60%;
+    margin: 20px auto;
     color: #fff;
 }
 
@@ -176,6 +177,8 @@ main{
     border-bottom: 2px #16147d solid;
 }
 
-main{
-    margin: auto;
+
+#formulario{
+    display: flex;
+    flex-direction: column;
 }
