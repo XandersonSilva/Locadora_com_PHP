@@ -98,7 +98,13 @@
 
 
 <div id="menuLateral">
-    <img src="../Imagens/Icones/menu.png" id="retMenu" onclick="retMenu()">
+    <div id="temaDiv">
+            <img src="../Imagens/Icones/menu.png" id="retMenu" onclick="retMenu()">
+            <form action="../ScriptsPHP/tema.php" method="get">
+                <input type="submit" value="Tema" id="btntema">
+                <input id='noneD' value="<?=$_SERVER['PHP_SELF'].'?id='.$placa?>" id="btntema"  name='back'>
+            </form>
+        </div>
         <div id="menu_list">
             <form action="../PaginasPHP/index.php">
                 <input type="submit" value="Página principal" class="css-input">
@@ -158,7 +164,7 @@
             </div>
  
             <?php $plc = $_GET['id']?>
-            <div> <p>Diaria: R$<?php $tt = $veiculoAtual["preco_Dia"]; echo $tt?></p> </div>
+            <div> <p>Diaria: R$<?php $tt = $veiculoAtual["valor_diaria"]; echo $tt?></p> </div>
         </section>
             <form action="Pagamento.php" method="post" id="alugar">
                 <label style="height: auto" for="dias">Dias</label>

@@ -99,7 +99,13 @@
 </header>
 
 <div id="menuLateral">
-    <img src="../Imagens/Icones/menu.png" id="retMenu" onclick="retMenu()">
+    <div id="temaDiv">
+            <img src="../Imagens/Icones/menu.png" id="retMenu" onclick="retMenu()">
+            <form action="../ScriptsPHP/tema.php" method="get">
+                <input type="submit" value="Tema" id="btntema">
+                <input id='noneD' value="<?=$_SERVER['PHP_SELF']?>" id="btntema"  name='back'>
+            </form>
+        </div>
         <div id="menu_list">
             <form action="../PaginasPHP/index.php">
                 <input type="submit" value="Página principal" class="css-input">
@@ -128,7 +134,7 @@
 </div>
 </head>
 <body>
-    <div class="container">
+    <main id="main" class="container">
         <p>Escaneie o QR Code com o aplicativo do seu banco</p>
         <div class="qr-code">
             <img src="data:image/png;base64, <?=base64_encode($qrImage)?>" alt="QR Code PIX">
@@ -139,8 +145,9 @@
         
 
         <a class="copiar-texto" href="#">Copiar Chave PIX</a>
-    </div>
+    </main>
 
+</body>
     <script>
         // JavaScript para copiar o texto para a área de transferência
         document.querySelector(".copiar-texto").addEventListener("click", function () {
@@ -154,5 +161,5 @@
             alert("Chave PIX copiada para a área de transferência: " + chavePix);
         });
     </script>
-</body>
+    <script src="../JavaScript/tema.js"> </script>
 </html>

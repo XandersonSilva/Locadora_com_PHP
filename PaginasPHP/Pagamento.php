@@ -54,7 +54,7 @@
 
     
 ?>
-<html lang="pt-BR">
+<html lang="pt-BR" id="html">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -96,7 +96,13 @@
 </header>
 
 <div id="menuLateral">
-    <img src="../Imagens/Icones/menu.png" id="retMenu" onclick="retMenu()">
+        <div id="temaDiv">
+            <img src="../Imagens/Icones/menu.png" id="retMenu" onclick="retMenu()">
+            <form action="../ScriptsPHP/tema.php" method="get">
+                <input type="submit" value="Tema" id="btntema">
+                <input id='noneD' value="<?=$_SERVER['PHP_SELF']?>" id="btntema"  name='back'>
+            </form>
+        </div>
         <div id="menu_list">
             <form action="../PaginasPHP/index.php">
                 <input type="submit" value="Página principal" class="css-input">
@@ -126,7 +132,7 @@
 
 
 <body>
-    <main>
+    <main id="main">
         <h1>Confirmação de aluguel</h1>
         
         <!--<p>Obrigado, <?// echo $nome; ?>!</p>-->
@@ -191,4 +197,5 @@
 
 </main>
 </body>
+<script src="../JavaScript/tema.js"> </script>
 </html>

@@ -4,7 +4,6 @@
     background-color: white;
 }
 
-
 .VeicIMG{
     margin: 10px 0px;
     width: auto;
@@ -85,4 +84,36 @@ label{
 
 #retMenu{
     width: 32px;
+    height: 32px;
+}
+
+#temaDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#btntema{
+    color: #ffffff;
+    background-color: rgb(9, 23, 44);
+    font-size: 19px;
+    border: 1px solid #000e27;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+#btntema:hover{
+
+    color: #000000;
+    background-color: #ffffff;
+    font-size: 19px;
+    border: 1px solid #001130;
+    cursor: pointer;
+    padding: 10px 20px 10px 30px;
+    transition: 0.3s;
+}
+
+#noneD{
+    display: none;
 }

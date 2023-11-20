@@ -61,7 +61,13 @@
 </header>
 
 <div id="menuLateral">
-    <img src="../Imagens/Icones/menu.png" id="retMenu" onclick="retMenu()">
+    <div id="temaDiv">
+            <img src="../Imagens/Icones/menu.png" id="retMenu" onclick="retMenu()">
+            <form action="../ScriptsPHP/tema.php" method="get">
+                <input type="submit" value="Tema" id="btntema">
+                <input id='noneD' value="<?=$_SERVER['PHP_SELF']?>" id="btntema"  name='back'>
+            </form>
+        </div>
         <div id="menu_list">
             <form action="../PaginasPHP/index.php">
                 <input type="submit" value="Página principal" class="css-input">
@@ -169,7 +175,7 @@
         </div>
 
 <body>
-    <main>
+    <main id="main">
             <section id="conteudo">
                 
                 

@@ -55,7 +55,13 @@
 </header>
 
 <div id="menuLateral">
-    <img src="../Imagens/Icones/menu.png" id="retMenu" onclick="retMenu()">
+        <div id="temaDiv">
+            <img src="../Imagens/Icones/menu.png" id="retMenu" onclick="retMenu()">
+            <form action="../ScriptsPHP/tema.php" method="get">
+                <input type="submit" value="Tema" id="btntema">
+                <input id='noneD' value="<?=$_SERVER['PHP_SELF']?>" id="btntema"  name='back'>
+            </form>
+        </div>
         <div id="menu_list">
             <form action="../PaginasPHP/index.php">
                 <input type="submit" value="Página principal" class="css-input">
@@ -304,6 +310,10 @@
                 <div class="selecao">
                     <label for="KmL">Quilômetros por litro</label>
                     <input required type="number" name="KmL" id="KmL" min="1" max="30" step="0.1" >
+                </div>
+                <div class="selecao">
+                    <label for="diaria"> Diária Sugerida </label>
+                    <input required type="number" name="diaria" id="diaria" min="1" max="2999.99" step="0.01" >
                 </div>
                 <label for="detalhes">Detalhes Adicionais</label>
                 <textarea id="detalhes" name="detalhes" rows="4" cols="5" ></textarea>
