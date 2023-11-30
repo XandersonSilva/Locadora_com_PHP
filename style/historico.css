@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background: linear-gradient(90deg, #322C91 0%, #285E9E 80%);
+    color: #fff;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.light-mode {
+    background-color: #6b5b95;
+    color: #fff;
+}
+
+.dark-mode {
+    background-color: #2e2e2e;
+    color: #fff;
+}
+
+.toggle-header {
+    cursor: pointer;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.arrow {
+    margin-left: 5px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+.down {
+    border-width: 0 5px 8px 5px;
+    border-color: transparent transparent #fff transparent;
+}
+
+.up {
+    border-width: 8px 5px 0 5px;
+    border-color: #fff transparent transparent transparent;
+}

@@ -1,7 +1,6 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f7f7f7;
 }
 .container {
     width: 340px;
@@ -11,6 +10,7 @@ body {
     border: 1px solid #ddd;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+background-color: hsl(240, 100%, 50%)0ff;
     text-align: center;
 }
 

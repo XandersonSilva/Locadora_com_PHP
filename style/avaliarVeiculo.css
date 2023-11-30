@@ -1,0 +1,15 @@
+.avaliacao {
+    display: flex;
+    cursor: pointer;
+}
+
+.estrela {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+}
+
+/* Adiciona a classe "preenchido" para preencher a estrela */
+.estrela.preenchido {
+    content: url('../Imagens/Icones/estrela2.png');
+}

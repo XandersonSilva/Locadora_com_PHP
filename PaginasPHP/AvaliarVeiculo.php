@@ -1,12 +1,24 @@
 <?php 
     //VERIFICA SE O USUÁRIO JÁ ESTÁ LOGADO, CASO NÃO ESTEJA, REDIRECIONA PARA LOGIN
     session_start();
+   
     if ((!isset($_SESSION['logado']) == true)){
         unset($_SESSION['logado']);
         session_destroy();
         header('Location: ../Cadastro_Login/login.php');
     }
    
+
+    $RegVeic = fopen("../Arquivos_json/carros_alugados.json" , "r");
+    $definido = 0;
+    $veiculoAtual = "Veiculo invalido";
+    if (filesize("../Arquivos_json/carros_alugados.json") > 0){
+        $jsonVeiculosReg = fread($RegVeic, filesize("../Arquivos_json/carros_alugados.json"));
+        $VeiculosAvaliados = json_decode($jsonVeiculosReg, true);
+        $definido = 1;
+    }
+    fclose($RegVeic);
+
     $RegVeic = fopen("../Arquivos_json/Veiculos_Registrados.json" , "r");
     $definido = 0;
     $veiculoAtual = "Veiculo invalido";
@@ -15,19 +27,30 @@
         $Veiculos = json_decode($jsonVeiculosReg, true);
         $definido = 1;
     }
-
+    
+    fclose($RegVeic);
     if (isset($_GET['id'])){
         $placa = $_GET['id'];
         if ($definido == 1){
             foreach ($Veiculos as $veiculo) {
                 if($veiculo['placa'] == $placa){
                     $veiculoAtual = $veiculo; 
-                    }
                 }
             }
         }
+    }
+    
+        foreach($VeiculosAvaliados as $veiculo){
+            if($veiculo['avaliacao'] && $veiculo['placa'] == $placa ){
+                ?>
+                <script>
+                    alert("Esse veículo já foi avaliado!");
+                </script>
+                <?php 
+                header("Location: historico.php?err=jaRej");
+            }
+        }
 
-                fclose($RegVeic);
         
     $quant = 0;
     $indicesVal = [];
@@ -57,6 +80,7 @@
     <link rel="stylesheet" href="../style/AdicionarV.css" >
     <link rel="stylesheet" href="../style/menu.css">
     <link rel="stylesheet" href="../style/Index.css">
+    <link rel="stylesheet" href="../style/avaliarVeiculo.css">
     <script src="../JavaScript/tema.js"></script>
     <script  src="../JavaScript/exibirBtnSair.js">  </script>
     <script  src="../JavaScript/jquery.js">         </script>
@@ -131,7 +155,6 @@
             </form>
         </div>
 </div>
-
 <body>
     <main id="main">
         <section>
@@ -166,12 +189,18 @@
             <?php $plc = $_GET['id']?>
             <div> <p>Diaria: R$<?php $tt = $veiculoAtual["valor_diaria"]; echo $tt?></p> </div>
         </section>
-            <form action="Pagamento.php" method="post" id="alugar">
-                <label style="height: auto" for="dias">Dias</label>
-                <input type="number" name="dias" id="dias" required max="180" min="1" maxlength="3">
-                <input type="submit" value="Alugar" id="alugarBTN">
+            <form action="../ScriptsPHP/avaliado.php" method="post" id="alugar">
+            <div class="avaliacao" id="avaliacao-container" >
+                <img src="../Imagens/Icones/estrela0.png" alt="Estrela Vazia" name="e1" id="est1" class="estrela" data-value="1">
+                <img src="../Imagens/Icones/estrela0.png" alt="Estrela Vazia" name="e2" id="est2" class="estrela" data-value="2">
+                <img src="../Imagens/Icones/estrela0.png" alt="Estrela Vazia" name="e3" id="est3" class="estrela" data-value="3">
+                <img src="../Imagens/Icones/estrela0.png" alt="Estrela Vazia" name="e4" id="est4" class="estrela" data-value="4">
+                <img src="../Imagens/Icones/estrela0.png" alt="Estrela Vazia" name="e5" id="est5" class="estrela" data-value="5">
+            </div>
+
+                <input type="button" onclick="verificarValor()" value="Avaliar" id="alugarBTN">
                 <input type="text" name="nome"  id="" value="<?=$nomeUser?>" class="NVeiw">
-                <input type="number" name="preco" id="" value="<?php echo $tt?>"  class="NVeiw" >
+                <input type="number" name="estrelasSlc" id="estrelasSlc" value="0"  class="NVeiw" >
                 <input type="text" name="placa" id="" value="<?=$plc?>" class="NVeiw">
             </form>
         <section id="dadosV">
@@ -208,4 +237,5 @@
         </section>
     </main>    
 </body>
+<script src="../JavaScript/AvaliarVeiculo.js"></script>
 </html>

@@ -4,6 +4,10 @@
     background-color: white;
 }
 
+body{
+    margin: 0;
+}
+
 .VeicIMG{
     margin: 10px 0px;
     width: auto;
@@ -13,21 +17,20 @@
 }
 .DivVeicIMG{
     min-height: 75px;
-}
+}    
 .veiculo{
-    /* background-color: #d7d2dd; */
+    background-color: #d7d2dd;
     display: flex;
-    margin: auto;
+    margin: 20px auto;
     /* border: 1px solid; */
     border-radius: 16px;
     width: 130px;
     height: 180px;
     padding: 3px;
-    margin-top: 5px;
+    /* margin-top: 5px; */
     flex-direction: column;
     align-items: center;
 }
-
 .alugarBTN{
     background:#2A43A8 ;
     border:  solid ;
@@ -54,10 +57,15 @@
     flex-wrap: wrap;
 }
 
-label{
-    display: flex;
+label{    
+    width: 118px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
     height: 50px;
 }
+
 
 #menuLateral{
     font-family: 'Martian Mono', monospace;

@@ -112,7 +112,7 @@
             </form>
         </div>
         <div id="menu_list">
-            <form action="#">
+            <form action="historico.php">
                 <input type="submit" value="Histórico" class="css-input">
             </form>
         </div>

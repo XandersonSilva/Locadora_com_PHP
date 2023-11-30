@@ -14,6 +14,7 @@
     $detalhes = $_POST['detalhes'];
     $cidade = $_POST['cidade'] ?? '';
     $estado = $_POST['uf']     ?? '';
+    $email = $_COOKIE['userA_Email'] ?? 'unknow';
     $localizacao_Atu = $cidade . ' - ' . $estados[$estado];
     
     $arquivoAbrir = fopen('../Arquivos_json/Carros_Brasileiros.json', 'r');
@@ -73,9 +74,9 @@
     }
     
     if ($definido === 0){
-        $Novo_veic = array(array('marca'=>$marca,'modelo'=>$modelo,'capacidade'=>$Qpassageiros,'placa'=>$placa,'combustivel'=>$combustivel,'KM_por_Litro'=>$KmL,'valor_diaria'=>"$diariaS",'data_saida'=>"",'data_retorno'=>"",'localizacao_Atu'=>$localizacao_Atu,'destino_Atu'=>"",'status'=>"disponivel",'CPF_cliente'=>"",'CPF_proprietario'=>$cpf,'detalhes'=>$detalhes, 'preco_Dia'=>$preco_Dia, 'imagens' => [$CaminhofotoA, $CaminhofotoB, $CaminhofotoC]));
+        $Novo_veic = array(array('proprietario'=>'','alugante'=>'','marca'=>$marca,'modelo'=>$modelo,'capacidade'=>$Qpassageiros,'placa'=>$placa,'combustivel'=>$combustivel,'KM_por_Litro'=>$KmL,'valor_diaria'=>"$diariaS",'data_saida'=>"",'data_retorno'=>"",'localizacao_Atu'=>$localizacao_Atu,'destino_Atu'=>"",'status'=>"disponivel",'CPF_cliente'=>"",'CPF_proprietario'=>$cpf,'detalhes'=>$detalhes, 'preco_Dia'=>$preco_Dia, 'imagens' => [$CaminhofotoA, $CaminhofotoB, $CaminhofotoC]));
     }else{
-        $Novo_veic = array('marca'=>$marca,'modelo'=>$modelo,'capacidade'=>$Qpassageiros,'placa'=>$placa,'combustivel'=>$combustivel,'KM_por_Litro'=>$KmL,'valor_diaria'=>"$diariaS",'data_saida'=>"",'data_retorno'=>"",'localizacao_Atu'=>$localizacao_Atu,'destino_Atu'=>"",'status'=>"disponivel",'CPF_cliente'=>"",'CPF_proprietario'=>$cpf,'detalhes'=>$detalhes, 'preco_Dia'=>$preco_Dia, 'imagens' => [$CaminhofotoA, $CaminhofotoB, $CaminhofotoC]);
+        $Novo_veic = array('proprietario'=>'','alugante'=>'','marca'=>$marca,'modelo'=>$modelo,'capacidade'=>$Qpassageiros,'placa'=>$placa,'combustivel'=>$combustivel,'KM_por_Litro'=>$KmL,'valor_diaria'=>"$diariaS",'data_saida'=>"",'data_retorno'=>"",'localizacao_Atu'=>$localizacao_Atu,'destino_Atu'=>"",'status'=>"disponivel",'CPF_cliente'=>"",'CPF_proprietario'=>$cpf,'detalhes'=>$detalhes, 'preco_Dia'=>$preco_Dia, 'imagens' => [$CaminhofotoA, $CaminhofotoB, $CaminhofotoC]);
     };
 
     $vazio0 = "";
