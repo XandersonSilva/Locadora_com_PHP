@@ -1,7 +1,7 @@
 <?php 
 
     require '../lib/vendor/autoload.php';
-    require '../ScriptsPHP/alugelConfirmado.php';
+    include '../ScriptsPHP/alugelConfirmado.php';
 
     use Mpdf\QrCode\QrCode;
     use Mpdf\QrCode\Output;
@@ -49,7 +49,7 @@
     $qrImage = (new Output\Png)->output($obQrcode, 300);
 
     // TORNAR O VEICULO INDISPONIVEL NO "BANCO DE DADOS"
-    VeiculoIndisponivel();
+    VeiculoIndisponivel($_COOKIE['placa']);
 ?>
 
 

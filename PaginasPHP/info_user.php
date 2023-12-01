@@ -88,9 +88,7 @@
 <body>
     <main id='main'>
        
-        <div id="ImgUsr">
-            <img src="../Imagens/Icones/user.png" alt="">
-        </div>
+        
         <?php
             echo'<p id="NameUsr"> ' . $name = $_COOKIE['userA_Nome'] . '</p>';
             echo'<p id="EmailUsr"> ' . $email = $_COOKIE['userA_Email'] . '</p>';
@@ -106,7 +104,7 @@
             <img id="Estrela" src="../Imagens/Icones/estrela0.png" alt="Estrela de classificação">
         </div>
         <hr>
-        <p>Veículos</p>
+<!--         <p>Veículos</p>
         <div id="V_Imgs">
             <img class="seta" src="../Imagens/Icones/seta-esquerda.png" alt="">
             <div id="veiculoImg">
@@ -121,7 +119,7 @@
                 Nome/Modelo
             </p>
             <input id="DetlhBtn" type="submit" value="Detalhes">
-        </form>
+        </form> -->
     </main>
     
 </body>

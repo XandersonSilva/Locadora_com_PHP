@@ -315,7 +315,9 @@
                     <label for="diaria"> Diária Sugerida </label>
                     <input required type="number" name="diaria" id="diaria" min="1" max="2999.99" step="0.01" >
                 </div>
-                <label for="detalhes">Detalhes Adicionais</label>
+                <div class="selecao">
+                    <label for="detalhes">Detalhes Adicionais</label>
+                </div>
                 <textarea id="detalhes" name="detalhes" rows="4" cols="5" ></textarea>
                 <p id="inserc">Local de inserção</p>
                 <div class="selecao">

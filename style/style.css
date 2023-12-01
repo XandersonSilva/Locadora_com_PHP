@@ -132,7 +132,7 @@ hr{
     border-radius: 10px;
     width: 150px;
     color:#fff;
-    background-color: #2243c9e0;
+    background-color: #2243c9;
     border: #00000000 solid;
     margin-left: 30px;
 }
@@ -213,12 +213,19 @@ hr{
     }
 }
 #avisoINF{
+    border: solid transparent 5px;
+    border-radius: 5px;
+    color: white;
+    background: #232072;
+    padding: 20px;
+    text-align: justify;
     margin: 100px auto;
 
 }
 
 .NVeiw{
     display: none;
+    background-color: red;
 }
 
 

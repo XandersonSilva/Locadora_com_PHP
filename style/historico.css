@@ -3,9 +3,16 @@ body {
     margin: 0;
     padding: 0;
 }
+h2{
+    margin: 0;
 
+}
 .header-container {
     display: flex;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
     justify-content: space-between;
     width: 100%;
     background: linear-gradient(90deg, #322C91 0%, #285E9E 80%);
@@ -25,14 +32,7 @@ body {
 }
 
 .toggle-header {
-    cursor: pointer;
-    margin: 0;
-    display: flex;
-    align-items: center;
-}
-
-.arrow {
-    margin-left: 5px;
+    
     width: 0;
     height: 0;
     border-style: solid;
@@ -44,6 +44,25 @@ body {
 }
 
 .up {
+    
     border-width: 8px 5px 0 5px;
     border-color: #fff transparent transparent transparent;
+}
+
+.cont{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.btn{
+    border-top: none;
+    border-left: transparent solid 1px;
+    font-size: 17px;
+    color: #fff;
+    width: 122px;
+    height: 32px;
+    border-radius: 16px;
+    /* border: #eee 1px solid; */
+    background: linear-gradient(180deg, #2948c9 0%, #15133b 100%);
 }

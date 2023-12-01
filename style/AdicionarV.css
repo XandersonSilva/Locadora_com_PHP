@@ -56,7 +56,7 @@ main{
     align-items: center;
 }
 .selecao>label{
-    max-width: 249px;
+    width: 249px;
     text-indent: 2px;
 }
 
@@ -106,8 +106,9 @@ main{
 }
 
 .CarroIMG{
-    max-width: 90px;
-    max-height: 90px;
+    border-radius: 15px;
+    max-width: 165px;
+    max-height: 165px;
     width: auto;
     height: auto;
 }

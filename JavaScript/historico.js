@@ -1,13 +1,14 @@
 
-function toggleItems(header) {
-    const arrow = header.querySelector('.arrow');
-    const isExpanded = header.classList.toggle('expanded');
-
-    if (isExpanded) {
-        arrow.classList.remove('down');
-        arrow.classList.add('up');
-    } else {
-        arrow.classList.remove('up');
-        arrow.classList.add('down');
+function ocutarItensHistorico(num) {
+    const Phistorico = document.getElementById('hist');
+    const  historico = document.getElementById('contH');
+    if(estado == 'norm'){
+        historico.classList.remove('cont');
+        historico.classList.add('Nveiw');
+    }else{
+        historico.classList.remove('down');
+        historico.classList.add('up');
     }
+    
+    
 }

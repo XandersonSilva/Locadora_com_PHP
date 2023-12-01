@@ -6,6 +6,21 @@
      header('Location: ../Cadastro_Login/login.php');
  }
 
+ if(isset($_GET['result']) && $_GET['result'] == 'sucess' ){
+    echo "<script>alert('Veiculo avaliado com Sucesso')</script>";
+ }elseif(isset($_GET['err']) && $_GET['err'] == 'jaRej'){
+    echo "<script>alert('O veiculo foi avaliado anteriormente!')</script>";
+ }
+
+ $RegVeic = fopen("../Arquivos_json/carros_alugados.json" , "r");
+ $Ja_Alugou = 0;
+ if (filesize("../Arquivos_json/carros_alugados.json") > 0){
+     $jsonVeiculosReg = fread($RegVeic, filesize("../Arquivos_json/carros_alugados.json"));
+     $VeiculosAvaliados = json_decode($jsonVeiculosReg, true);
+     $Ja_Alugou = 1;
+ }
+ fclose($RegVeic);
+
  $RegVeic = fopen("../Arquivos_json/Veiculos_Registrados.json" , "r");
  $definido = 0;
  if (filesize("../Arquivos_json/Veiculos_Registrados.json") > 0){
@@ -96,50 +111,56 @@
 
 <body>
 
-<div class="header-container light-mode">
-    <h2 class="toggle-header"  onclick="toggleItems(this)">Veículos Recentes <span class="arrow up"></span></h2>
+<div class="header-container">
+    <h2  id="hist">Veículos Recentes <button class="btn" onclick="ocutarItensHistorico(1)" data-value="norm">Ocutar</button></h2>
 </div>
 <div>
-<section id="conteudo">
+<section  id="contH" class="cont ">
     <?php
-        if(isset($Veiculos)){
-            foreach($Veiculos as $veiculo){
-                if($veiculo["alugante"] == $_COOKIE['userA_Email']){
-                    $semcarros = 1;
-                    
-                    $FimVeicF = " </form>";
-                    $Botão    = '<input class="alugarBTN" type="submit" value="Avaliar">';
-                        $IniVeicF = "<form action='AvaliarVeiculo.php?id=".$veiculo['placa']."'method='get' class='veiculo'>";
-                        $VecId = '<input style="display: none;" type="text" name="id" id="placaID" value="' . $veiculo['placa'] .'">';
-
-                        if($veiculo["marca"]){
-                            $veic = '<label>' .  $veiculo["marca"] . ' - ' . $veiculo["modelo"] . '</label>' ;    
-                        }
-
-                        if($veiculo["imagens"][0]){
-                            $imagem = " <div class='DivVeicIMG'><img class='VeicIMG' src='".$veiculo["imagens"][0]."' alt=''> </div>";
+        $semcarros = 1;
+        if($Ja_Alugou !== 0 && $definido !== 0){    
+            foreach($VeiculosAvaliados as $veicAva){
+                foreach($Veiculos as $veiculo){
+                    if($veicAva['placa'] == $veiculo['placa']){
+                        if($veicAva["usuario"] == $_COOKIE['userA_Email']){
                             
-                        }elseif($veiculo["imagens"][1]){
-                            $imagem = " <div class='DivVeicIMG'><img class='VeicIMG' src='".$veiculo["imagens"][1]."' alt=''> </div>";
-                        }elseif($veiculo["imagens"][2]){
-                            $imagem = " <div class='DivVeicIMG'><img class='VeicIMG' src='".$veiculo["imagens"][2]."' alt=''> </div>";
-                        }else{
-                            $imagem = "<p class='erroIMG'> SEM IMGEM</p>";
+                            $FimVeicF = " </form>";
+                            $Botão    = '<input class="alugarBTN" type="submit" value="Avaliar">';
+                                $IniVeicF = "<form action='AvaliarVeiculo.php?id=".$veiculo['placa']."'method='get' class='veiculo' class='historico'>";
+                                $VecId = '<input style="display: none;" type="text" name="id" id="placaID" value="' . $veiculo['placa'] .'">';
 
-                        }
+                                if($veiculo["marca"]){
+                                    $veic = '<label>' .  $veiculo["marca"] . ' - ' . $veiculo["modelo"] . '</label>' ;    
+                                }
 
-                        if (isset($veic)){
-                            $veicF = $IniVeicF . $VecId . $imagem . $veic . $Botão . $FimVeicF;
+                                if($veiculo["imagens"][0]){
+                                    $imagem = " <div class='DivVeicIMG'><img class='VeicIMG' src='".$veiculo["imagens"][0]."' alt=''> </div>";
+                                    
+                                }elseif($veiculo["imagens"][1]){
+                                    $imagem = " <div class='DivVeicIMG'><img class='VeicIMG' src='".$veiculo["imagens"][1]."' alt=''> </div>";
+                                }elseif($veiculo["imagens"][2]){
+                                    $imagem = " <div class='DivVeicIMG'><img class='VeicIMG' src='".$veiculo["imagens"][2]."' alt=''> </div>";
+                                }else{
+                                    $imagem = "<p class='erroIMG'> SEM IMGEM</p>";
+
+                                }
+
+                                if (isset($veic)){
+                                    $veicF = $IniVeicF . $VecId . $imagem . $veic . $Botão . $FimVeicF;
+                                }
+                                    if (isset($veicF)){
+                                    echo $veicF;
+                                }
+                                
+                                $semcarros = 0;
+                            }
+                            
                         }
-                            if (isset($veicF)){
-                            echo $veicF;
-                        }
-                        $semcarros = 0;
                     }
                 }
                 }else{
                     ?>
-                        <h2 id="avisoINF" id="texto">Para Alugar um veiculo informe sua cidade de partida e sua cidade destino!</h2>
+                        <h2 id="avisoINF" id="texto">Assim que você alugar um veiculo ele estará disponivel para avaliação aqui!</h2>
     
                     <?php }
                 if ($semcarros == 1 && $partida){
@@ -153,8 +174,8 @@
                 
     </section>
 </div>
-<div class="header-container light-mode">
-    <h2 class="toggle-header"  onclick="toggleItems(this)">Carros Compartilhados <span class="arrow up"></span></h2>
+<div class="header-container ">
+    <h2 class="" data-value="ativado" onclick="toggleItems(2)">Carros Compartilhados <button  class="btn" onclick="ocutarItensHistorico(1)" data-value="norm">Ocutar</button></h2>
 </div>
 <div>
     <?php

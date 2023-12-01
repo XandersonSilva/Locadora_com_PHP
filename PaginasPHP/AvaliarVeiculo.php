@@ -98,7 +98,7 @@
         <div id="Menu">
             <img src="../Imagens/Icones/menu.png" alt="" srcset="" onclick="retMenu()">
         </div>
-        <h1>Alugar Veículo</h1>
+        <h1>Avaliar Veículo</h1>
         <div id="login" onclick="alternar()">
         <?php
             if(isset($_COOKIE['userA_Nome'])){
@@ -189,7 +189,7 @@
             <?php $plc = $_GET['id']?>
             <div> <p>Diaria: R$<?php $tt = $veiculoAtual["valor_diaria"]; echo $tt?></p> </div>
         </section>
-            <form action="../ScriptsPHP/avaliado.php" method="post" id="alugar">
+            <form action="../ScriptsPHP/avaliar.php" method="post" id="alugar">
             <div class="avaliacao" id="avaliacao-container" >
                 <img src="../Imagens/Icones/estrela0.png" alt="Estrela Vazia" name="e1" id="est1" class="estrela" data-value="1">
                 <img src="../Imagens/Icones/estrela0.png" alt="Estrela Vazia" name="e2" id="est2" class="estrela" data-value="2">
