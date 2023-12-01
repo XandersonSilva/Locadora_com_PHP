@@ -7,13 +7,12 @@ h2{
     margin: 0;
 
 }
-.header-container {
-    display: flex;
+.Topcontainer {
+    margin-top: 2px;
     cursor: pointer;
     display: flex;
     align-items: center;
-    margin-left: 5px;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 100%;
     background: linear-gradient(90deg, #322C91 0%, #285E9E 80%);
     color: #fff;
@@ -56,13 +55,21 @@ h2{
 }
 
 .btn{
-    border-top: none;
-    border-left: transparent solid 1px;
+    margin-left: 15px;
+    background: #2A43A8;
+    border: solid;
+    border-left-color: #285E9E;
+    border-top-color: #285E9E;
+    border-right-color: #1f1b58;
+    border-bottom-color: #1f1b58;
+    border-radius: 5px;
+    color: white;
     font-size: 17px;
     color: #fff;
     width: 122px;
     height: 32px;
-    border-radius: 16px;
-    /* border: #eee 1px solid; */
-    background: linear-gradient(180deg, #2948c9 0%, #15133b 100%);
+    }
+
+.btn:focus {
+    outline: 1px solid #1f1b58;
 }

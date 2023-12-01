@@ -41,7 +41,7 @@
     }
     
         foreach($VeiculosAvaliados as $veiculo){
-            if($veiculo['avaliacao'] && $veiculo['placa'] == $placa ){
+            if(!empty($veiculo['avaliacao']) && $veiculo['placa'] == $placa ){
                 ?>
                 <script>
                     alert("Esse veículo já foi avaliado!");

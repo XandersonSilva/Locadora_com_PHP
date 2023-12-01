@@ -6,6 +6,22 @@
      header('Location: ../Cadastro_Login/login.php');
  }
 
+
+ $erroDiv = '<div id="erroReg"><div><div id="extiAvisoErro">
+ <p  onclick="esconderAviso()" tabindex="0">x</p>
+</div>
+ <p>O veículo não está em nossa posse!</p>
+</div></div>';
+$sucesso = '<script> alert("Veiculo Removido com sucesso!")</script>';
+
+if (isset($_GET['erro']) and $_GET['erro'] == 'vieculoNaoRegistrado'){
+ echo $erroDiv;
+}
+if (isset($_GET['aviso']) and $_GET['aviso'] == 'sucesso'){
+ echo $sucesso;
+}
+
+
  if(isset($_GET['result']) && $_GET['result'] == 'sucess' ){
     echo "<script>alert('Veiculo avaliado com Sucesso')</script>";
  }elseif(isset($_GET['err']) && $_GET['err'] == 'jaRej'){
@@ -111,11 +127,12 @@
 
 <body>
 
-<div class="header-container">
-    <h2  id="hist">Veículos Recentes <button class="btn" onclick="ocutarItensHistorico(1)" data-value="norm">Ocutar</button></h2>
+<div class="Topcontainer">
+    <h2  id="hist">Veículos Recentes </h2>
+    <button id="histBTN" class="btn" onclick="ocutarItensHistorico(1)" data-value="norm">Ocutar</button>
 </div>
 <div>
-<section  id="contH" class="cont ">
+<div  id="contH" class="cont ">
     <?php
         $semcarros = 1;
         if($Ja_Alugou !== 0 && $definido !== 0){    
@@ -169,15 +186,14 @@
                         <h2 id="avisoINF">Não há veiculos disponiveis na cidade de partida selecinada</h2>
                     <?php 
                     }
-                    ?>
-    
-                
-    </section>
+    ?>                
+        </div>
 </div>
-<div class="header-container ">
-    <h2 class="" data-value="ativado" onclick="toggleItems(2)">Carros Compartilhados <button  class="btn" onclick="ocutarItensHistorico(1)" data-value="norm">Ocutar</button></h2>
+<div class="Topcontainer">
+    <h2 class="comp" data-value="ativado" >Carros Compartilhados </h2>
+    <button id="compBTN" class="btn" onclick="ocutarItensCompartilhados(2)" data-value="norm">Ocutar</button>
 </div>
-<div>
+<div id="contC" class="cont">
     <?php
         if(isset($Veiculos)){
             foreach($Veiculos as $veiculo){
@@ -185,10 +201,62 @@
             }
         }
     }
-        //proprietario
-    ?>
+    
+    
+    if(isset($Veiculos)){
+        foreach($Veiculos as $veiculo){
+            if($veiculo["proprietario"] == $_COOKIE['userA_Email']){   
+                        
+                        $FimVeicF = " </form>";
+                        $Botão    = '<input class="alugarBTN" type="submit" value="Retirar">';
+                            $IniVeicF = "<form action='RetirarVeiculo.php?id=".$veiculo['placa']."'method='get' class='veiculo' class='historico'>";
+                            $VecId = '<input style="display: none;" type="text" name="id" id="placaID" value="' . $veiculo['placa'] .'">';
+
+                            if($veiculo["marca"]){
+                                $veic = '<label>' .  $veiculo["marca"] . ' - ' . $veiculo["modelo"] . '</label>' ;    
+                            }
+
+                            if($veiculo["imagens"][0]){
+                                $imagem = " <div class='DivVeicIMG'><img class='VeicIMG' src='".$veiculo["imagens"][0]."' alt=''> </div>";
+                                
+                            }elseif($veiculo["imagens"][1]){
+                                $imagem = " <div class='DivVeicIMG'><img class='VeicIMG' src='".$veiculo["imagens"][1]."' alt=''> </div>";
+                            }elseif($veiculo["imagens"][2]){
+                                $imagem = " <div class='DivVeicIMG'><img class='VeicIMG' src='".$veiculo["imagens"][2]."' alt=''> </div>";
+                            }else{
+                                $imagem = "<p class='erroIMG'> SEM IMGEM</p>";
+
+                            }
+
+                            if (isset($veic)){
+                                $veicF = $IniVeicF . $VecId . $imagem . $veic . $Botão . $FimVeicF;
+                            }
+                                if (isset($veicF)){
+                                echo $veicF;
+                            }
+                            
+                            $semcarros = 0;
+                        }
+                        
+                    }
+                }
+            else{
+                ?>
+                    <h2 id="avisoINF" id="texto">Assim que você alugar um veiculo ele estará disponivel para avaliação aqui!</h2>
+
+                <?php }
+            if ($semcarros == 1 && $partida){
+                $semcarros = 2;
+                ?>
+                    <h2 id="avisoINF">Não há veiculos disponiveis na cidade de partida selecinada</h2>
+                <?php 
+                }
+?>                
+    </div>
 </div>
 
 </body>
 <script src="../JavaScript/historico.js"></script>
+<script src="../JavaScript/AdicionarVeiculo.js"></script>
+
 </html>

@@ -65,6 +65,15 @@
     justify-content: space-between;
     align-items: center;
 }
+#remover{
+    padding: 0px 5px;
+    width: 350px;
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;    
+}
+
 #dias{
     border-color: #eee;
     border-radius: 16px;
@@ -84,6 +93,19 @@
     background: linear-gradient(180deg, #322C91 0%, #285E9E 100%);
 
 }
+
+
+#removerBTN {
+    font-size: 20px;
+    width: 310px;
+    color: #fff;
+    height: 32px;
+    border-radius: 8px;
+    border:none;
+    background: linear-gradient(180deg, #f00 0%, #912c2c 100%);
+
+}
+
 
 #detalhes{
     display: flex;
