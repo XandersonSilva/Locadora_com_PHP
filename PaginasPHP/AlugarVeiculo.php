@@ -100,6 +100,7 @@
     <script  src="../JavaScript/exibirBtnSair.js">  </script>
     <script  src="../JavaScript/jquery.js">         </script>
     <script  src="../JavaScript/AlugarVeiculo.js">  </script>
+    <link rel="shortcut icon" href="../Imagens/Favicon/favicon.png" type="image/png">
     
     
 </head>
@@ -108,10 +109,13 @@
         display: none   ;
     }
 </style>
-<header onload="user()">
+    
+</head>
+<header onload="index()">
     <nav>
         <div id="Menu">
             <img src="../Imagens/Icones/menu.png" alt="" srcset="" onclick="retMenu()">
+            <img  src="../Imagens/Logotipo/logo_Locadora.png" alt="">
         </div>
         <h1>Alugar Veículo</h1>
         <div id="login" onclick="alternar()">
@@ -207,7 +211,7 @@
             </div>
  
             <?php $plc = $_GET['id']?>
-            <div id="diaria" > <p>Diaria: R$<?php $tt = $veiculoAtual["valor_diaria"]; echo $tt?></p> </div>
+            <div id="diaria" > <p>Diaria: R$<?= number_format($veiculoAtual["valor_diaria"], 2, ',', '.')?></p> </div>
             
         </section>
             <form action="Pagamento.php" method="post" id="alugar">
@@ -215,7 +219,7 @@
                 <input type="number" name="dias" id="dias" required max="180" min="1" maxlength="3">
                 <input type="submit" value="Alugar" id="alugarBTN">
                 <input type="text" name="nome"  id="" value="<?=$nomeUser?>" class="NVeiw">
-                <input type="number" name="preco" id="" value="<?php echo $tt?>"  class="NVeiw" >
+                <input type="number" name="preco" id="" value="<?= $veiculoAtual["valor_diaria"]?>"  class="NVeiw" >
                 <input type="text" name="placa" id="" value="<?=$plc?>" class="NVeiw">
             </form>
         <section id="dadosV" >
@@ -263,7 +267,7 @@
             
             
             <div id='detalhes' >
-                <p>Detalhes </p>
+                <p id='detPrg'>Detalhes </p>
                 <?="<p>".$veiculoAtual["detalhes"]."</p>"?>
             </div>
         </section>

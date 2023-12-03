@@ -74,7 +74,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alugar</title>
+    <title>Avaliar</title>
     <link rel="stylesheet" href="../style/AlugarVeic.css">
     <link rel="stylesheet" href="../style/style.css">
     <link rel="stylesheet" href="../style/AdicionarV.css" >
@@ -85,6 +85,7 @@
     <script  src="../JavaScript/exibirBtnSair.js">  </script>
     <script  src="../JavaScript/jquery.js">         </script>
     <script  src="../JavaScript/AlugarVeiculo.js">  </script>
+    <link rel="shortcut icon" href="../Imagens/Favicon/favicon.png" type="image/png">
     
     
 </head>
@@ -93,10 +94,13 @@
         display: none   ;
     }
 </style>
-<header onload="user()">
+    
+</head>
+<header onload="index()">
     <nav>
         <div id="Menu">
             <img src="../Imagens/Icones/menu.png" alt="" srcset="" onclick="retMenu()">
+            <img  src="../Imagens/Logotipo/logo_Locadora.png" alt="">
         </div>
         <h1>Avaliar Veículo</h1>
         <div id="login" onclick="alternar()">
@@ -187,7 +191,7 @@
             </div>
  
             <?php $plc = $_GET['id']?>
-            <div> <p>Diaria: R$<?php $tt = $veiculoAtual["valor_diaria"]; echo $tt?></p> </div>
+            <div> <p>Diaria: R$<?php $tt = number_format($veiculoAtual["valor_diaria"], 2, ',', '.'); echo $tt?></p> </div>
         </section>
             <form action="../ScriptsPHP/avaliar.php" method="post" id="alugar">
             <div class="avaliacao" id="avaliacao-container" >
@@ -230,12 +234,20 @@
                 <p>Quilometros por litro </p>
                 <?="<p>".$veiculoAtual["KM_por_Litro"]."</p>"?>
             </div>
-            <div class='dado'>
-                <p>Quilometros por litro </p>
-                <?="<p>".$veiculoAtual["proprietario"]."</p>"?>
-            </div>
+            <?php 
+            
+            if(!empty($veiculoAtual['proprietario'])){
+                echo "<div class='dado'>
+                <p>Contato proprietario</p>
+                    <p>
+                    <a href='info_user.php?prop=".$veiculoAtual['proprietario']."'>".$veiculoAtual["proprietario"]."</a>
+                    </p>
+                </div>";
+            }
+
+            ?>
             <div id='detalhes'>
-                <p>Detalhes </p>
+                <p id="detPrg">Detalhes </p>
                 <?="<p>".$veiculoAtual["detalhes"]."</p>"?>
             </div>
         </section>

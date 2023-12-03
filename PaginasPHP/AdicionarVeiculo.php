@@ -13,13 +13,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alugar</title>
+    <title>Adicionar Veículo</title>
     <link rel="stylesheet" href="../style/style.css">
     <link rel="stylesheet" href="../style/AdicionarV.css">
     <link rel="stylesheet" href="../style/menu.css">
     <link rel="stylesheet" href="../style/Index.css">
     <link rel="stylesheet" href="../style/AdicionarV_pc.css">
     <script src="../JavaScript/tema.js"></script>
+    <link rel="shortcut icon" href="../Imagens/Favicon/favicon.png" type="image/png">
 </head>
 <style>
     label{
@@ -27,10 +28,13 @@
     height: auto;
 }
 </style>
-<header onload="user()">
+    
+</head>
+<header onload="index()">
     <nav>
         <div id="Menu">
             <img src="../Imagens/Icones/menu.png" alt="" srcset="" onclick="retMenu()">
+            <img  src="../Imagens/Logotipo/logo_Locadora.png" alt="">
         </div>
         <h1>Adicionar Veículo</h1>
         <div id="login" onclick="alternar()">

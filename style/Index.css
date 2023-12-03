@@ -117,7 +117,7 @@ label{
     font-size: 19px;
     border: 1px solid #001130;
     cursor: pointer;
-    padding: 10px 20px 10px 30px;
+    padding: 10px 20px;
     transition: 0.3s;
 }
 

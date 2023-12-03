@@ -36,7 +36,6 @@ main{
 }
 
 #placa, #KmL, #diaria{
-    width: 116px;
     height: 32px;
     text-align: center;
     text-transform: uppercase;
@@ -106,9 +105,9 @@ main{
 }
 
 .CarroIMG{
-    border-radius: 15px;
-    max-width: 165px;
-    max-height: 165px;
+
+    max-width: 96px;
+    max-height: 96px;
     width: auto;
     height: auto;
 }

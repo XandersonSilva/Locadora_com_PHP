@@ -110,7 +110,21 @@
 #detalhes{
     display: flex;
     flex-direction: column;
+    background-color: #2a43a81c;
+    border-top-right-radius: 8px;
+    border-top-left-radius:  8px;
+}
+
+#detalhes> p{
+    text-indent: 2em;
+    text-align: justify;
+    padding: 10px 10px;
+}
+#detPrg{
+    border-bottom: 2px solid #2c2b2b;
+    margin: 0;
+
 }
 main{
-    margin: auto;
+    min-height: 100vh;
 }

@@ -59,7 +59,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alugar</title>
+    <title>Compra Finalizada</title>
     <link rel="stylesheet" href="../style/style.css">
     <link rel="stylesheet" href="../style/Index.css">
     <link rel="stylesheet" href="../style/menu.css">
@@ -67,6 +67,7 @@
     <script  src="../JavaScript/exibirBtnSair.js">  </script>
     <script  src="../JavaScript/jquery.js">         </script>
     <script src="../JavaScript/tema.js">            </script>
+    <link rel="shortcut icon" href="../Imagens/Favicon/favicon.png" type="image/png">
     
     <title>Pagamento PIX</title>
     
@@ -75,6 +76,7 @@
     <nav>
         <div id="Menu">
             <img src="../Imagens/Icones/menu.png" alt="" srcset="" onclick="retMenu()">
+            <img  src="../Imagens/Logotipo/logo_Locadora.png" alt="">
         </div>
         <h1>Pagamento PIX</h1>
         <div id="login" onclick="alternar()">
@@ -101,10 +103,6 @@
 <div id="menuLateral">
     <div id="temaDiv">
             <img src="../Imagens/Icones/menu.png" id="retMenu" onclick="retMenu()">
-            <form action="../ScriptsPHP/tema.php" method="get">
-                <input type="submit" value="Tema" id="btntema">
-                <input id='noneD' value="<?=$_SERVER['PHP_SELF']?>" id="btntema"  name='back'>
-            </form>
         </div>
         <div id="menu_list">
             <form action="../PaginasPHP/index.php">

@@ -1,5 +1,15 @@
 function index(){
-    var cookie = document.cookie.split(';')[5].charAt(6);
+    let cookie = 'W';
+    let valoresC = Object.values(document.cookie.split(';'));
+    let valCont = valoresC.length;
+    for(let i = 0; i< valCont; i++){
+        if(valoresC[i] == ' tema=D'){
+             cookie = 'D';
+        } else if(valoresC[i] == ' tema=W'){
+             cookie = 'W';
+        }
+    }
+
     console.log(cookie);
 
     var html = document.getElementById("html");
@@ -44,7 +54,17 @@ function index(){
 document.addEventListener("DOMContentLoaded", index);
 
 function user(){
-    var cookie = document.cookie.split(';')[5].charAt(6);
+    let cookie = 'W';
+    let valoresC = Object.values(document.cookie.split(';'));
+    let valCont = valoresC.length;
+    for(let i = 0; i< valCont; i++){
+        if(valoresC[i] == ' tema=D'){
+             cookie = 'D';
+        } else if(valoresC[i] == ' tema=W'){
+             cookie = 'W';
+        }
+    }
+
     console.log(cookie);
 
     var html = document.getElementById("main");

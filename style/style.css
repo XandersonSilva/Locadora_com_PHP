@@ -29,8 +29,8 @@ hr{
 
 #Menu>img{
     padding-left: 8px;
-    width: 32px;
-    height: 32px;
+    width: auto;
+    height: 29px;
     margin: 2px;
 }
 #login{

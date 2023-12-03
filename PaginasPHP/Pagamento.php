@@ -59,19 +59,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alugar</title>
+    <title>Pagamento</title>
     <link rel="stylesheet" href="../style/style.css">
     <link rel="stylesheet" href="../style/Index.css">
     <link rel="stylesheet" href="../style/menu.css">
     <link rel="stylesheet" href="../style/pagamento.css">
     <script  src="../JavaScript/exibirBtnSair.js">  </script>
     <script  src="../JavaScript/jquery.js">         </script>
+    <link rel="shortcut icon" href="../Imagens/Favicon/favicon.png" type="image/png">
     
 </head>
-<header>
+<header onload="index()">
     <nav>
         <div id="Menu">
             <img src="../Imagens/Icones/menu.png" alt="" srcset="" onclick="retMenu()">
+            <img  src="../Imagens/Logotipo/logo_Locadora.png" alt="">
         </div>
         <h1>Alugar</h1>
         <div id="login" onclick="alternar()">
@@ -98,10 +100,7 @@
 <div id="menuLateral">
         <div id="temaDiv">
             <img src="../Imagens/Icones/menu.png" id="retMenu" onclick="retMenu()">
-            <form action="../ScriptsPHP/tema.php" method="get">
-                <input type="submit" value="Tema" id="btntema">
-                <input id='noneD' value="<?=$_SERVER['PHP_SELF']?>" id="btntema"  name='back'>
-            </form>
+            
         </div>
         <div id="menu_list">
             <form action="../PaginasPHP/index.php">
@@ -160,8 +159,8 @@
     
             <form action="../ScriptsPHP/realizarPagamento.php" method="post">
                 <input class="modern-button" type="submit" value="Pagar com pix">
-                <input type="text" style="display: none;" name="placa" value="<?=$placa?>">
-                <input type="text" style="display: none;" name="preco" value="<?=$total?>">
+                <input type="text" style="display: none;" name="placa" value="<?=$placa ?>">
+                <input type="text" style="display: none;" name="preco" value="<?= number_format($total, 2, ',', '.')?>">
             </form>
 </div>
 
@@ -182,7 +181,7 @@
         </tr>
         <tr>
             <td>Diária:</td>
-            <td><?php echo number_format($preco,2); ?></td>
+            <td><?php echo 'R$ '. number_format($preco, 2, ',', '.')?></td>
         </tr>
         <tr>
             <td>Quantidade de dias:</td>
@@ -190,7 +189,7 @@
         </tr>
         <tr>
             <td>Total:</td>
-            <td>R$<?php echo number_format($total, 2); ?></td>
+            <td><?php echo 'R$ '. number_format($total, 2, ',', '.')?></td>
         </tr>
     </table>
 

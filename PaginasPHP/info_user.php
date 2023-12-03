@@ -110,7 +110,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alugar</title>
+    <title>Informações do Proprietario </title>
     <link rel="stylesheet" href="../style/style.css">
     <script  src="../JavaScript/exibirBtnSair.js">  </script>
     <script  src="../JavaScript/jquery.js">         </script>
@@ -118,14 +118,16 @@
     <link rel="stylesheet" href="../style/User_Page.css">
     <link rel="stylesheet" href="../style/menu.css">
     <link rel="stylesheet" href="../style/Index.css">
+    <link rel="shortcut icon" href="../Imagens/Favicon/favicon.png" type="image/png">
     
 </head>
-<header onload="user()">
+<header onload="index()">
     <nav>
         <div id="Menu">
             <img src="../Imagens/Icones/menu.png" alt="" srcset="" onclick="retMenu()">
+            <img  src="../Imagens/Logotipo/logo_Locadora.png" alt="">
         </div>
-        <h1>Perfil</h1>
+        <h1>Informações do Proprietario</h1>
         <div id="login" onclick="alternar()">
         <?php
             if(isset($_COOKIE['userA_Nome'])){

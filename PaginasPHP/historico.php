@@ -53,7 +53,7 @@ if (isset($_GET['aviso']) and $_GET['aviso'] == 'sucesso'){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alugar</title>
+    <title>Histórico</title>
     <link rel="stylesheet" href="../style/style.css">
     <link rel="stylesheet" href="../style/Index.css">
     <script  src="../JavaScript/exibirBtnSair.js">  </script>
@@ -61,13 +61,15 @@ if (isset($_GET['aviso']) and $_GET['aviso'] == 'sucesso'){
     <script src="../JavaScript/tema.js">            </script>
     <link rel="stylesheet" href="../style/menu.css">
     <link rel="stylesheet" href="../style/historico.css">
+    <link rel="shortcut icon" href="../Imagens/Favicon/favicon.png" type="image/png">
     
-</head>
-<header onload="index()">
-    <nav>
-        <div id="Menu">
-            <img src="../Imagens/Icones/menu.png" alt="" srcset="" onclick="retMenu()">
-        </div>
+    </head>
+    <header onload="index()">
+        <nav>
+            <div id="Menu">
+                <img src="../Imagens/Icones/menu.png" alt="" srcset="" onclick="retMenu()">
+                <img  src="../Imagens/Logotipo/logo_Locadora.png" alt="">
+            </div>
         <h1>Histórico</h1>
         <div id="login" onclick="alternar()">
         <?php
