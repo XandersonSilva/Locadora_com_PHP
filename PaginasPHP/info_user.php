@@ -39,7 +39,7 @@
 
              foreach($CarrosAvaliados as $CarrosAva){
                if(!empty($CarrosAva['avaliacao'])){
-                    $Propeml =$CarrosAva['propietario'];
+                    $Propeml =$CarrosAva['proprietario'];
                     if($PropEmail == $Propeml){
                         $AvaAtu=intval($CarrosAva['avaliacao']);
                         $classificacao  += $AvaAtu;

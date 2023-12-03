@@ -317,7 +317,7 @@
                 </div>
                 <div class="selecao">
                     <label for="diaria"> Diária Sugerida </label>
-                    <input required type="number" name="diaria" id="diaria" min="1" max="2999.99" step="0.01" >
+                    <input required type="number" name="diaria" id="diariaAd" min="1" max="2999.99" step="0.01" >
                 </div>
                 <div class="selecao">
                     <label for="detalhes">Detalhes Adicionais</label>

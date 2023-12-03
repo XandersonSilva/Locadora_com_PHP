@@ -20,7 +20,7 @@
     foreach($CarrosAlugados as $ind => $carro){
         if ($placa == $carro['placa'] && $carro['usuario'] == $usuario){
             $indice = $ind;
-            $CarrosAlugados[$indice] =  ['placa'=> $carro['placa'], 'usuario' => $carro['usuario'], 'propietario' => $carro['propietario'], 'avaliacao' => $avaliacao] ;
+            $CarrosAlugados[$indice] =  ['placa'=> $carro['placa'], 'usuario' => $carro['usuario'], 'proprietario' => $carro['proprietario'], 'avaliacao' => $avaliacao] ;
             $avaliar = true;
         } 
        

@@ -35,12 +35,18 @@ main{
     color: #fff;
 }
 
-#placa, #KmL, #diaria{
+#placa, #KmL, #diariaAd{
     height: 32px;
+    width: 130px;
     text-align: center;
     text-transform: uppercase;
 }
 
+#diaria{
+    height: 32px;
+    text-align: center;
+    text-transform: uppercase;
+}
 #detalhes{
     margin: auto;
     width: 350px;

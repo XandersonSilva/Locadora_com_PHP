@@ -160,7 +160,7 @@
             <form action="../ScriptsPHP/realizarPagamento.php" method="post">
                 <input class="modern-button" type="submit" value="Pagar com pix">
                 <input type="text" style="display: none;" name="placa" value="<?=$placa ?>">
-                <input type="text" style="display: none;" name="preco" value="<?= number_format($total, 2, ',', '.')?>">
+                <input type="text" style="display: none;" name="preco" value="<?= $total?>">
             </form>
 </div>
 
