@@ -101,7 +101,7 @@
             <div class="cidadeINPT">
                 <p>Cidade de Partida </p> 
                 
-                <select name="partida" type=“text” id=“cidadesP” class="cidade" required>
+                <select  name="partida" type=“text” id=“cidadesP” class="cidade" required>
                 <option> <?=$partida?></option>
                 <option> Aracaju - Sergipe </option>
                 <option> Belém  - Pará   </option>
@@ -217,14 +217,17 @@
                     
                 }else{
                     ?>
-                        <h2 id="avisoINF" id="texto">Para Alugar um veiculo informe sua cidade de partida e sua cidade destino!</h2>
+                        <div class="conAviso">
+                            <h2 id="avisoINF" id="texto">Para Alugar um veiculo informe sua cidade de partida e sua cidade destino!</h2>
+                        </div>
     
                     <?php }
                 if ($semcarros == 1 && $partida){
                     $semcarros = 2;
                     ?>
-                        <h2 id="avisoINF">Não há veiculos disponiveis na cidade de partida selecinada</h2>
-    
+                        <div class="conAviso">
+                            <h2 id="avisoINF">Não há veiculos disponiveis na cidade de partida selecinada</h2>
+                        </div>
                     <?php }
             
                 ?>

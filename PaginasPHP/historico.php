@@ -177,15 +177,9 @@ if (isset($_GET['aviso']) and $_GET['aviso'] == 'sucesso'){
                 }
                 }else{
                     ?>
-                        <h2 id="avisoINF" id="texto">Assim que você alugar um veiculo ele estará disponivel para avaliação aqui!</h2>
+                       <div class="conAviso"> <h2 id="avisoINF" id="texto">Assim que você alugar um veiculo ele estará disponivel para avaliação aqui!</h2></div>
     
                     <?php }
-                if ($semcarros == 1 && $partida){
-                    $semcarros = 2;
-                    ?>
-                        <h2 id="avisoINF">Não há veiculos disponiveis na cidade de partida selecinada</h2>
-                    <?php 
-                    }
     ?>                
         </div>
 </div>
@@ -242,15 +236,11 @@ if (isset($_GET['aviso']) and $_GET['aviso'] == 'sucesso'){
                 }
             else{
                 ?>
-                    <h2 id="avisoINF" id="texto">Assim que você alugar um veiculo ele estará disponivel para avaliação aqui!</h2>
+                    <div class="conAviso">
+                        <h2 id="avisoINF" id="texto">Assim que você Adicionar um veiculo ele estará disponivel para remoção aqui!</h2>
+                    </div>
 
                 <?php }
-            if ($semcarros == 1 && $partida){
-                $semcarros = 2;
-                ?>
-                    <h2 id="avisoINF">Não há veiculos disponiveis na cidade de partida selecinada</h2>
-                <?php 
-                }
 ?>                
     </div>
 </div>

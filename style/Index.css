@@ -19,17 +19,16 @@ body{
     min-height: 75px;
 }    
 .veiculo{
-    background-color: #d7d2dd;
+    background-color: #2a43a81c;
     display: flex;
     margin: 20px auto;
-    /* border: 1px solid; */
-    border-radius: 16px;
+    border-radius: 8px;
     width: 130px;
     height: 180px;
     padding: 3px;
-    /* margin-top: 5px; */
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
 }
 .alugarBTN{
     background:#2A43A8 ;

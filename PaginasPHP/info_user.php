@@ -7,6 +7,103 @@
         session_destroy();
         header('Location: ../Cadastro_Login/login.php');
     }
+
+    $Veiculos = [];
+
+
+    $RegVeic = fopen("../Arquivos_json/Veiculos_Registrados.json" , "r");
+    $definido = 0;
+    $veiculoAtual = "Veiculo invalido";
+    if (filesize("../Arquivos_json/Veiculos_Registrados.json") > 0){
+        $jsonVeiculosReg = fread($RegVeic, filesize("../Arquivos_json/Veiculos_Registrados.json"));
+        $Veiculos = json_decode($jsonVeiculosReg, true);
+        $definido = 1;
+    }else{
+        header('Location: ../PaginasPHP/index.php');
+        exit;
+    }
+    fclose($RegVeic);
+    
+
+
+
+    $arquivo = file_get_contents("../Arquivos_json/carros_alugados.json");
+    $CarrosAvaliados = json_decode($arquivo, true);
+   
+
+
+    function classificacao($PropEmail, $CarrosAvaliados){
+        //print_r($CarrosAvaliados);
+        $classificacao = 0;
+        $contador = 0;
+
+             foreach($CarrosAvaliados as $CarrosAva){
+               if(!empty($CarrosAva['avaliacao'])){
+                    $Propeml =$CarrosAva['propietario'];
+                    if($PropEmail == $Propeml){
+                        $AvaAtu=intval($CarrosAva['avaliacao']);
+                        $classificacao  += $AvaAtu;
+                        $contador++;
+                    }
+                }
+            } 
+             
+        $estrelasFull = '';
+        $classificacao =  intval($classificacao/$contador);
+        for($i =0 ; $i< $classificacao; $i++ ){
+            $estrelasFull .=  '<img id="Estrela" src="../Imagens/Icones/estrela2.png" alt="">';
+            
+        }
+        for($i =0 ; $i< 5 - $classificacao; $i++ ){
+            $estrelasFull .=  '<img id="Estrela" src="../Imagens/Icones/estrela0.png" alt="">';
+        }
+        echo $estrelasFull;
+        
+    }
+    function infoProp($CarrosAvaliados){
+        $RegProp = fopen("../Arquivos_json/usuarios.json" , "r");
+        $definido = 0;
+        if (filesize("../Arquivos_json/usuarios.json") > 0){
+            $jsonVeiculosReg = fread($RegProp, filesize("../Arquivos_json/usuarios.json"));
+            $usuarios = json_decode($jsonVeiculosReg, true);
+            $definido = 1;
+        }else{
+            header('Location: ../PaginasPHP/index.php');
+            exit;
+        }
+        fclose($RegProp);
+    
+        if (isset($_GET['prop'])){
+            $prietario = $_GET['prop'];
+            if ($definido == 1){
+                foreach ($usuarios as $usuario) {
+                    if($usuario['Email'] == $prietario){
+                        $propietarioAtual = $usuario; 
+                        }
+                    }
+                }
+                echo'<p id="NameUsr"> ' . $propietarioAtual['nome'] . '</p>';
+                echo'<p id="EmailUsr"> ' .$propietarioAtual['Email'] . '</p>';
+                echo'
+                <div id="classifc">
+                <p>Classificação </p>';
+                echo classificacao($propietarioAtual['Email'],$CarrosAvaliados);
+                echo '</div>
+                <hr>
+                ';
+    
+            }else{
+                echo'<p id="NameUsr"> ' . $name = $_COOKIE['userA_Nome'] . '</p>';
+                echo'<p id="EmailUsr"> ' . $email = $_COOKIE['userA_Email'] . '</p>';
+                echo'
+                <div id="classifc">
+                <p>Classificação </p>';
+                echo classificacao($_COOKIE['userA_Email'] ,$CarrosAvaliados);
+                echo '</div>
+                <hr>
+                ';
+            }
+    }
 ?>
 <html lang="pt-BR">
 <head>
@@ -90,36 +187,9 @@
        
         
         <?php
-            echo'<p id="NameUsr"> ' . $name = $_COOKIE['userA_Nome'] . '</p>';
-            echo'<p id="EmailUsr"> ' . $email = $_COOKIE['userA_Email'] . '</p>';
-            //echo"<p> CPF: " . $cpf = $_COOKIE['userA_CPF'];
+            infoProp($CarrosAvaliados)
         ?>
-        <div id="classifc">
-            <p>Classificação </p>
-        
-            <img id="Estrela" src="../Imagens/Icones/estrela0.png" alt="Estrela de classificação">
-            <img id="Estrela" src="../Imagens/Icones/estrela0.png" alt="Estrela de classificação">
-            <img id="Estrela" src="../Imagens/Icones/estrela0.png" alt="Estrela de classificação">
-            <img id="Estrela" src="../Imagens/Icones/estrela0.png" alt="Estrela de classificação">
-            <img id="Estrela" src="../Imagens/Icones/estrela0.png" alt="Estrela de classificação">
-        </div>
-        <hr>
-<!--         <p>Veículos</p>
-        <div id="V_Imgs">
-            <img class="seta" src="../Imagens/Icones/seta-esquerda.png" alt="">
-            <div id="veiculoImg">
-                <form action="AdicionarVeiculo.php" method="post">
-                    <input type="submit" value="Adicionar Veículo">
-                </form>
-            </div>
-            <img class="seta" src="../Imagens/Icones/seta-direita.png" alt="">
-        </div>
-        <form id="Dtlh" action="" method="post">
-            <p for="Detalhes">
-                Nome/Modelo
-            </p>
-            <input id="DetlhBtn" type="submit" value="Detalhes">
-        </form> -->
+       
     </main>
     
 </body>

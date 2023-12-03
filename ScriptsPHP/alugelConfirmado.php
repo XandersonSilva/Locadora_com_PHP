@@ -34,7 +34,7 @@ function VeiculoIndisponivel($placa){
                 }
             }
             if ($gravarAluguel){    
-                $novo_item = ['placa'=> $carro['placa'], 'usuario'=> $usuario, 'proprietario'=> $carro['email'], 'avalialiacao'=>''];
+                $novo_item = ['placa'=> $carro['placa'], 'usuario'=> $usuario, 'proprietario'=> $carro['proprietario'], 'avalialiacao'=>''];
 
                 $arquivoAlugPont = fopen('../Arquivos_json/carros_alugados.json', 'w');
         

@@ -18,16 +18,29 @@ fclose($arquivo);
 $vazio0 = "";
 $vazio1 = array();
 
+$prosseguir = false;
 if  (!($Veiculos == $vazio0 or $Veiculos == $vazio1 or $definido == 0)){ 
-    foreach ($Veiculos as $indice => $veiculo) {
+    foreach ($Veiculos as $ind => $veiculo) {
         if ($veiculo['placa'] ==  $placa) {
             $prosseguir = true;
-        }else{
-            header("Location: ../PaginasPHP/AdicionarVeiculo.php?erro=vieculoNaoRegistrado");
-            $prosseguir = false;
-            exit;
-        }  
+            $indice = $ind;
+        }
     }
 }
-echo $prosseguir;
+if(!($prosseguir)){
+    header("Location: ../PaginasPHP/historico.php?erro=vieculoNaoRegistrado");
+    exit;
+}
+
+unset($Veiculos[$indice]);
+$Veiculos = json_encode($Veiculos);
+
+$arquivo = fopen("../Arquivos_json/Veiculos_Registrados.json", 'w');
+fwrite($arquivo, $Veiculos);
+fclose($arquivo);
+header("Location: ../PaginasPHP/historico.php?aviso=sucesso");
+
+
+
+
 ?>

@@ -6,7 +6,9 @@
         session_destroy();
         header('Location: ../Cadastro_Login/login.php');
     }
-   
+    $Veiculos = [];
+
+
     $RegVeic = fopen("../Arquivos_json/Veiculos_Registrados.json" , "r");
     $definido = 0;
     $veiculoAtual = "Veiculo invalido";
@@ -14,8 +16,12 @@
         $jsonVeiculosReg = fread($RegVeic, filesize("../Arquivos_json/Veiculos_Registrados.json"));
         $Veiculos = json_decode($jsonVeiculosReg, true);
         $definido = 1;
+    }else{
+        header('Location: ../PaginasPHP/index.php');
+        exit;
     }
-
+    fclose($RegVeic);
+    
     if (isset($_GET['id'])){
         $placa = $_GET['id'];
         if ($definido == 1){
@@ -24,11 +30,44 @@
                     $veiculoAtual = $veiculo; 
                     }
                 }
+                if($veiculoAtual == 'Veiculo invalido'){
+                    header('Location: ../PaginasPHP/index.php');
+                    exit;
+                }
+            }else{
+                header('Location: ../PaginasPHP/index.php');
+                exit;
             }
+        }else{
+            header('Location: ../PaginasPHP/index.php');
+            exit;
         }
 
-                fclose($RegVeic);
+    $arquivo = file_get_contents("../Arquivos_json/carros_alugados.json");
+    $CarrosAvaliados = json_decode($arquivo, true);
+  
         
+    function classificacao($CarrosAvaliados, $placa){
+        $classificacao = 0;
+        foreach($CarrosAvaliados as $CarrosAva){
+                if($CarrosAva['placa'] == $placa){
+                    
+                    $classificacao = intval($CarrosAva['avaliacao']);
+                }
+            }           
+
+
+        $estrelasFull = '';
+        for($i =0 ; $i< $classificacao; $i++ ){
+            $estrelasFull .=  '<img id="Estrela" src="../Imagens/Icones/estrela2.png" alt="">';
+            
+        }
+          for($i =0 ; $i< 5 - $classificacao; $i++ ){
+            $estrelasFull .=  '<img id="Estrela" src="../Imagens/Icones/estrela0.png" alt="">';
+        }
+        echo $estrelasFull;
+    }
+
     $quant = 0;
     $indicesVal = [];
     for ($i = 0; $i < 3; $i++){
@@ -162,9 +201,14 @@
             }
                     ?>
             </div>
+            <div id='classifc' >
+                <p>Classificação </p>
+                <?="<div id='classifc'>".classificacao($CarrosAvaliados, $placa)."</div>"?>
+            </div>
  
             <?php $plc = $_GET['id']?>
-            <div> <p>Diaria: R$<?php $tt = $veiculoAtual["valor_diaria"]; echo $tt?></p> </div>
+            <div id="diaria" > <p>Diaria: R$<?php $tt = $veiculoAtual["valor_diaria"]; echo $tt?></p> </div>
+            
         </section>
             <form action="Pagamento.php" method="post" id="alugar">
                 <label style="height: auto" for="dias">Dias</label>
@@ -174,9 +218,10 @@
                 <input type="number" name="preco" id="" value="<?php echo $tt?>"  class="NVeiw" >
                 <input type="text" name="placa" id="" value="<?=$plc?>" class="NVeiw">
             </form>
-        <section id="dadosV">
+        <section id="dadosV" >
+        
             <div class='dado'>
-                <p>Marca</p>
+            <p>Marca</p>
                 <?php 
                 echo "<p>".$veiculoAtual["marca"]."</p>";
                 ?>
@@ -201,7 +246,23 @@
                 <p>Quilometros por litro </p>
                 <?="<p>".$veiculoAtual["KM_por_Litro"]."</p>"?>
             </div>
-            <div id='detalhes'>
+            
+                
+            <?php 
+            
+            if(!empty($veiculoAtual['proprietario'])){
+                echo "<div class='dado'>
+                <p>Contato proprietario</p>
+                    <p>
+                    <a href='info_user.php?prop=".$veiculoAtual['proprietario']."'>".$veiculoAtual["proprietario"]."</a>
+                    </p>
+                </div>";
+            }
+
+            ?>
+            
+            
+            <div id='detalhes' >
                 <p>Detalhes </p>
                 <?="<p>".$veiculoAtual["detalhes"]."</p>"?>
             </div>

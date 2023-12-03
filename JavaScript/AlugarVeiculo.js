@@ -17,6 +17,7 @@ function Anterior(ind0, ind1, ind2){
      
     fetch("../Arquivos_json/Veiculos_Registrados.json").then((response) => {
         response.json().then((dados)  => {
+            dados =  Object.values(dados);
             dados.map((veiculo) => {
                 if (veiculo["placa"] == placa){
                     var IMGs = veiculo["imagens"];
@@ -75,6 +76,8 @@ function Proximo(ind0, ind1, ind2){
      
     fetch("../Arquivos_json/Veiculos_Registrados.json").then((response) => {
         response.json().then((dados)  => {
+
+            dados =  Object.values(dados);
             dados.map((veiculo) => {
                 if (veiculo["placa"] == placa){
                     var IMGs = veiculo["imagens"];

@@ -65,8 +65,11 @@
     
 </head>
 <style>
+    #removerBTN:focus{
+    outline: 2px solid #ff2929;
+    }
     .NVeiw{
-        display: none   ;
+        display: none;
     }
 </style>
 <header onload="user()">
@@ -167,7 +170,7 @@
             <div> <p>Diaria: R$<?php $tt = $veiculoAtual["valor_diaria"]; echo $tt?></p> </div>
         </section>
             <form action="../ScriptsPHP/removerVeiculo.php" method="post" id="remover">
-                <input type="submit" value="Remover Veiculo" id="removerBTN">
+                <input tabindex="1" type="submit" value="Remover Veiculo" id="removerBTN">
                 <input type="text" name="nome"  id="" value="<?=$nomeUser?>" class="NVeiw">
                 <input type="number" name="preco" id="" value="<?php echo $tt?>"  class="NVeiw" >
                 <input type="text" name="placa" id="" value="<?=$plc?>" class="NVeiw">

@@ -152,7 +152,7 @@ hr{
         flex-direction: column;
         justify-content: center;
         background-color: #e1e1e1;
-        padding: 1px 3px 0px 5px;
+        padding: 5px 3px 10px 5px;
     }
     
     #pesq_input {
@@ -213,7 +213,6 @@ hr{
     }
 }
 #avisoINF{
-    border: solid #00000000 5px;
     border-radius: 5px;
     color: white;
     background: #232072;
@@ -269,4 +268,91 @@ hr{
     border-radius: 8px;
     width: 16px;
     height: 16px;
+}
+
+.conAviso{
+    padding: 10px;
+    margin: auto;
+}
+
+#classifc{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+#classifc>p{
+    margin:  12px 12px 12px 0;
+
+}
+
+#Estrela{
+    width: 32px;
+    height: 32px;
+    margin-left: 2px;
+    user-select: none;
+}
+
+#diaria> p{
+    margin:  7px 0;
+}
+
+
+/* Estilo do Select */
+select {
+   appearance: none;
+   -webkit-appearance: none; 
+   -moz-appearance: none; 
+    padding: 3px;;
+    border: 1px solid #6a5acd; /* Cor roxa */
+    border-radius: 5px;
+    background-color: #f8f8f8; /* Cor de fundo */
+    color: #333; /* Cor do texto */
+    cursor: pointer;
+    outline: none;
+}
+
+/* Estilo das Opções */
+select option {
+    background-color: #424242; /* Cor de fundo das opções */
+    color: #fff; /* Cor do texto das opções */
+    padding: 10px;
+    font-size: 15px;
+
+}
+
+/* Estilo das Opções no Hover */
+select option:hover {
+    background-color: #2243c9e0; /* Cor de fundo das opções ao passar o mouse */
+}
+
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 9px;
+    height: 4px;
+}
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #2c2b2b;
+    background: #2c2b2b;
+    margin-left: 10px;
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: #0b36cd;
+    border-radius: 10px;
+    transition: all .6s;
+}
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: #261eb3;
 }

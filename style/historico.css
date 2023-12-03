@@ -55,7 +55,6 @@ h2{
 }
 
 .btn{
-    margin-left: 15px;
     background: #2A43A8;
     border: solid;
     border-left-color: #285E9E;
@@ -63,10 +62,9 @@ h2{
     border-right-color: #1f1b58;
     border-bottom-color: #1f1b58;
     border-radius: 5px;
-    color: white;
     font-size: 17px;
     color: #fff;
-    width: 122px;
+    width: 90px;
     height: 32px;
     }
 

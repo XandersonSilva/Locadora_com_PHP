@@ -18,7 +18,7 @@
     
     $avaliar = false;    
     foreach($CarrosAlugados as $ind => $carro){
-        if ($placa == $carro['placa'] && $carro['usuario'] == $usuario && empty($carro['avaliacao'])){
+        if ($placa == $carro['placa'] && $carro['usuario'] == $usuario){
             $indice = $ind;
             $CarrosAlugados[$indice] =  ['placa'=> $carro['placa'], 'usuario' => $carro['usuario'], 'propietario' => $carro['propietario'], 'avaliacao' => $avaliacao] ;
             $avaliar = true;
@@ -30,6 +30,8 @@
         $CarrosA = json_encode($CarrosAlugados);
         fwrite($arquivo, $CarrosA);
         fclose($arquivo);
+        header("Location: ../PaginasPHP/historico.php?result=sucess");
+    }else{
         header("Location: ../PaginasPHP/historico.php?result=sucess");
     }
 

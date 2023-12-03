@@ -230,6 +230,10 @@
                 <p>Quilometros por litro </p>
                 <?="<p>".$veiculoAtual["KM_por_Litro"]."</p>"?>
             </div>
+            <div class='dado'>
+                <p>Quilometros por litro </p>
+                <?="<p>".$veiculoAtual["proprietario"]."</p>"?>
+            </div>
             <div id='detalhes'>
                 <p>Detalhes </p>
                 <?="<p>".$veiculoAtual["detalhes"]."</p>"?>
