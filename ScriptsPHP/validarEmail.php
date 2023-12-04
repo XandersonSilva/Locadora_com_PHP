@@ -130,7 +130,7 @@ try {
     $mail->Host       = 'smtp.gmail.com';                         //Especivicar o SMTP server para envio
     $mail->SMTPAuth   = true;                                     //Ativar SMTP authentication
     $mail->Username   = 'jxveiculos@gmail.com';                   //SMTP username
-    $mail->Password   = 'gfnw zdvr xxji mmbw';                                       //SMTP password - Não forneciada publicamente por motivos de segurança
+    $mail->Password   = '';                                       //SMTP password - Não forneciada publicamente por motivos de segurança
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;              //Enable implicit TLS encryption
     $mail->Port       = 465;                                      //Porta TCP para conexão;
 

@@ -3,9 +3,23 @@
     main {
       width: 350px;
     }
+    
+    #Menu{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
+@media (min-width: 361px){
+    
+#Menu{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
 
+}
 
 *:focus{
     outline: 2px solid #322C91;
@@ -14,24 +28,33 @@ header{
     background-color: #322c91fd;
 }
 nav{
-    font-family:  Geneva, Verdana, sans-serif;
+    width: 100%;
+    font-family: Geneva, Verdana, sans-serif;
     color: white;
-    max-height: 50px;
+    max-height: 70px;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    flex-wrap: nowrap;
     justify-content: space-between;
+    align-items: center;
 }
 
 hr{
     margin-top: 1px;
 }
-
-#Menu>img{
+h1{
+    margin: 0;
+}
+#menuIco{
     padding-left: 8px;
     width: auto;
-    height: 29px;
+    height: 32px;
     margin: 2px;
+}
+#logotipo{
+    padding: 0 8px;
+    width: auto;
+    max-height: 20px;
 }
 #login{
     font-size: 1.5em;

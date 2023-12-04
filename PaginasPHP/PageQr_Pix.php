@@ -75,8 +75,8 @@
 <header onload="index()">
     <nav>
         <div id="Menu">
-            <img src="../Imagens/Icones/menu.png" alt="" srcset="" onclick="retMenu()">
-            <img  src="../Imagens/Logotipo/logo_Locadora.png" alt="">
+            <img  id="logotipo" src="../Imagens/Logotipo/logo_Locadora.png" alt="">
+            <img id="menuIco" src="../Imagens/Icones/menu.png" alt="" srcset="" onclick="retMenu()">
         </div>
         <h1>Pagamento PIX</h1>
         <div id="login" onclick="alternar()">

@@ -67,9 +67,9 @@ if (isset($_GET['aviso']) and $_GET['aviso'] == 'sucesso'){
     <header onload="index()">
         <nav>
             <div id="Menu">
-                <img src="../Imagens/Icones/menu.png" alt="" srcset="" onclick="retMenu()">
-                <img  src="../Imagens/Logotipo/logo_Locadora.png" alt="">
-            </div>
+            <img  id="logotipo" src="../Imagens/Logotipo/logo_Locadora.png" alt="">
+            <img id="menuIco" src="../Imagens/Icones/menu.png" alt="" srcset="" onclick="retMenu()">
+        </div>
         <h1>Histórico</h1>
         <div id="login" onclick="alternar()">
         <?php
