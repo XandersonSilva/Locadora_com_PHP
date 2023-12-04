@@ -45,8 +45,11 @@
                         $classificacao  += $AvaAtu;
                         $contador++;
                     }
-                }
+               }
             } 
+            if($contador == 0){
+                $contador =1;
+            }
              
         $estrelasFull = '';
         $classificacao =  intval($classificacao/$contador);

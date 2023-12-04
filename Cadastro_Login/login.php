@@ -53,7 +53,7 @@
              </article>
         </section>
     </main>
-    <footer>
+    <footer style="text-align: center;">
         <small>
             &reg; Todos os direitos reservados 
         </br>
