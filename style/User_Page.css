@@ -46,7 +46,7 @@ form>p{
 
 #NameUsr{
     display: flex;
-    width: 130px;
+    width: 100%;
     height: 34px;
     margin-bottom: 11px;
     justify-content: center;
