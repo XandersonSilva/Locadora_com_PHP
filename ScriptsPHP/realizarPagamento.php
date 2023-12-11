@@ -49,21 +49,4 @@ fclose($PagPendente);
     header("Location: ../PaginasPHP/PageQr_Pix.php");
 
     exit;
-
 ?>
-<style>
-    .elemento-com-barra-de-rolagem {
-    background-color: #005612;
-        max-width: 350px;
-    max-height: 350px;
-    overflow-y: auto;
-  }
-
-</style>
-<main class="elemento-com-barra-de-rolagem">
-    
-    
-    <h1>Teste</h1>
-    
-    <img src="data:image/png;base64, <?=base64_encode($qrImage)?>">
-</main>
